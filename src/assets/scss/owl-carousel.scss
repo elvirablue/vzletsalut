@@ -1,0 +1,44 @@
+.app .owl-carousel {
+    position: relative;
+}
+
+.owl-carousel-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 10px;
+    pointer-events: none;
+
+    &__prev {
+        transform: rotate(180deg);
+    }
+
+
+    [class*='owl-carousel-nav__'] {
+        display: inline-flex;
+        padding: 10px 0;
+        pointer-events: auto;
+
+        .button {
+            color: var(--main-color);
+            opacity: 0.3;
+            transition: opacity ease-in-out 0.1s;
+
+            &:hover {
+                color: var(--main-color) !important;
+                opacity: 1;
+            }
+        }
+    }
+
+    @include media_breakpoint(mobile) {
+        padding: 0;
+    }
+}

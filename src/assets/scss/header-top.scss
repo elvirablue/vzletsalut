@@ -1,0 +1,78 @@
+.header-top {
+    display: flex;
+    width: 100%;
+    height: var(--header-top-height);
+    padding: 24px 0;
+    color: var(--surface-color);
+    background-color: var(--main-color);
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 0 12px;
+        width: 50%;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0 36px;
+        width: 50%;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        display: inline-flex;
+        width: 220px;
+        height: 34px;
+
+        img, svg {
+            display: inline-flex;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__description {
+        display: inline-flex;
+        flex-direction: column;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    &__social, &__user {
+        display: flex;
+        align-items: flex-end;
+        gap: 0 8px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-size: 16px;
+    }
+
+    &__search {
+        width: 160px;
+    }
+
+    &__cart-amount {
+        display: block;
+        padding: 6px 0 4px 8px;
+        font-size: 14px;
+        line-height: 1;
+        color: var(--text-light-color);
+        white-space: nowrap;
+    }
+
+    .button.-cart {
+        position: relative;
+
+        .badge {
+            position: absolute;
+            top: -5px;
+            left: 16px;
+        }
+    }
+}

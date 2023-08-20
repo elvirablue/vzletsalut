@@ -1,0 +1,23 @@
+.index-catalog {
+    display: block;
+    padding: 96px 0 52px;
+    color: var(--main-color);
+
+    &__content {
+        display: block;
+        padding: 32px 0 52px;
+    }
+
+    &__action {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include media_breakpoint(mobile) {
+        &__action {
+            .button {
+                width: 100%;
+            }
+        }
+    }
+}

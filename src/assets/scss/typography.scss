@@ -1,0 +1,42 @@
+.h1 {
+    display: block;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+
+    @include media_breakpoint(tablet) {
+        font-size: 30px;
+    }
+}
+
+.h2 {
+    display: block;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+
+    @include media_breakpoint(tablet) {
+        font-size: 26px;
+    }
+}
+
+.h3 {
+    display: block;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+
+    @include media_breakpoint(tablet) {
+        font-size: 18px;
+    }
+}
+
+.accent-font {
+    font-family: 'Chianti BdIt Win95BT', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.text-bold {
+    font-weight: 700;
+}

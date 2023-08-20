@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Vzletsalut</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name = "format-detection" content = "telephone=no">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://myfonts.ru/myfonts?fonts=chianti-bdit-win95bt" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body onload="loaded();">
+<div class="app">
+    <header class="app-header">
+        <div class="header-top">
+            <div class="container -row">
+                <div class="header-top__brand">
+                    <a href="/" class="header-top__logo">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                    <div class="header-top__description">
+                        <span>Интернет-магазин</span>
+                        <span>Фейерверки, салюты, пиротехника</span>
+                        <span>Оптом и в розницу</span>
+                    </div>
+                </div>
+
+                <div class="header-top__actions">
+                    <div class="header-top__social">
+                        <a href="#" class="button -icon -size-20">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#vk"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="button -icon -size-20">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#youtube"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="button -icon -size-20">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#instagram"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="button -icon -size-20">
+                            <svg>
+                                <use xlink:href="/img/sprite.svg#telegram"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="header-top__contacts">
+                        <a href="#" class="button -text">8 495 177 04 27</a>
+                        <a href="#" class="button -text">8 800 177 04 27</a>
+                    </div>
+
+                    <div class="header-top__search">
+                    </div>
+
+                    <div class="header-top__user">
+                        <button class="button -icon">
+                            <svg><use xlink:href="/img/sprite.svg#account"/></svg>
+                        </button>
+                        <button class="button -icon">
+                            <svg><use xlink:href="/img/sprite.svg#favorite"/></svg>
+                        </button>
+                        <button class="button -icon -cart">
+                            <svg><use xlink:href="/img/sprite.svg#cart"/></svg>
+                            <span class="badge -small">20</span>
+                        </button>
+                        <span class="header-top__cart-amount">21 650 ₽</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom"><!-- -fixed -->
+            <div class="header-bottom__navigation">
+                <div class="container -row">
+                    <nav class="app-navigation" id="navigation">
+                        <div id="catalogButton" class="app-navigation__item">
+                            <a href="#" class="app-navigation__button">
+                                <svg>
+                                    <use xlink:href="/img/sprite.svg#menu"/>
+                                </svg>
+                                <span>Каталог</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="app-navigation__button">
+                                <svg>
+                                    <use xlink:href="/img/sprite.svg#smail"/>
+                                </svg>
+                                <span>Система<br/>лояльности</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="app-navigation__button">
+                                <svg>
+                                    <use xlink:href="/img/sprite.svg#percent"/>
+                                </svg>
+                                <span>Вход&nbsp;в&nbsp;ЛК</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="app-navigation__button">
+                                <svg>
+                                    <use xlink:href="/img/sprite.svg#mens"/>
+                                </svg>
+                                <span>Оптовые<br/>закупки</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="app-navigation__button">
+                                <svg>
+                                    <use xlink:href="/img/sprite.svg#car"/>
+                                </svg>
+                                <span>Доставка<br/>и оплата</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="app-navigation__button">
+                                <svg>
+                                    <use xlink:href="/img/sprite.svg#box"/>
+                                </svg>
+                                <span>Производители</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="app-navigation__button">
+                                <svg>
+                                    <use xlink:href="/img/sprite.svg#medal"/>
+                                </svg>
+                                <span>ТМ&nbsp;Взлёт</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="app-navigation__button">
+                                <svg>
+                                    <use xlink:href="/img/sprite.svg#book"/>
+                                </svg>
+                                <span>ПироБлог</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="app-navigation__button">
+                                <svg>
+                                    <use xlink:href="/img/sprite.svg#mail"/>
+                                </svg>
+                                <span>Контакты</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div id="catalog" class="header-bottom__catalog">
+                <div class="container">
+                    <div class="app-catalog">
+                        <div  class="app-catalog__columns">
+                        <ul class="app-catalog__list">
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>СУПЕРпредложения</span>
+                                </a>
+                                <ul class="app-catalog__list">
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">Распродажа</a>
+                                    </li>
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">Новинки</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Особый повод</span>
+                                </a>
+                                <ul class="app-catalog__list">
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">Свадьба</a>
+                                    </li>
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">День рождения</a>
+                                    </li>
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">Гендер-пати</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Готовые наборы</span>
+                                </a>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Батареи салютов и фейерверков</span>
+                                </a>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Петарды</span>
+                                </a>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Фонтаны пиротехнические</span>
+                                </a>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Ракеты</span>
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <div class="index-fs">
+            <div class="container">
+                <div class="row -dense">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="index-fs__description">
+                            <div class="card -bg-gray">
+                                <h1 class="index-fs__title h1">Интернет-магазин салютов и пиротехники</h1>
+                                <div class="h3">Самый удобный и позитивный в России</div>
+                                <ul class="index-fs__list">
+                                    <li class="index-fs__list-item">
+                                        <svg><use xlink:href="/img/sprite.svg#ok"/></svg>
+                                        <span>Являемся прямым производителем</span>
+                                    </li>
+                                    <li class="index-fs__list-item">
+                                        <svg><use xlink:href="/img/sprite.svg#ok"/></svg>
+                                        <span>Лучший ассортимент фейерверков и петард</span>
+                                    </li>
+                                    <li class="index-fs__list-item">
+                                        <svg><use xlink:href="/img/sprite.svg#ok"/></svg>
+                                        <span>Приятные цены и&nbsp;скидки до 50%</span>
+                                    </li>
+                                    <li class="index-fs__list-item">
+                                        <svg><use xlink:href="/img/sprite.svg#ok"/></svg>
+                                        <span>наш фирменный драйв</span>
+                                    </li>
+                                </ul>
+                                <div class="index-fs__decor">
+                                    <img src="img/fs-fireworks.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="index-fs__promo">
+                            <div class="card">
+                                <img src="img/fs-sale.png" alt="">
+                            </div>
+                            <div class="index-fs__promo-text accent-font">
+                                сезон скидок
+                            </div>
+                            <div class="index-fs__promo-arrow">
+                                <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-catalog">
+            <div class="container">
+                <h2 class="h2 --text-center">Каталог фейерверков и пиротехники</h2>
+                <div class="index-catalog__content">
+                    <div class="row -dense-sm">
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a href="#" class="card -bg-gray -catalog-item">
+                                <img src="img/catalog/batteries.svg" alt="">
+                                <span>Батареи салютов и фейерверков</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a href="#" class="card -bg-gray -catalog-item">
+                                <img src="img/catalog/candles.svg" alt="">
+                                <span>Ракеты</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a href="#" class="card -bg-gray -catalog-item">
+                                <img src="img/catalog/petards.svg" alt="">
+                                <span>Петарды</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a href="#" class="card -bg-gray -catalog-item">
+                                <img src="img/catalog/clappers.svg" alt="">
+                                <span>Хлопушки и пневмохлопушки</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a href="#" class="card -bg-gray -catalog-item">
+                                <img src="img/catalog/balls.svg" alt="">
+                                <span>Фестивальные шары</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a href="#" class="card -bg-gray -catalog-item">
+                                <img src="img/catalog/fountains.svg" alt="">
+                                <span>Фонтаны пиротехнические</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a href="#" class="card -bg-gray -catalog-item">
+                                <img src="img/catalog/pyrotechnics.svg" alt="">
+                                <span>Дневная пиротехника</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a href="#" class="card -bg-gray -catalog-item">
+                                <img src="img/catalog/bengal.svg" alt="">
+                                <span>Бенгальские огни</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-catalog__action">
+                    <button type="button" class="button">Перейти в каталог</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-sale">
+            <div class="container">
+                <h2 class="h2 --text-center">Акции и скидки</h2>
+                <div class="index-sale__carousel">
+                    <div class="sale-carousel">
+                        <div class="owl-sale owl-carousel owl-theme">
+                            <div class="sale-carousel__item">
+                                <div class="sale-carousel__container">
+                                    <div class="sale-carousel__promo">
+                                        <button class="button -icon -size-36 -favorite -active">
+                                            <svg>
+                                                <use xlink:href="/img/sprite.svg#favorite-stroke"/>
+                                            </svg>
+                                        </button>
+                                        <span class="sale-carousel__promo-text">WOW-цена</span>
+                                        <span class="badge">-50%</span>
+                                    </div>
+                                    <div class="sale-carousel__image">
+                                        <img src="img/salut.png" alt="">
+                                    </div>
+                                    <div class="sale-carousel__title">
+                                        <span class="text-bold">Салют Z811 Инкогнито</span>
+                                        <span>(1,2 х 13)</span>
+                                    </div>
+                                    <div class="sale-carousel__price">
+                                        <div class="new">1650 ₽</div>
+                                        <div class="old">3300 ₽</div>
+                                    </div>
+                                    <div class="sale-carousel__action">
+                                        <button type="button" class="button -small -outline">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sale-carousel__item">
+                                <div class="sale-carousel__container">
+                                    <div class="sale-carousel__promo">
+                                        <button class="button -icon -size-36 -favorite -active">
+                                            <svg>
+                                                <use xlink:href="/img/sprite.svg#favorite-stroke"/>
+                                            </svg>
+                                        </button>
+                                        <span class="sale-carousel__promo-text">WOW-цена</span>
+                                        <span class="badge">-50%</span>
+                                    </div>
+                                    <div class="sale-carousel__image">
+                                        <img src="img/salut.png" alt="">
+                                    </div>
+                                    <div class="sale-carousel__title">
+                                        <span class="text-bold">Салют Z811 Инкогнито</span>
+                                        <span>(1,2 х 13)</span>
+                                    </div>
+                                    <div class="sale-carousel__price">
+                                        <div class="new">1650 ₽</div>
+                                        <div class="old">3300 ₽</div>
+                                    </div>
+                                    <div class="sale-carousel__action">
+                                        <button type="button" class="button -small -outline">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sale-carousel__item">
+                                <div class="sale-carousel__container">
+                                    <div class="sale-carousel__promo">
+                                        <button class="button -icon -size-36 -favorite -active">
+                                            <svg>
+                                                <use xlink:href="/img/sprite.svg#favorite-stroke"/>
+                                            </svg>
+                                        </button>
+                                        <span class="sale-carousel__promo-text">WOW-цена</span>
+                                        <span class="badge">-50%</span>
+                                    </div>
+                                    <div class="sale-carousel__image">
+                                        <img src="img/salut.png" alt="">
+                                    </div>
+                                    <div class="sale-carousel__title">
+                                        <span class="text-bold">Салют Z811 Инкогнито</span>
+                                        <span>(1,2 х 13)</span>
+                                    </div>
+                                    <div class="sale-carousel__price">
+                                        <div class="new">1650 ₽</div>
+                                        <div class="old">3300 ₽</div>
+                                    </div>
+                                    <div class="sale-carousel__action">
+                                        <button type="button" class="button -small -outline">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sale-carousel__item">
+                                <div class="sale-carousel__container">
+                                    <div class="sale-carousel__promo">
+                                        <button class="button -icon -size-36 -favorite -active">
+                                            <svg>
+                                                <use xlink:href="/img/sprite.svg#favorite-stroke"/>
+                                            </svg>
+                                        </button>
+                                        <span class="sale-carousel__promo-text">WOW-цена</span>
+                                        <span class="badge">-50%</span>
+                                    </div>
+                                    <div class="sale-carousel__image">
+                                        <img src="img/salut.png" alt="">
+                                    </div>
+                                    <div class="sale-carousel__title">
+                                        <span class="text-bold">Салют Z811 Инкогнито</span>
+                                        <span>(1,2 х 13)</span>
+                                    </div>
+                                    <div class="sale-carousel__price">
+                                        <div class="new">1650 ₽</div>
+                                        <div class="old">3300 ₽</div>
+                                    </div>
+                                    <div class="sale-carousel__action">
+                                        <button type="button" class="button -small -outline">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sale-carousel__item">
+                                <div class="sale-carousel__container">
+                                    <div class="sale-carousel__promo">
+                                        <button class="button -icon -size-36 -favorite -active">
+                                            <svg>
+                                                <use xlink:href="/img/sprite.svg#favorite-stroke"/>
+                                            </svg>
+                                        </button>
+                                        <span class="sale-carousel__promo-text">WOW-цена</span>
+                                        <span class="badge">-50%</span>
+                                    </div>
+                                    <div class="sale-carousel__image">
+                                        <img src="img/salut.png" alt="">
+                                    </div>
+                                    <div class="sale-carousel__title">
+                                        <span class="text-bold">Салют Z811 Инкогнито</span>
+                                        <span>(1,2 х 13)</span>
+                                    </div>
+                                    <div class="sale-carousel__price">
+                                        <div class="new">1650 ₽</div>
+                                        <div class="old">3300 ₽</div>
+                                    </div>
+                                    <div class="sale-carousel__action">
+                                        <button type="button" class="button -small -outline">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-carousel-nav">
+                            <div class="owl-carousel-nav__next">
+                                <button class="button -icon -size-40">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-carousel"/></svg>
+                                </button>
+                            </div>
+                            <div class="owl-carousel-nav__prev">
+                                <button class="button -icon -size-40">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-carousel"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-sale__action">
+                    <button type="button" class="button">Все акции</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-communication">
+            <div class="container">
+                <div class="row -dense">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="index-communication__image">
+                            <div class="card">
+                                <img src="img/pink-angel.png" alt="">
+                            </div>
+                            <div class="index-communication__image-text accent-font">
+                                <span>Не придумали чем удивить</span>
+                                <span class="--primary-color">ЛЮБИМЫХ</span>?
+                            </div>
+                            <div class="index-communication__image-arrow">
+                                <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="index-communication__content">
+                            <div class="card -bg-gray">
+                                <ul class="index-communication__list">
+                                    <li class="index-communication__list-item">
+                                        <button class="button -text -communication">
+                                            <svg> <use xlink:href="/img/sprite.svg#communication-phone"/></svg>
+                                            <span>Просто наберите нас</span>
+                                        </button>
+                                    </li>
+                                    <li class="index-communication__list-item">
+                                        <button class="button -text -communication">
+                                            <svg> <use xlink:href="/img/sprite.svg#communication-request"/></svg>
+                                            <span>Или оставьте заявку</span>
+                                        </button>
+                                    </li>
+                                    <li class="index-communication__list-item">
+                                        <button class="button -text -communication">
+                                            <svg> <use xlink:href="/img/sprite.svg#communication-search"/></svg>
+                                            <span>Воспользуйтесь самым удобным каталогом пиротехники</span>
+                                        </button>
+                                    </li>
+                                    <li class="index-communication__list-item">
+                                        <button class="button -text -communication">
+                                            <svg> <use xlink:href="/img/sprite.svg#communication-whatsapp"/></svg>
+                                            <span>Напишите нам в WhatsApp</span>
+                                        </button>
+                                    </li>
+                                    <li class="index-communication__list-item">
+                                        <button class="button -text -communication">
+                                            <svg> <use xlink:href="/img/sprite.svg#communication-telegram"/></svg>
+                                            <span>Или в Telegram</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="index-communication__action">
+                    <button type="button" class="button">Зарегистрироваться и получить скидку</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-buy">
+            <div class="container">
+                <h2 class="h2 --text-center">
+                    Купить фейерверки и пиротехнику от производителя
+                    с доставкой в Москве и всей России
+                </h2>
+            </div>
+            <div class="index-buy__container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7 col-12">
+                            <div class="index-buy__content">
+                                <div class="index-buy__image-arrow">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                </div>
+                                <div class="index-buy__title">Помогаем выбрать.</div>
+                                <div>Для нас не важно покупаете ли вы свой первый фейерверк на Новый год, день рождение
+                                    или просто так без повода, либо являетесь опытным «пиро-фанатом» и хорошо понимаете
+                                    свои пожелания по высоте, количеству залпов, калибру и эффекту батареи салютов. Мы
+                                    всегда сможем подсказать что-то полезное, проконсультировать по любому вопросу и
+                                    просто дать совет, как создать еще больше драйва и огня на вашем празднике.
+                                </div>
+
+                                <div class="index-buy__title">Тщательно подобранный ассортимент.</div>
+                                <div>Мы являемся настоящими энтузиастами своего дела, которые прошли путь от любителей
+                                    красочных салютов до создания своего бренда и организации производственной цепи.
+                                    Поэтому мы внимательно подбираем весь ассортимент, представленный в нашем
+                                    Интернет-магазине пиротехники. Команда «Взлет-салют» не придерживается принципа:
+                                    «чем больше товара на сайте – тем лучше», а стремится выбирать только самые
+                                    интересные модели фейерверков и другой пиротехники. Для нас важно, чтобы вы получили
+                                    максимальные эмоции и удовольствие от использования нашей продукции.
+                                </div>
+
+                                <div class="index-buy__title">Приятные цены.</div>
+                                <div>В Интернет-магазине представлена продукция от прямого производителя и проверенных
+                                    партнеров. Поэтому мы можем гарантировать не только самое высокое качество
+                                    фейерверков, петард и другой пиротехники, но и возможность недорогой и приятной
+                                    покупки. Нам важно, чтобы вы могли купить фейерверк и другую продукцию недорого,
+                                    позволить себе это всегда и на любой праздник.
+                                </div>
+
+                                <div class="index-buy__title">Безопасность.</div>
+                                <div>Самое пристальное внимание мы уделяем вопросам качества и безопасности. Мы
+                                    внимательно контролируем производство, режимы транспортировки и хранения, сроки
+                                    годности и сохранность любой пиротехники. Покупая фейерверк от производителя – вы
+                                    можете быть уверенны в том, что не будет никаких неожиданностей и неприятностей при
+                                    его запуске. Кроме того, наши менеджеры и пиротехники всегда готовы
+                                    проинструктировать вас по технике безопасности и правилам использования продукции.
+                                </div>
+
+                                <div class="index-buy__title">Быстрая доставка.</div>
+                                <div>Хорошо то, что происходит ко времени. Так мы подумали и решили сделать самую
+                                    быструю и удобную доставку. В нашем Интернет-магазине вы можете оформить заказ
+                                    круглосуточно, а продукцию привезут вам бесплатно в тот же или на следующий день.
+                                    Разумеется, мы так же проследим за тем, чтобы привезли именно то, что вы выбрали и
+                                    могли все оплатить любым удобным для вас способом.
+                                </div>
+
+                                <div class="index-buy__title">Магазин рядом с вами.</div>
+                                <div>Иногда перед покупкой фейерверков хочется не только все посмотреть на сайте, но и
+                                    потрогать руками, потрясти коробку и просто окунуться в мир залпов, взрывов и
+                                    красочных салютов. Мы вас – хорошо понимаем. Все это можно сделать в наших
+                                    стационарных фирменных магазинах и в сети торговых точек, которую мы разворачиваем
+                                    под Новый год. Посмотрите внимательно адреса наших магазинов, возможно один из них
+                                    находится прямо рядом с вашим домом.
+                                </div>
+
+                                <div class="index-buy__title">Любая поддержка наших клиентов.</div>
+                                <div>Фейерверки, ракеты, петарды, бенгальские огни – для команды «Взлет-салют» — это
+                                    хобби, драйв и образ жизни. Поэтому мы искренне рады любому общению с нашими
+                                    клиентами «по делу» и просто так. Пишите, звоните, вступайте в наши социальные сети
+                                    – делитесь эмоциями и впечатлениями. А мы вас поддержим по любому вопросу.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-5 col-12">
+                            <div class="index-buy__image">
+                                <img src="img/girl-in-swimsuit.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-certificates">
+            <div class="container">
+                <h2 class="h2 --text-center"> Сертификаты качества</h2>
+                <div class="index-certificates__content card">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5">
+                            <div class="index-certificates__image">
+                                <img src="img/bandaged-man.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7">
+                            <div class="index-certificates__title accent-font">
+                                Вся наша пиротехника сертифицирована и полностью безопасна
+                                <div class="index-certificates__image-arrow">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-certificates__carousel">
+                    <div class="certificates-carousel">
+                        <div class="certificates-carousel__container">
+                            <div class="owl-certificates owl-carousel owl-theme">
+                                <div class="certificates-carousel__item">
+                                    <div class="certificates-carousel__image">
+                                        <img src="img/certificat.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="certificates-carousel__item">
+                                    <div class="certificates-carousel__image">
+                                        <img src="img/certificat.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="certificates-carousel__item">
+                                    <div class="certificates-carousel__image">
+                                        <img src="img/certificat.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="certificates-carousel__item">
+                                    <div class="certificates-carousel__image">
+                                        <img src="img/certificat.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="certificates-carousel__item">
+                                    <div class="certificates-carousel__image">
+                                        <img src="img/certificat.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="certificates-carousel__item">
+                                    <div class="certificates-carousel__image">
+                                        <img src="img/certificat.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="certificates-carousel__item">
+                                    <div class="certificates-carousel__image">
+                                        <img src="img/certificat.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="certificates-carousel__item">
+                                    <div class="certificates-carousel__image">
+                                        <img src="img/certificat.jpeg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-carousel-nav">
+                            <div class="owl-carousel-nav__next">
+                                <button class="button -icon -size-40">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-carousel"/></svg>
+                                </button>
+                            </div>
+                            <div class="owl-carousel-nav__prev">
+                                <button class="button -icon -size-40">
+                                    <svg><use xlink:href="/img/sprite.svg#arrow-carousel"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="index-map-shops">
+            <div class="container">
+                <div class="card">
+                    <h2 class="h2 --text-center">Адреса магазинов фейерверков</h2>
+
+                    <div class="index-map-shops__map">
+                        <img src="img/map-example.png" alt="">
+                    </div>
+
+                    <div class="index-map-shops__content">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-6 col-12">
+                                <div class="index-map-shops__text accent-font">
+                                    <span>Не нашли магазин в удобном месте?</span>
+                                    <div class="index-map-shops__image-arrow">
+                                        <svg><use xlink:href="/img/sprite.svg#arrow-catalog"/></svg>
+                                    </div>
+                                </div>
+                                <div class="index-map-shops__title accent-font">
+                                    Доставим праздник прямо к двери!
+                                </div>
+                                <div class="index-map-shops__action">
+                                    <button type="button" class="button">Нужна помощь консультанта</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-6 col-12">
+                                <div class="index-map-shops__image">
+                                    <img src="img/angel-with-box.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="index-feedback">
+            <div class="container">
+                <h2 class="h2 --text-center">Отзывы</h2>
+            </div>
+            <div class="index-feedback__container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="index-feedback__carousel">
+                                <div class="feedback-carousel">
+                                    <div class="owl-feedback owl-carousel owl-theme">
+                                        <div class="feedback-carousel__item">
+                                            <div class="feedback-carousel__container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="owl-carousel-nav">
+                                        <div class="owl-carousel-nav__next">
+                                            <button class="button -icon -size-40">
+                                                <svg><use xlink:href="/img/sprite.svg#arrow-carousel"/></svg>
+                                            </button>
+                                        </div>
+                                        <div class="owl-carousel-nav__prev">
+                                            <button class="button -icon -size-40">
+                                                <svg><use xlink:href="/img/sprite.svg#arrow-carousel"/></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="app-footer"></footer>
+
+    <div class="app-popup" id="popup">
+        <div class="container">
+            <div class="app-popup__inner">
+                <div class="app-popup__header">
+                    <div class="app-popup__title">Брониро&shy;ва&shy;ние билетов</div>
+                    <div class="app-popup__close">
+                        <button type="button" class="button -icon -dark" onclick="closePopup()">
+                            <img src="img/close.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="app-popup__content" id="popupContent">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template id="formBuyTicket">
+        <form class="form" onsubmit="submitFormBuyTicket(event)">
+            <div class="form__item -fields">
+                <div class="input">
+                    <div class="input__label">Дата заезда</div>
+                    <input type="date">
+                </div>
+                <div class="input">
+                    <div class="input__label">Дата выезда</div>
+                    <input type="date">
+                </div>
+                <div class="input">
+                    <div class="input__label">Количество</div>
+                    <input type="number" min="1" max="10" value="1" onchange="changeInputNumber(event)">
+                    <div class="input__unit">человек</div>
+                </div>
+            </div>
+            <div class="form__item">
+                <div class="--hidden-mobile"></div>
+                <div class="--hidden-mobile"></div>
+                <button type="submit" class="button -dark">Купить билеты</button>
+            </div>
+        </form>
+
+        <div id="formSuccess" class="form -success">Покупка прошла успешно!</div>
+    </template>
+</div>
+
+</body>
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+
+<script>
+    let owl1 = $('.owl-sale');
+    owl1.owlCarousel({
+        margin: 20,
+        loop: true,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
+    $(".sale-carousel .owl-carousel-nav__next").click(function(){
+        owl1.trigger("next.owl.carousel");
+    });
+    $(".sale-carousel .owl-carousel-nav__prev").click(function(){
+        owl1.trigger("prev.owl.carousel");
+    });
+
+    let owl2 = $('.owl-certificates');
+    owl2.owlCarousel({
+        margin: 0,
+        loop: true,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            680: {
+                items: 3
+            },
+            820: {
+                items: 4
+            },
+            1020: {
+                items: 5
+            },
+            1281: {
+                items: 6
+            }
+        }
+    })
+    $(".certificates-carousel .owl-carousel-nav__next").click(function(){
+        owl2.trigger("next.owl.carousel");
+    });
+    $(".certificates-carousel .owl-carousel-nav__prev").click(function(){
+        owl2.trigger("prev.owl.carousel");
+    });
+
+    let owl3 = $('.owl-feedback');
+    owl3.owlCarousel({
+        margin: 0,
+        loop: true,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+        }
+    })
+    $(".feedback-carousel .owl-carousel-nav__next").click(function(){
+        owl1.trigger("next.owl.carousel");
+    });
+    $(".feedback-carousel .owl-carousel-nav__prev").click(function(){
+        owl1.trigger("prev.owl.carousel");
+    });
+</script>
+</html>

@@ -1,0 +1,42 @@
+.certificates-carousel {
+    position: relative;
+    padding: 0 56px;
+
+    &__container {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        padding: 12px;
+    }
+
+    &__image {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 0.5px solid var(--surface-color);
+        background: linear-gradient(132deg, rgba(255, 255, 255, 0.36) 0.02%, rgba(255, 255, 255, 0.56) 100%);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+
+        img {
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    @include media_breakpoint(tablet) {
+        &__image {
+            max-height: 270px;
+            max-width: 195px;
+        }
+    }
+
+    @include media_breakpoint(mobile) {
+        padding: 0 20px;
+    }
+}

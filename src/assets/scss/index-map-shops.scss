@@ -1,0 +1,144 @@
+.index-map-shops {
+    &__map {
+        display: flex;
+        width: 100%;
+        height: 536px;
+        padding: 32px 56px 0 56px;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        margin-top: -120px;
+        padding-left: 56px;
+        color: var(--main-color);
+    }
+
+    &__title {
+        display: block;
+        font-size: 50px;
+        padding-top: 72px;
+        text-align: center;
+    }
+
+    &__text {
+        position: relative;
+        display: block;
+        width: 333px;
+        padding: 32px;
+        margin: 52px auto 0;
+        font-size: 30px;
+        font-weight: 400;
+        background-color: var(--gray-color);
+    }
+
+    &__image-arrow {
+        position: absolute;
+        right: -30px;
+        bottom: -55px;
+        transform: rotate(90deg);
+
+        svg {
+            width: 70px;
+            height: 92px;
+            color: var(--primary-color);
+        }
+    }
+
+    &__action {
+        display: flex;
+        justify-content: center;
+        padding-top: 52px;
+        padding-bottom: 32px;
+    }
+
+    &__image {
+        display: flex;
+        margin-left: auto;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        max-height: 631px;
+
+        img {
+           object-position: right bottom;
+        }
+    }
+
+    .card {
+        padding: 64px 0 0 0;
+        color: var(--main-color);
+        background-image: linear-gradient(180deg, #B99ECB 0%, #B296C7 100%);
+    }
+
+    @include media_breakpoint(tablet) {
+        &__map {
+            height: 450px;
+            padding: 32px 20px 0 20px;
+        }
+
+        &__content {
+            margin-top: -100px;
+            padding-left: 20px;
+        }
+
+        &__title {
+            font-size: 32px;
+            padding-top: 72px;
+        }
+
+        &__text {
+            width: 280px;
+            font-size: 24px;
+        }
+
+        &__image {
+            height: 100%;
+
+            img {
+                object-position: left bottom;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include media_breakpoint(mobile) {
+        &__map {
+            height: 350px;
+            padding: 32px 0 0 0;
+        }
+
+        &__text {
+            margin-top: 0;
+        }
+
+        &__title {
+            padding-top: 46px;
+        }
+
+        &__content {
+            margin-top: -40px;
+            padding: 0 20px;
+        }
+
+        &__image-arrow {
+            transform: rotate(90deg) scale(0.75);
+        }
+
+        &__action {
+            padding-top: 32px;
+            padding-bottom: 0;
+
+            .button {
+                width: 100%;
+            }
+        }
+
+        .card {
+            margin: 0 calc(-1 * var(--mobile-padding));
+            border-radius: 0;
+        }
+    }
+}

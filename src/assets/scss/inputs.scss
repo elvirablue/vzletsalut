@@ -1,0 +1,21 @@
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 72px;
+    border-bottom: 1px solid var(--text-color);
+
+    &__label {
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+
+    &__unit {
+        position: absolute;
+        bottom: 13px;
+        left: 20px;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,23 @@
+.index-feedback {
+    display: block;
+    padding-top: 64px;
+    color: var(--main-color);
+
+    .h2 {
+        max-width: 830px;
+        margin: 0 auto;
+        padding-bottom: 32px;
+    }
+
+    &__container {
+        display: block;
+        padding: 52px 0;
+        background-color: var(--gray-color);
+    }
+
+    &__carousel {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
