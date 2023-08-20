@@ -1,8 +1,17 @@
 .sale-carousel {
     position: relative;
+    width: 100%;
     padding: 0 60px;
 
-    &__container {
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    &__inner {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -38,24 +47,18 @@
         }
     }
 
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 10px;
-    }
-
     &__promo {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
+        width: 100%;
         padding-bottom: 4px;
     }
 
     &__promo-text {
         display: inline-flex;
         padding: 0 8px;
+        margin-right: auto;
         font-size: 20px;
         font-weight: 700;
         color: var(--primary-color);
@@ -116,6 +119,20 @@
                 height: 2px;
                 background-color: var(--primary-color);
             }
+        }
+    }
+
+    @include media_breakpoint(tablet) {
+
+    }
+
+    @include media_breakpoint(mobile) {
+        padding: 0 28px;
+        width: 100%;
+        max-width: 454px;
+
+        &__inner {
+            padding: 20px;
         }
     }
 }

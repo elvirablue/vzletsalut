@@ -123,6 +123,14 @@
             padding: 0 20px;
         }
 
+        &__image {
+            max-height: 350px;
+            img {
+                object-position: center bottom;
+                object-fit: contain;
+            }
+        }
+
         &__image-arrow {
             transform: rotate(90deg) scale(0.75);
         }
@@ -133,6 +141,8 @@
 
             .button {
                 width: 100%;
+                max-width: 380px;
+                white-space: normal;
             }
         }
 

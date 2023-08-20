@@ -14,6 +14,18 @@
 		max-width: none;
 	}
 
+    @include media_breakpoint(small-desktop desktop) {
+        &.-row-lg {
+            flex-direction: row;
+        }
+    }
+
+    @include media_breakpoint(only-tablet) {
+        &.-row-md {
+            flex-direction: row;
+        }
+    }
+
     @include media_breakpoint(small-desktop) {
         max-width: 100vw;
         padding: 0  calc(var(--desktop-padding) / 2);
@@ -53,7 +65,7 @@
 }
 
 .--primary-color {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 // Глобальные модификаторы
 
@@ -70,7 +82,7 @@
     overflow: hidden !important;
 }
 
-@include media_breakpoint(desktop) {
+@include media_breakpoint(small-desktop desktop) {
     .--hidden-desktop {
         display: none !important;
     }

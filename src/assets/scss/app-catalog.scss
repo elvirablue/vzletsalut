@@ -1,12 +1,17 @@
 .app-catalog {
     display: flex;
+    flex-direction: column;
     padding: 20px 28px;
     margin: 0 20px;
-    color: var(--text-color);
+    color: var(--main-color);
     border-radius: var(--root-radius);
     background-color: var(--surface-color);
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.25);
     overflow: hidden;
+
+    &__mobile-back {
+        display: none;
+    }
 
     &__columns {
         display: block;
@@ -69,6 +74,51 @@
                 flex-direction: column;
                 padding-left: 21px;
             }
+        }
+    }
+
+    @include media_breakpoint(small-desktop) {
+        margin: 0;
+    }
+
+    @include media_breakpoint(tablet) {
+        margin: 0;
+
+        &__columns {
+            column-count: 3;
+        }
+    }
+
+    @include media_breakpoint(mobile) {
+        margin: 0;
+        padding: 0;
+        font-family: 'Fira Mono', sans-serif;
+        background-color: transparent;
+        box-shadow: none;
+        overflow-y: auto;
+
+        &__mobile-back {
+            position: absolute;
+            top: -28px;
+            display: block;
+            .button {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+
+        .app-catalog__columns {
+            column-count: 1;
+
+            > .app-catalog__list > .app-catalog__item {
+                font-weight: 500;
+            }
+        }
+
+        &__item {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
         }
     }
 }

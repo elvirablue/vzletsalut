@@ -1,21 +1,53 @@
 .input {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 72px;
-    border-bottom: 1px solid var(--text-color);
-
-    &__label {
-        display: block;
-        font-weight: 700;
+    &.-simple {
+        display: flex;
+        align-items: center;
+        height: var(--action-height);
+        padding: 12px 22px;
         font-size: 16px;
-        padding-bottom: 20px;
+        font-weight: 400;
+        line-height: 1;
+        color: var(--main-color);
+        border-radius: 20px;
+        background-color: var(--surface-color);
+        border: 1px solid var(--darker-gray-color);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
     }
 
-    &__unit {
-        position: absolute;
-        bottom: 13px;
-        left: 20px;
-        pointer-events: none;
+    &.-textarea {
+        height: auto;
+        padding: 16px 22px;
+    }
+
+    input, textarea {
+        width: 100%;
+        font: inherit;
+        color: inherit;
+    }
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 24px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--surface-color);
+    border-radius: 6.5px;
+    background-color: var(--main-color);
+    border: 1px solid var(--darker-gray-color);
+
+    input, textarea {
+        width: 100%;
+        font: inherit;
+        color: inherit;
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
     }
 }

@@ -6,24 +6,27 @@
     --text-color: #000000;
     --text-light-color: #828282;
 
+    --darker-gray-color: #A5A5A5;
+    --dark-gray-color: #BDBDBD;
     --gray-color: #D9D9D9;
+    --light-gray-color: #E1E1E1;
     --yellow-color: #F2C94C;
     --purple-color: #BB6BD9;
 
 	--header-top-height: 100px;
 	--header-bottom-height: 60px;
-    --action-height: 55px;
-    --action-small-height: 33px;
+    --action-height: 54px;
+    --action-small-height: 32px;
 
 	--content-width: 1600px;
 	--desktop-padding: 80px;
-	--mobile-padding: 20px;
+	--mobile-padding: 10px;
 	--root-radius: 5px;
 }
 
 
-$scroll-custom-size: 5px;
-$scroll-thumb-bg: var(--text-color);
-$scroll-thumb-hover-bg: var(--primary-color);
-$scroll-track-bg: var(--surface-color);
-$scroll-thumb-border: 0px solid var(--surface-color);
+$scroll-custom-size: 4px;
+$scroll-thumb-bg: var(--text-light-color);
+$scroll-thumb-hover-bg: var(--main-color);
+$scroll-track-bg: var(--gray-color);
+$scroll-thumb-border: 0px solid var(--gray-color);

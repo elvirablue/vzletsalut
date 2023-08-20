@@ -5,7 +5,8 @@
     background-color: var(--yellow-color);
 
     &__carousel {
-        display: block;
+        display: flex;
+        justify-content: center;
         padding: 32px 0;
     }
 
@@ -15,9 +16,14 @@
     }
 
     @include media_breakpoint(mobile) {
+        &__carousel {
+            margin: 0 calc(-1 * var(--mobile-padding));
+        }
+
         &__action {
             .button {
                 width: 100%;
+                max-width: 380px;
             }
         }
     }

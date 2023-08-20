@@ -1,9 +1,6 @@
 
     function loaded() {
-        const catalogButton = document.body.querySelector('#catalogButton');
-        catalogButton.addEventListener('mouseenter', openCatalog)
-        catalogButton.addEventListener('mouseleave', catalogButtonMouseLeave)
-        window.addEventListener('resize', closeNavigation)
+        window.addEventListener('resize', closeNavigationMobile)
     }
 
     function isCursorOnElem( event, elem ){
@@ -19,6 +16,7 @@
     }
 
     function openCatalog() {
+    console.debug('openCatalog')
         const catalog = document.body.querySelector('#catalog')
         const catalogButton = document.body.querySelector('#catalogButton')
         catalog.classList.add('-show')
@@ -28,14 +26,16 @@
     function trackCursorOnCatalog(event) {
         const catalogContent = document.body.querySelector('.app-catalog')
         if (catalogContent && !isCursorOnElem(event, catalogContent)) {
-            document.body.removeEventListener( 'mousemove', trackCursorOnCatalog)
             closeCatalog()
         }
     }
+
     function closeCatalog() {
+        console.debug('closeCatalog')
         const catalog = document.body.querySelector('#catalog')
         catalog.classList.remove('-show')
         document.body.querySelector('.app-navigation__button.-active')?.classList?.remove('-active')
+        document.body.removeEventListener( 'mousemove', trackCursorOnCatalog)
     }
     function catalogButtonMouseLeave(event) {
         setTimeout(() => {
@@ -43,41 +43,39 @@
         }, 200)
     }
 
-    function toggleNavigation(event) {
-        const target = event.currentTarget;
-        if (target.classList.contains('-open')) {
-            closeNavigation()
-        } else {
-            openNavigation()
-        }
-    }
+    //function toggleNavigation(event) {
+    //    const target = event.currentTarget;
+    //    if (target.classList.contains('-open')) {
+    //        closeNavigation()
+    //    } else {
+    //        openNavigation()
+    //    }
+    //}
 
-    function openNavigation() {
-        const elementHamburger = document.body.querySelector('#hamburgerMenu');
-        elementHamburger.classList.add('-open');
+    function openNavigationMobile() {
         document.body.classList.add('--hidden');
 
-        const elementNavigation = document.querySelector('#navigation');
-        elementNavigation.classList.add('-show');
+        const headerHeight = document.querySelector('.header-top').clientHeight || 0;
+        const elementNavigationWrap = document.querySelector('#navigationWrap');
+        const elementNavigationContent = document.querySelector('#navigationMobile');
+        document.body.style.setProperty('--header-height', (`${headerHeight}px`))
+        elementNavigationWrap.classList.add('-show');
+        elementNavigationContent.classList.add('-show');
         setTimeout(() => {
-            elementNavigation.classList.add('-open');
+            elementNavigationWrap.classList.add('-open');
+            elementNavigationContent.classList.add('-move');
         }, 20)
-
-        const elementHeaderActions = document.querySelector('#headerActions');
-        elementHeaderActions.classList.add('-move');
     }
 
-    function closeNavigation() {
-        const elementHamburger = document.body.querySelector('#hamburgerMenu');
-        elementHamburger.classList.remove('-open');
-
-        const elementHeaderActions = document.querySelector('#headerActions');
-        elementHeaderActions.classList.remove('-move');
-
-        const elementNavigation = document.querySelector('#navigation');
-        elementNavigation.classList.remove('-open');
+    function closeNavigationMobile() {
+        closeCatalog()
+        const elementNavigationWrap = document.querySelector('#navigationWrap');
+        elementNavigationWrap.classList.remove('-open');
+        const elementNavigationContent = document.querySelector('#navigationMobile');
+        elementNavigationContent.classList.remove('-move');
         setTimeout(() => {
-            elementNavigation.classList.remove('-show');
+            elementNavigationWrap.classList.remove('-show');
+            elementNavigationContent.classList.remove('-show');
             document.body.classList.remove('--hidden');
         }, 500)
 

@@ -45,7 +45,6 @@
         img {
             object-position: right bottom;
         }
-
     }
 
     &__carousel {
@@ -84,8 +83,12 @@
             border-radius: 0;
         }
 
+        &__carousel {
+            margin: -200px calc(-1 * var(--mobile-padding)) 0;
+        }
+
         &__image {
-            height: 35vw;
+            height: 50vw;
             max-height: 300px;
 
             img {

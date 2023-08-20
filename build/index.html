@@ -22,6 +22,7 @@
     <link href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
     <link href="https://myfonts.ru/myfonts?fonts=chianti-bdit-win95bt" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.cdnfonts.com/css/fira-mono" rel="stylesheet">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -37,7 +38,7 @@
 <div class="app">
     <header class="app-header">
         <div class="header-top">
-            <div class="container -row">
+            <div class="container -row-lg -row-md">
                 <div class="header-top__brand">
                     <a href="/" class="header-top__logo">
                         <img src="img/logo.svg" alt="">
@@ -50,7 +51,7 @@
                 </div>
 
                 <div class="header-top__actions">
-                    <div class="header-top__social">
+                    <div class="header-top__social --hidden-tablet">
                         <a href="#" class="button -icon -size-20">
                             <svg>
                                 <use xlink:href="/img/sprite.svg#vk"/>
@@ -73,12 +74,16 @@
                         </a>
                     </div>
 
-                    <div class="header-top__contacts">
+                    <div class="header-top__contacts --hidden-mobile">
                         <a href="#" class="button -text">8 495 177 04 27</a>
                         <a href="#" class="button -text">8 800 177 04 27</a>
                     </div>
 
                     <div class="header-top__search">
+                        <div class="search">
+                            <input type="text" placeholder=""/>
+                            <svg><use xlink:href="/img/sprite.svg#magnify"/></svg>
+                        </div>
                     </div>
 
                     <div class="header-top__user">
@@ -99,23 +104,33 @@
         </div>
 
         <div class="header-bottom"><!-- -fixed -->
-            <div class="header-bottom__navigation">
-                <div class="container -row">
+            <div class="header-bottom__navigation-wrap" id="navigationWrap"></div>
+            <div class="header-bottom__navigation" id="navigationMobile">
+                <div class="container -row-lg -row-md">
+                    <div class="header-bottom__mobile-top">
+                        <button onclick="closeNavigationMobile()" type="button" class="button -icon --primary-color">
+                            <svg> <use xlink:href="/img/sprite.svg#close"/></svg>
+                        </button>
+                    </div>
                     <nav class="app-navigation" id="navigation">
                         <div id="catalogButton" class="app-navigation__item">
-                            <a href="#" class="app-navigation__button">
-                                <svg>
+                            <button
+                                    onclick="openCatalog()"
+                                    onmouseenter="openCatalog()"
+                                    onmouseleave="catalogButtonMouseLeave()"
+                                    type="button" class="app-navigation__button">
+                                <svg class="--primary-color">
                                     <use xlink:href="/img/sprite.svg#menu"/>
                                 </svg>
                                 <span>Каталог</span>
-                            </a>
+                            </button>
                         </div>
                         <div class="app-navigation__item">
                             <a href="#" class="app-navigation__button">
                                 <svg>
                                     <use xlink:href="/img/sprite.svg#smail"/>
                                 </svg>
-                                <span>Система<br/>лояльности</span>
+                                <span>Система<br/> лояльности</span>
                             </a>
                         </div>
                         <div class="app-navigation__item">
@@ -131,7 +146,7 @@
                                 <svg>
                                     <use xlink:href="/img/sprite.svg#mens"/>
                                 </svg>
-                                <span>Оптовые<br/>закупки</span>
+                                <span>Оптовые<br/> закупки</span>
                             </a>
                         </div>
                         <div class="app-navigation__item">
@@ -139,7 +154,7 @@
                                 <svg>
                                     <use xlink:href="/img/sprite.svg#car"/>
                                 </svg>
-                                <span>Доставка<br/>и оплата</span>
+                                <span>Доставка<br/> и оплата</span>
                             </a>
                         </div>
                         <div class="app-navigation__item">
@@ -171,15 +186,81 @@
                                 <svg>
                                     <use xlink:href="/img/sprite.svg#mail"/>
                                 </svg>
-                                <span>Контакты</span>
+                                <span>Магазины</span>
+                            </a>
+                        </div>
+
+                        <div class="app-navigation__more">
+                            <a href="#" class="button -text -more">
+                                <svg> <use xlink:href="/img/sprite.svg#more"/> </svg>
+                                <span>Ещё</span>
                             </a>
                         </div>
                     </nav>
+                    <div class="header-bottom__mobile-bottom">
+                        <div class="header-bottom__mobile-item">
+                            <a href="#" class="button -text">8 495 177 04 27</a>
+                            <a href="#" class="button -text">8 800 177 04 27</a>
+                        </div>
+                        <div class="header-bottom__mobile-item">
+                            <button type="button" class="button -outline -small">Свяжитесь со мной</button>
+                        </div>
+                        <div class="header-bottom__mobile-item">
+                            <div class="header-bottom__social">
+                                <a href="#" class="button -icon -size-20">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#vk"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="button -icon -size-20">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#youtube"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="button -icon -size-20">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#instagram"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="button -icon -size-20">
+                                    <svg>
+                                        <use xlink:href="/img/sprite.svg#telegram"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="header-bottom__mobile">
+                <div class="container -row">
+                    <div class="header-bottom__contacts">
+                        <a href="#" class="button -text">8 495 177 04 27</a>
+                        <a href="#" class="button -text">8 800 177 04 27</a>
+                    </div>
+                    <div class="header-bottom__actions">
+                        <div type="button" class="button -icon">
+                            <svg> <use xlink:href="/img/sprite.svg#smail"/></svg>
+                        </div>
+                        <div type="button" class="button -icon --primary-color">
+                            <svg> <use xlink:href="/img/sprite.svg#menu"/></svg>
+                        </div>
+                        <button onclick="openNavigationMobile()" type="button" class="button -icon --primary-color">
+                            <svg> <use xlink:href="/img/sprite.svg#more"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <div id="catalog" class="header-bottom__catalog">
                 <div class="container">
                     <div class="app-catalog">
+                        <div class="app-catalog__mobile-back">
+                            <button onclick="closeCatalog()" type="button" class="button -text">
+                                < Назад
+                            </button>
+                        </div>
                         <div  class="app-catalog__columns">
                         <ul class="app-catalog__list">
                             <li class="app-catalog__item">
@@ -369,7 +450,7 @@
                     <div class="sale-carousel">
                         <div class="owl-sale owl-carousel owl-theme">
                             <div class="sale-carousel__item">
-                                <div class="sale-carousel__container">
+                                <div class="sale-carousel__inner">
                                     <div class="sale-carousel__promo">
                                         <button class="button -icon -size-36 -favorite -active">
                                             <svg>
@@ -396,7 +477,7 @@
                                 </div>
                             </div>
                             <div class="sale-carousel__item">
-                                <div class="sale-carousel__container">
+                                <div class="sale-carousel__inner">
                                     <div class="sale-carousel__promo">
                                         <button class="button -icon -size-36 -favorite -active">
                                             <svg>
@@ -423,7 +504,7 @@
                                 </div>
                             </div>
                             <div class="sale-carousel__item">
-                                <div class="sale-carousel__container">
+                                <div class="sale-carousel__inner">
                                     <div class="sale-carousel__promo">
                                         <button class="button -icon -size-36 -favorite -active">
                                             <svg>
@@ -450,7 +531,7 @@
                                 </div>
                             </div>
                             <div class="sale-carousel__item">
-                                <div class="sale-carousel__container">
+                                <div class="sale-carousel__inner">
                                     <div class="sale-carousel__promo">
                                         <button class="button -icon -size-36 -favorite -active">
                                             <svg>
@@ -477,7 +558,7 @@
                                 </div>
                             </div>
                             <div class="sale-carousel__item">
-                                <div class="sale-carousel__container">
+                                <div class="sale-carousel__inner">
                                     <div class="sale-carousel__promo">
                                         <button class="button -icon -size-36 -favorite -active">
                                             <svg>
@@ -798,13 +879,47 @@
             </div>
             <div class="index-feedback__container">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
+                    <div class="row -center">
+                        <div class="col-lg-5 col-md-6 col-12">
                             <div class="index-feedback__carousel">
                                 <div class="feedback-carousel">
                                     <div class="owl-feedback owl-carousel owl-theme">
                                         <div class="feedback-carousel__item">
-                                            <div class="feedback-carousel__container">
+                                            <div class="feedback-carousel__inner">
+                                                <div class="feedback-carousel__author">
+                                                    <div class="feedback-carousel__avatar">
+                                                        <img src="img/bandaged-man.png" alt="">
+                                                    </div>
+                                                    <div class="feedback-carousel__title">
+                                                        <span class="text-bold">Алексей </span>
+                                                        <span class="text-italic">Заказывал салют для свадьбы</span>
+                                                    </div>
+                                                </div>
+                                                <div class="feedback-carousel__text">
+                                                    <p>Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо!  Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо!</p>
+                                                    <p>Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! </p>
+                                                </div>
+
+                                                <div class="feedback-carousel__date text-italic">15.04.2023</div>
+                                            </div>
+                                        </div>
+                                        <div class="feedback-carousel__item">
+                                            <div class="feedback-carousel__inner">
+                                                <div class="feedback-carousel__author">
+                                                    <div class="feedback-carousel__avatar">
+                                                        <img src="img/pink-angel.png" alt="">
+                                                    </div>
+                                                    <div class="feedback-carousel__title">
+                                                        <span class="text-bold">Алексей </span>
+                                                        <span class="text-italic">Заказывал салют для свадьбы</span>
+                                                    </div>
+                                                </div>
+                                                <div class="feedback-carousel__text">
+                                                    <p>Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо!  Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо!</p>
+                                                    <p>Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! Заказывал салют для свадьбы. Спасибо! </p>
+                                                </div>
+
+                                                <div class="feedback-carousel__date text-italic">15.04.2023</div>
                                             </div>
                                         </div>
                                     </div>
@@ -823,7 +938,33 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-12"></div>
+                        <div class="col-lg-5 col-md-6 col-12">
+                            <form class="index-feedback__form">
+                                <div class="index-feedback__form-item">
+                                    <div class="input -simple">
+                                        <input type="text" placeholder="Ваше имя"/>
+                                    </div>
+                                </div>
+                                <div class="index-feedback__form-item">
+                                    <div class="input -simple">
+                                        <input type="text" placeholder="Тут вы можете загрузить свое фото"/>
+                                    </div>
+                                </div>
+                                <div class="index-feedback__form-item">
+                                    <div class="input -simple">
+                                        <input type="text" placeholder="Повод, по которому покупали салют"/>
+                                    </div>
+                                </div>
+                                <div class="index-feedback__form-item">
+                                    <div class="input -simple -textarea">
+                                        <textarea rows="4" placeholder="Отзыв и пожелания нам ;)"></textarea>
+                                    </div>
+                                </div>
+                                <div class="index-feedback__form-item">
+                                    <button type="submit" class="button -outline">Оставить отзыв</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -893,10 +1034,13 @@
             0: {
                 items: 1
             },
-            600: {
+            768: {
                 items: 2
             },
-            1000: {
+            980: {
+                items: 3
+            },
+            1281: {
                 items: 4
             }
         }
@@ -944,21 +1088,17 @@
 
     let owl3 = $('.owl-feedback');
     owl3.owlCarousel({
-        margin: 0,
+        margin: 20,
         loop: true,
         nav: false,
         dots: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-        }
+        items: 1
     })
     $(".feedback-carousel .owl-carousel-nav__next").click(function(){
-        owl1.trigger("next.owl.carousel");
+        owl3.trigger("next.owl.carousel");
     });
     $(".feedback-carousel .owl-carousel-nav__prev").click(function(){
-        owl1.trigger("prev.owl.carousel");
+        owl3.trigger("prev.owl.carousel");
     });
 </script>
 </html>

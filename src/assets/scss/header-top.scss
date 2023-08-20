@@ -40,10 +40,16 @@
         line-height: 1.4;
     }
 
-    &__social, &__user {
+    &__social {
         display: flex;
         align-items: flex-end;
         gap: 0 8px;
+    }
+
+    &__user {
+        display: flex;
+        align-items: flex-end;
+        gap: 0 10px;
     }
 
     &__contacts {
@@ -54,6 +60,8 @@
     }
 
     &__search {
+        display: flex;
+        align-items: flex-end;
         width: 160px;
     }
 
@@ -73,6 +81,51 @@
             position: absolute;
             top: -5px;
             left: 16px;
+        }
+    }
+
+    @include media_breakpoint(tablet) {
+        &__logo {
+            width: 180px;
+            height: 28px;
+        }
+    }
+
+    @include media_breakpoint(mobile) {
+        padding: 8px 0 0;
+        height: auto;
+
+        &__brand {
+            width: 100%;
+            flex-direction: column-reverse;
+        }
+
+        &__actions {
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 50px;
+        }
+
+        &__description {
+            justify-content: center;
+            padding-bottom: 8px;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        &__logo {
+            width: 135px;
+            height: 21px;
+        }
+
+        &__cart-amount {
+            margin-left: auto;
+        }
+
+        &__search {
+            width: 100%;
+            max-width: 160px;
         }
     }
 }

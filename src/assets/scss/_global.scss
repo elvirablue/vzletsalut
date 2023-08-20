@@ -53,6 +53,7 @@ input, select, textarea {
 	opacity: 1;
 
 	&::placeholder {
-		color: var(--text-color);
+		color: var(--text-light-color);
+        opacity: 1;
 	}
 }
