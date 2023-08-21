@@ -1778,7 +1778,7 @@ textarea::placeholder {
   font-size: 14px;
   padding-left: 100px;
   text-align: justify;
-  background-image: url("/img/girl-in-swimsuit.png");
+  background-image: url("../img/girl-in-swimsuit.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 700px 940px;
@@ -2050,7 +2050,7 @@ textarea::placeholder {
 
 .error-page {
   display: block;
-  background-image: url("/img/error-page.png");
+  background-image: url("../img/error-page.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
