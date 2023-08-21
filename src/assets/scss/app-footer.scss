@@ -1,0 +1,14 @@
+.app-footer {
+    flex-shrink: 0;
+    display: flex;
+    background-color: black;
+    width: 100%;
+    padding: 64px 0;
+    margin-top: auto;
+
+    &__logo {
+        display: block;
+        width: 220px;
+        height: 34px;
+    }
+}
