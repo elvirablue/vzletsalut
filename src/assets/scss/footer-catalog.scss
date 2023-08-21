@@ -1,0 +1,39 @@
+.footer-catalog {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0;
+        break-inside: avoid;
+    }
+
+    &__link {
+        display: inline-flex;
+        padding: 4px 0;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: color ease-in-out 0.2s;
+
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+
+    > .footer-catalog__item {
+        padding-top: 20px;
+
+        > .footer-catalog {
+            .footer-catalog__item {
+                padding-top: 0;
+            }
+
+            .footer-catalog__link {
+                font-weight: 400;
+                text-transform: none;
+            }
+        }
+    }
+}

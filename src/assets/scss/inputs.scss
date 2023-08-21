@@ -26,23 +26,22 @@
 
     &.-textarea {
         .input__field {
-            height: 104px;
+            height: 70px;
         }
 
         textarea {
-            padding: 16px 22px;
+            padding: 16px 0;
         }
     }
 
     input, textarea {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        top: 1px;
+        bottom: 1px;
+        left: 22px;
+        right: 22px;
         display: block;
-        width: 100%;
-        padding: 12px 22px;
+        padding: 12px 0;
         font: inherit;
         color: inherit;
 

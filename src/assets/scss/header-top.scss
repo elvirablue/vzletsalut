@@ -74,16 +74,6 @@
         white-space: nowrap;
     }
 
-    .button.-cart {
-        position: relative;
-
-        .badge {
-            position: absolute;
-            top: -5px;
-            left: 16px;
-        }
-    }
-
     @include media_breakpoint(tablet) {
         &__logo {
             width: 180px;

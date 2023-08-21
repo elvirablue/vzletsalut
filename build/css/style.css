@@ -262,6 +262,10 @@ textarea::placeholder {
   margin: -20px;
 }
 
+.row.-fill-height {
+  height: 100%;
+}
+
 .row.-no-wrap {
   flex-wrap: nowrap !important;
 }
@@ -371,6 +375,11 @@ textarea::placeholder {
   max-width: 25%;
 }
 
+.row .col-2 {
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+
 .row .col-1 {
   flex: 0 0 8.3333333333%;
   max-width: 8.3333333333%;
@@ -447,7 +456,7 @@ textarea::placeholder {
 
 .button:disabled,
 .button.-disabled {
-  opacity: 0.5;
+  opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
@@ -564,6 +573,16 @@ textarea::placeholder {
   background: none;
 }
 
+.button.-cart {
+  position: relative;
+}
+
+.button.-cart .badge {
+  position: absolute;
+  top: -5px;
+  left: 16px;
+}
+
 .input {
   position: relative;
   display: flex;
@@ -590,23 +609,22 @@ textarea::placeholder {
 }
 
 .input.-textarea .input__field {
-  height: 104px;
+  height: 70px;
 }
 
 .input.-textarea textarea {
-  padding: 16px 22px;
+  padding: 16px 0;
 }
 
 .input input,
 .input textarea {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 1px;
+  bottom: 1px;
+  left: 22px;
+  right: 22px;
   display: block;
-  width: 100%;
-  padding: 12px 22px;
+  padding: 12px 0;
   font: inherit;
   color: inherit;
 }
@@ -731,6 +749,7 @@ textarea::placeholder {
   min-width: 320px;
   min-height: 100vh;
   margin: 0 auto;
+  padding-top: 160px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: var(--text-color);
@@ -738,6 +757,11 @@ textarea::placeholder {
 }
 
 .app-header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
   max-width: 100%;
 }
 
@@ -824,16 +848,6 @@ textarea::placeholder {
   line-height: 1;
   color: var(--text-light-color);
   white-space: nowrap;
-}
-
-.header-top .button.-cart {
-  position: relative;
-}
-
-.header-top .button.-cart .badge {
-  position: absolute;
-  top: -5px;
-  left: 16px;
 }
 
 .header-bottom {
@@ -1083,12 +1097,125 @@ textarea::placeholder {
   width: 100%;
   padding: 64px 0;
   margin-top: auto;
+  color: var(--surface-color);
+  font-size: 12px;
 }
 
 .app-footer__logo {
   display: block;
   width: 220px;
   height: 34px;
+}
+
+.app-footer__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.app-footer__block {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.app-footer__columns-catalog {
+  display: block;
+  -moz-columns: 4;
+  columns: 4;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  padding-left: 20px;
+}
+
+.app-footer__social,
+.app-footer__users {
+  display: flex;
+  justify-content: center;
+  gap: 0 8px;
+  padding-bottom: 22px;
+}
+
+.app-footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 22px;
+  gap: 2px;
+}
+
+.app-footer__contacts .button {
+  justify-content: flex-start;
+  font-weight: 700;
+}
+
+.app-footer__actions {
+  display: flex;
+  justify-content: center;
+  margin: auto auto 0;
+}
+
+.app-footer__actions .button {
+  font-size: 12px;
+}
+
+.app-footer__copyright {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 0;
+}
+
+.app-footer__copyright .button {
+  margin-top: 4px;
+  justify-content: flex-start;
+}
+
+.app-footer__copyright .button img {
+  width: 80px;
+  height: 11px;
+}
+
+.footer-catalog {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-catalog__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0;
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.footer-catalog__link {
+  display: inline-flex;
+  padding: 4px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color ease-in-out 0.2s;
+}
+
+.footer-catalog__link:hover {
+  color: var(--primary-color);
+}
+
+.footer-catalog > .footer-catalog__item {
+  padding-top: 20px;
+}
+
+.footer-catalog > .footer-catalog__item > .footer-catalog .footer-catalog__item {
+  padding-top: 0;
+}
+
+.footer-catalog > .footer-catalog__item > .footer-catalog .footer-catalog__link {
+  font-weight: 400;
+  text-transform: none;
 }
 
 .index-fs__description {
@@ -1853,23 +1980,22 @@ textarea::placeholder {
 }
 
 .input.-textarea .input__field {
-  height: 104px;
+  height: 70px;
 }
 
 .input.-textarea textarea {
-  padding: 16px 22px;
+  padding: 16px 0;
 }
 
 .input input,
 .input textarea {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 1px;
+  bottom: 1px;
+  left: 22px;
+  right: 22px;
   display: block;
-  width: 100%;
-  padding: 12px 22px;
+  padding: 12px 0;
   font: inherit;
   color: inherit;
 }
@@ -1966,6 +2092,16 @@ textarea::placeholder {
   .app-catalog__columns {
     -moz-column-count: 3;
     column-count: 3;
+  }
+
+  .app-footer__columns-catalog {
+    -moz-columns: 3;
+    columns: 3;
+    padding-left: 0;
+  }
+
+  .app-footer__actions {
+    margin: 0;
   }
 
   .index-fs__description .card {
@@ -2167,6 +2303,10 @@ textarea::placeholder {
 
   .owl-carousel-nav {
     padding: 0;
+  }
+
+  .app {
+    padding-top: 169px;
   }
 
   .header-top {
@@ -2393,6 +2533,27 @@ textarea::placeholder {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
+  }
+
+  .app-footer__columns-catalog {
+    -moz-columns: 2;
+    columns: 2;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .app-footer__social,
+  .app-footer__contacts,
+  .app-footer__users,
+  .app-footer__actions,
+  .app-footer__copyright {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .app-footer__users {
+    padding-right: 10px;
   }
 
   .index-fs__description .h1,
@@ -2625,6 +2786,10 @@ textarea::placeholder {
     padding: 10px;
   }
 
+  .row.-fill-height-lg {
+    height: 100%;
+  }
+
   .row .col-lg-12 {
     flex: 0 0 100%;
     max-width: 100%;
@@ -2715,19 +2880,29 @@ textarea::placeholder {
     max-width: 100%;
   }
 
+  .row .col-md-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+
+  .row .col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
   .row .col-md-8 {
     flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
 
-  .row .col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
   .row .col-md-7 {
     flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
+  }
+
+  .row .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
   .row .col-md-5 {
@@ -2743,6 +2918,16 @@ textarea::placeholder {
   .row .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+
+  .row .col-md-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+
+  .row .col-md-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
   }
 
   .row .col-md-auto {
