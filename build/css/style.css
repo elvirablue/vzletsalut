@@ -2340,6 +2340,7 @@ textarea::placeholder {
     width: 100%;
     max-width: 520px;
     padding-top: 52px;
+    padding-right: 20px;
     margin-right: 0;
     font-size: 32px;
   }
@@ -2359,6 +2360,7 @@ textarea::placeholder {
 
   .index-certificates__image-arrow {
     right: 70px;
+    bottom: -100px;
   }
 
   .index-map-shops__map {
@@ -2869,13 +2871,19 @@ textarea::placeholder {
     border-radius: 0;
   }
 
+  .index-certificates__content .row {
+    flex-direction: column-reverse;
+  }
+
   .index-certificates__carousel {
     margin: -200px calc(-1 * var(--mobile-padding)) 0;
   }
 
   .index-certificates__image {
-    height: 50vw;
-    max-height: 300px;
+    height: 100vw;
+    max-height: 440px;
+    margin-top: -30vw;
+    margin-left: -30vw;
   }
 
   .index-certificates__image img {
@@ -2884,16 +2892,18 @@ textarea::placeholder {
   }
 
   .index-certificates__title {
-    max-width: none;
-    margin-top: -20px;
-    padding: 0 10px 220px;
-    font-size: 28px;
+    max-width: 550px;
+    margin: auto;
+    padding-top: 32px;
+    padding-left: 28vw;
+    padding-right: 20px;
+    font-size: 24px;
+    text-align: right;
   }
 
   .index-certificates__image-arrow {
-    bottom: auto;
-    top: -80px;
     right: 20px;
+    bottom: -100px;
     transform: rotate(90deg) scale(0.75);
   }
 
