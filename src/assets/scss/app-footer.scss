@@ -22,13 +22,6 @@
         padding-top: 30px;
     }
 
-    &__block {
-        display: flex;
-        flex-direction: column;
-        padding-top: 20px;
-        break-inside: avoid;
-    }
-
     &__columns-catalog {
         display: block;
         columns: 4;
@@ -41,6 +34,7 @@
         justify-content: center;
         gap: 0 8px;
         padding-bottom: 22px;
+        padding-top: 20px;
     }
 
     &__contacts {
@@ -107,6 +101,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             margin: 0;
+            padding-top: 0;
         }
 
         &__users {

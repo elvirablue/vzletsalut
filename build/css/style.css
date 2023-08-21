@@ -1115,14 +1115,6 @@ textarea::placeholder {
   padding-top: 30px;
 }
 
-.app-footer__block {
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-  -moz-column-break-inside: avoid;
-  break-inside: avoid;
-}
-
 .app-footer__columns-catalog {
   display: block;
   -moz-columns: 4;
@@ -1138,6 +1130,7 @@ textarea::placeholder {
   justify-content: center;
   gap: 0 8px;
   padding-bottom: 22px;
+  padding-top: 20px;
 }
 
 .app-footer__contacts {
@@ -2550,6 +2543,7 @@ textarea::placeholder {
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0;
+    padding-top: 0;
   }
 
   .app-footer__users {
