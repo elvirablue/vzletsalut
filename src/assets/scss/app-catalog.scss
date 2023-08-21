@@ -62,16 +62,9 @@
         }
 
         > .app-catalog__list {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: flex-start;
             width: 100%;
 
             .app-catalog__list {
-                display: flex;
-                flex-direction: column;
                 padding-left: 21px;
             }
         }

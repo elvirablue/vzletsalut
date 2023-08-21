@@ -24,7 +24,7 @@
 
     &__columns-catalog {
         display: block;
-        columns: 4;
+        column-count: 4;
         column-gap: 40px;
         padding-left: 20px;
     }
@@ -78,7 +78,7 @@
 
     @include media_breakpoint(tablet) {
         &__columns-catalog {
-            columns: 3;
+            column-count: 3;
             padding-left: 0;
         }
 
@@ -89,7 +89,7 @@
 
     @include media_breakpoint(mobile) {
         &__columns-catalog {
-            columns: 2;
+            column-count: 2;
             column-gap: 20px;
         }
 
