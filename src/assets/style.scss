@@ -30,19 +30,8 @@
 @import "scss/index-certificates";
 @import "scss/index-map-shops";
 @import "scss/index-feedback";
-//@import "scss/app-search";
-//@import "scss/app-account";
-//@import "scss/app-main";
-@import "scss/app-popup";
-//@import "scss/first-screen";
-//@import "scss/index-title";
-//@import "scss/form";
 @import "scss/inputs";
-//@import "scss/hamburger-menu";
-//
-//@import "scss/aside";
-//@import "scss/profile";
-//@import "scss/breadcrumbs";
-//@import "scss/special-buttons";
-//@import "scss/side-navigation";
-//@import "scss/navigation-content-mobile";
+
+@import "scss/pages/error";
+
+@import "scss/app-popup";

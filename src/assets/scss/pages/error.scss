@@ -1,0 +1,47 @@
+.error-page {
+    display: block;
+    background-image: url("/img/error-page.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - var(--header-height));
+
+        .number {
+            display: block;
+            font-size: 200px;
+            font-weight: 400;
+        }
+
+        .title {
+            display: block;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .text {
+            display: block;
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .text {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,6 +1,10 @@
 
     function loaded() {
         window.addEventListener('resize', closeNavigationMobile)
+        const headerHeight = document.querySelector('.app-header')?.clientHeight ?? 0;
+        const breadcrumbsHeight = document.querySelector('.app-breadcrumbs')?.clientHeight ?? 0;
+        document.body.style.setProperty('--header-height', (`${headerHeight + breadcrumbsHeight}px`))
+
     }
 
     function isCursorOnElem( event, elem ){
