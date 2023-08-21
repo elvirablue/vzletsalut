@@ -29,6 +29,7 @@
         top: -30px;
 
         svg {
+            flex-shrink: 0;
             width: 70px;
             height: 92px;
             color: var(--primary-color);
@@ -95,6 +96,118 @@
                 width: auto;
                 height: 150vw;
                 max-height: 350px;
+            }
+        }
+    }
+
+
+    &.-test {
+        .index-buy__image {
+            display: none;
+        }
+
+        .index-buy__image-arrow {
+            left: 20px;
+        }
+
+        .index-buy__content {
+            margin: 0;
+            width: 100%;
+            font-size: 14px;
+            padding-left: 100px;
+            text-align: justify;
+            background-image: url("/img/girl-in-swimsuit.png");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: 700px 940px;
+        }
+
+        .index-buy__content-item {
+            max-width: 650px;
+            padding-bottom: 20px;
+        }
+
+        @include media_breakpoint(small-desktop) {
+            .index-buy__content {
+                padding: 60px;
+                font-size: 12px;
+                background-size: 45vw auto;
+            }
+
+            .index-buy__content-item {
+                max-width: calc(100% - 45vw);
+            }
+        }
+
+        @include media_breakpoint(tablet) {
+            .index-buy__image-arrow {
+                left: 0;
+            }
+            .index-buy__content {
+                padding-left: 0;
+                background-size: 550px auto;
+                background-position: right bottom;
+            }
+
+            .index-buy__content-item {
+                max-width: calc(100% - 550px);
+            }
+
+            .index-buy__content-item:nth-child(2),
+            .index-buy__content-item:nth-child(3) {
+                max-width: 100%;
+            }
+
+            .index-buy__content-item:nth-child(8) {
+                max-width: calc(100% - 550px);
+            }
+        }
+
+        @media only screen and (min-width: 870px) and (max-width: 1120px) {
+            .index-buy__content-item:nth-child(2),
+            .index-buy__content-item:nth-child(3),
+            .index-buy__content-item:nth-child(4){
+                max-width: 100%;
+            }
+            .index-buy__content-item:nth-child(8) {
+                max-width: calc(100% - 550px);
+            }
+        }
+
+        @media only screen and (min-width: 890px) and (max-width: 869px) {
+            .index-buy__content-item:nth-child(2),
+            .index-buy__content-item:nth-child(3),
+            .index-buy__content-item:nth-child(6),
+            .index-buy__content-item:nth-child(4) {
+                max-width: 100%;
+            }
+            .index-buy__content-item:nth-child(8) {
+                max-width: calc(100% - 550px);
+            }
+        }
+
+        @media only screen and (max-width: 889px) {
+            .index-buy__content {
+                background: none;
+            }
+
+            .index-buy__image {
+                display: block;
+                width: 88vw;
+                height: 120vw;
+                max-height: 500px;
+                margin: 0 auto;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    max-height: none;
+                    object-position: center;
+                }
+            }
+
+            .index-buy__content-item {
+                max-width: none !important;
             }
         }
     }

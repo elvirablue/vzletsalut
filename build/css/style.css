@@ -752,7 +752,7 @@ textarea::placeholder {
   padding-top: 160px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  color: var(--text-color);
+  color: var(--main-color);
   overflow: hidden;
 }
 
@@ -833,6 +833,11 @@ textarea::placeholder {
   flex-direction: column;
   justify-content: flex-end;
   font-size: 16px;
+  gap: 4px;
+}
+
+.header-top__contacts .button.-text {
+  line-height: 1;
 }
 
 .header-top__search {
@@ -1368,7 +1373,7 @@ textarea::placeholder {
   align-items: stretch;
   justify-content: center;
   width: 100%;
-  padding: 22px;
+  padding: 12px;
   color: var(--main-color);
   border-radius: 20px;
   border: 0.5px solid var(--surface-color);
@@ -1408,9 +1413,11 @@ textarea::placeholder {
 .sale-carousel__promo-text {
   display: inline-flex;
   padding: 0 8px;
+  margin-left: auto;
   margin-right: auto;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
+  white-space: nowrap;
   color: var(--primary-color);
 }
 
@@ -1726,6 +1733,7 @@ textarea::placeholder {
 }
 
 .index-buy__image-arrow svg {
+  flex-shrink: 0;
   width: 70px;
   height: 92px;
   color: var(--primary-color);
@@ -1754,6 +1762,31 @@ textarea::placeholder {
 .index-buy__image img {
   -o-object-position: bottom left;
   object-position: bottom left;
+}
+
+.index-buy.-test .index-buy__image {
+  display: none;
+}
+
+.index-buy.-test .index-buy__image-arrow {
+  left: 20px;
+}
+
+.index-buy.-test .index-buy__content {
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  padding-left: 100px;
+  text-align: justify;
+  background-image: url("/img/girl-in-swimsuit.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 700px 940px;
+}
+
+.index-buy.-test .index-buy__content-item {
+  max-width: 650px;
+  padding-bottom: 20px;
 }
 
 .index-certificates {
@@ -2021,6 +2054,8 @@ textarea::placeholder {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: var(--main-color);
+  text-align: center;
 }
 
 .error-page__content {
@@ -2028,17 +2063,22 @@ textarea::placeholder {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 560px;
   height: calc(100vh - var(--header-height));
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .error-page__content .number {
   display: block;
+  padding-bottom: 10px;
   font-size: 200px;
   font-weight: 400;
 }
 
 .error-page__content .title {
   display: block;
+  padding-bottom: 54px;
   font-size: 30px;
   font-weight: 700;
 }
@@ -2053,14 +2093,40 @@ textarea::placeholder {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 54px 0;
 }
 
 .error-page__actions .text {
   display: block;
   width: 100%;
+  padding-bottom: 20px;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
+}
+
+.error-page__button {
+  display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: underline;
+  white-space: nowrap;
+  transition: color ease-in-out 0.2s;
+}
+
+.error-page__button svg {
+  width: 38px;
+  height: 29px;
+  color: var(--primary-color);
+}
+
+.error-page__button.-back svg {
+  transform: rotate(180deg);
+}
+
+.error-page__button:hover {
+  color: var(--primary-color);
 }
 
 .app-popup {
@@ -2247,6 +2313,29 @@ textarea::placeholder {
     max-height: 650px;
   }
 
+  .index-buy.-test .index-buy__image-arrow {
+    left: 0;
+  }
+
+  .index-buy.-test .index-buy__content {
+    padding-left: 0;
+    background-size: 550px auto;
+    background-position: right bottom;
+  }
+
+  .index-buy.-test .index-buy__content-item {
+    max-width: calc(100% - 550px);
+  }
+
+  .index-buy.-test .index-buy__content-item:nth-child(2),
+  .index-buy.-test .index-buy__content-item:nth-child(3) {
+    max-width: 100%;
+  }
+
+  .index-buy.-test .index-buy__content-item:nth-child(8) {
+    max-width: calc(100% - 550px);
+  }
+
   .index-certificates__title {
     width: 100%;
     max-width: 520px;
@@ -2301,6 +2390,69 @@ textarea::placeholder {
     object-position: left bottom;
     -o-object-fit: cover;
     object-fit: cover;
+  }
+
+  .error-page__content {
+    max-height: 700px;
+  }
+
+  .error-page__content .number {
+    font-size: 160px;
+  }
+
+  .error-page__content .title {
+    font-size: 28px;
+  }
+
+  .error-page__content .text {
+    font-size: 36px;
+  }
+
+  .error-page__actions {
+    justify-content: center;
+  }
+
+  .error-page__actions .text {
+    font-size: 24px;
+  }
+
+  .error-page__button {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .error-page__button.-back {
+    margin-right: 50px;
+  }
+
+  .error-page__button.-main {
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 889px) {
+  .index-buy.-test .index-buy__content {
+    background: none;
+  }
+
+  .index-buy.-test .index-buy__image {
+    display: block;
+    width: 88vw;
+    height: 120vw;
+    max-height: 500px;
+    margin: 0 auto;
+  }
+
+  .index-buy.-test .index-buy__image img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    -o-object-position: center;
+    object-position: center;
+  }
+
+  .index-buy.-test .index-buy__content-item {
+    max-width: none !important;
   }
 }
 
@@ -2648,7 +2800,12 @@ textarea::placeholder {
   }
 
   .sale-carousel__inner {
-    padding: 20px;
+    padding: 8px;
+  }
+
+  .sale-carousel__promo .badge {
+    height: 36px;
+    font-size: 18px;
   }
 
   .certificates-carousel {
@@ -2802,6 +2959,58 @@ textarea::placeholder {
 
   .index-feedback__form-item .button {
     width: 100%;
+  }
+
+  .error-page {
+    height: 400px;
+    background-position: 50% top;
+  }
+
+  .error-page__content {
+    height: auto;
+    max-width: 300px;
+    margin: 0 0 0 auto;
+  }
+
+  .error-page__content .number {
+    padding-top: 20px;
+    font-size: 60px;
+  }
+
+  .error-page__content .title {
+    padding-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .error-page__content .text {
+    font-size: 24px;
+  }
+
+  .error-page__actions {
+    padding: 80px 0 20px;
+  }
+
+  .error-page__actions .text {
+    padding-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .error-page__button {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  .error-page__button svg {
+    width: 28px;
+    height: 19px;
+  }
+
+  .error-page__button.-back {
+    margin-right: 30px;
+  }
+
+  .error-page__button.-main {
+    margin-left: 46px;
   }
 }
 
@@ -2996,6 +3205,16 @@ textarea::placeholder {
   .index-fs__list-item {
     max-width: none;
   }
+
+  .index-buy.-test .index-buy__content {
+    padding: 60px;
+    font-size: 12px;
+    background-size: 45vw auto;
+  }
+
+  .index-buy.-test .index-buy__content-item {
+    max-width: calc(100% - 45vw);
+  }
 }
 
 @media (min-width: 1280px) and (max-width: 1600px), only screen and (max-width: 1279px) {
@@ -3005,6 +3224,31 @@ textarea::placeholder {
 
   .app-navigation__item:nth-last-child(-n+2) {
     padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 870px) and (max-width: 1120px) {
+  .index-buy.-test .index-buy__content-item:nth-child(2),
+  .index-buy.-test .index-buy__content-item:nth-child(3),
+  .index-buy.-test .index-buy__content-item:nth-child(4) {
+    max-width: 100%;
+  }
+
+  .index-buy.-test .index-buy__content-item:nth-child(8) {
+    max-width: calc(100% - 550px);
+  }
+}
+
+@media only screen and (min-width: 890px) and (max-width: 869px) {
+  .index-buy.-test .index-buy__content-item:nth-child(2),
+  .index-buy.-test .index-buy__content-item:nth-child(3),
+  .index-buy.-test .index-buy__content-item:nth-child(6),
+  .index-buy.-test .index-buy__content-item:nth-child(4) {
+    max-width: 100%;
+  }
+
+  .index-buy.-test .index-buy__content-item:nth-child(8) {
+    max-width: calc(100% - 550px);
   }
 }
 

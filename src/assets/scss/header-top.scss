@@ -57,6 +57,11 @@
         flex-direction: column;
         justify-content: flex-end;
         font-size: 16px;
+        gap: 4px;
+
+        .button.-text {
+            line-height: 1;
+        }
     }
 
     &__search {
