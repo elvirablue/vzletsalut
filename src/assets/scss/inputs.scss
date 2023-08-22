@@ -398,3 +398,32 @@
     }
 }
 
+.counter {
+    display: flex;
+    width: 120px;
+    height: var(--action-small-height);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--root-radius);
+    overflow: hidden;
+
+    .minus, .plus {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: var(--action-small-height);
+        height: var(--action-small-height);
+        font-size: 30px;
+        line-height: 28px;
+        color: var(--surface-color);
+        background-color: var(--primary-color);
+    }
+
+    input {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+}
+

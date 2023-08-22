@@ -43,6 +43,7 @@
     &.-small {
         height: var(--action-small-height);
         font-size: 16px;
+        border-radius: 20px;
 
         &:not(.-text):not(.-icon) {
             min-width: 174px;
