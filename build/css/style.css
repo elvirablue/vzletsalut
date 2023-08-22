@@ -18,9 +18,14 @@
   --action-height: 54px;
   --action-small-height: 32px;
   --content-width: 1600px;
+  --content-small-width: 1160px;
   --desktop-padding: 80px;
   --mobile-padding: 10px;
   --root-radius: 5px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -173,22 +178,20 @@ textarea::placeholder {
   background-color: var(--primary-color);
 }
 
+.characteristics {
+  display: block;
+  width: 100%;
+}
+
 .characteristics__list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 10px;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  gap: 10px;
+  width: 100%;
   padding-top: 24px;
 }
 
-.characteristics__list .a-name {
-  width: 60%;
-  max-width: 60%;
-}
-
 .characteristics__list .a-value {
-  width: 40%;
-  max-width: 40%;
   text-align: right;
   font-weight: 700;
 }
@@ -198,6 +201,7 @@ textarea::placeholder {
   width: 100%;
   font-size: 16px;
   font-family: "Inter", sans-serif;
+  line-height: 1.25;
   color: var(--text-color);
 }
 
@@ -302,6 +306,33 @@ textarea::placeholder {
   justify-content: flex-start;
 }
 
+.--text-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+}
+
+.--text-clamp.-row-2 {
+  -webkit-line-clamp: 2;
+}
+
+.--text-clamp.-row-3 {
+  -webkit-line-clamp: 3;
+}
+
+.--p-0 {
+  padding: 0 !important;
+}
+
+.--ml-auto {
+  margin-left: auto;
+}
+
+.--mr-auto {
+  margin-right: auto;
+}
+
 .--gap-8 {
   gap: 8px;
 }
@@ -318,6 +349,14 @@ textarea::placeholder {
   gap: 20px;
 }
 
+.--gap-32 {
+  gap: 32px;
+}
+
+.--bg-gray {
+  background-color: var(--gray-color);
+}
+
 .--primary-color {
   color: var(--primary-color) !important;
 }
@@ -328,6 +367,18 @@ textarea::placeholder {
 
 .--flex-center {
   justify-content: center;
+  align-items: center;
+}
+
+.--flex-align-center {
+  align-items: center;
+}
+
+.--flex-jc-center {
+  justify-content: center;
+}
+
+.--flex-ai-center {
   align-items: center;
 }
 
@@ -768,6 +819,14 @@ textarea::placeholder {
   background: none;
 }
 
+.button.-text.-primary {
+  color: var(--primary-color);
+}
+
+.button.-text.-primary:not(.-disabled):not(:disabled):hover {
+  color: var(--main-color);
+}
+
 .button.-cart {
   position: relative;
 }
@@ -786,6 +845,7 @@ textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
+  text-align: left;
   color: var(--main-color);
   transition-property: background-color, color, opacity, font-weight;
   transition-timing-function: ease-in-out;
@@ -3006,11 +3066,17 @@ textarea::placeholder {
   backdrop-filter: blur(10px);
 }
 
+.product__image {
+  max-width: 400px;
+}
+
 .product__main {
   display: grid;
-  grid-template-columns: 27% 1fr 1fr 40px;
-  grid-template-areas: "promo title title favorite" "images title title favorite" "images info characteristics characteristics" "images price characteristics characteristics";
+  grid-template-columns: 1fr 0.75fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "promo title favorite" "images info characteristics" "images price characteristics";
   gap: 20px 40px;
+  justify-content: flex-start;
 }
 
 .product__main .a-promo {
@@ -3041,14 +3107,31 @@ textarea::placeholder {
   grid-area: price;
 }
 
-.product__description .h3 {
+.product.-card .product__main {
+  grid-template-columns: 27% 1fr 1fr 40px;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas: "promo title title favorite" "images title title favorite" "images info characteristics characteristics" "images price characteristics characteristics";
+}
+
+.product-description .h3,
+.product-description .h2 {
   padding-bottom: 12px;
 }
 
-.product__actions {
+.product-description.-manufacturer .logo {
+  flex-shrink: 0;
+  width: 30%;
+  height: auto;
+  max-width: 436px;
+  max-height: 184px;
+}
+
+.product-actions {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  min-height: 90px;
   gap: 20px;
 }
 
@@ -3133,13 +3216,14 @@ textarea::placeholder {
   color: var(--primary-color);
 }
 
-.page .h1 {
+.page-title {
   padding-top: 24px;
   text-align: center;
 }
 
-.page__content {
+.page-item {
   display: block;
+  width: 100%;
   padding-top: 64px;
   padding-bottom: 64px;
 }
@@ -3214,7 +3298,7 @@ textarea::placeholder {
 }
 
 .catalog-page__top {
-  display: block;
+  display: flex;
   width: 100%;
   height: 32px;
   margin-bottom: -16px;
@@ -4130,6 +4214,10 @@ textarea::placeholder {
 }
 
 @media (min-width: 1280px) and (max-width: 1600px), only screen and (min-width: 1601px) {
+  .container.-small {
+    max-width: var(--content-small-width);
+  }
+
   .container.-row-lg {
     flex-direction: row;
   }
