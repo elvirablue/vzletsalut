@@ -1,0 +1,41 @@
+.app-breadcrumbs {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    color: var(--text-light-color);
+
+    &__item {
+        display: flex;
+        align-items: center;
+        transition: color ease-in-out 0.1s;
+
+        svg {
+            display: inline-flex;
+            width: 5px;
+            height: 8px;
+            margin: 0 8px;
+        }
+
+        &:not(:last-child):hover {
+            color: var(--main-color);
+        }
+
+        &:last-child {
+            .app-breadcrumbs__link {
+                font-weight: 700;
+                text-decoration: none;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        padding: 4px 0;
+        text-decoration: underline;
+    }
+
+    @include media_breakpoint(desktop) {
+        padding: 0 20px;
+    }
+}

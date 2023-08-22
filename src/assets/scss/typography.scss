@@ -23,6 +23,17 @@
 .h3 {
     display: block;
     margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+
+    @include media_breakpoint(tablet) {
+        font-size: 20px;
+    }
+}
+
+.large-text {
+    display: block;
+    margin: 0;
     font-size: 20px;
     font-weight: 700;
 

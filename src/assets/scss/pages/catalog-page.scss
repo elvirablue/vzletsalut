@@ -1,0 +1,24 @@
+.catalog-page {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 40px;
+    }
+
+    &__top {
+        display: block;
+        width: 100%;
+        height: 32px;
+        margin-bottom: -16px;
+    }
+
+}

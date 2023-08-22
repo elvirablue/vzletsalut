@@ -14,6 +14,7 @@
 @import "scss/app";
 @import "scss/header-top";
 @import "scss/header-bottom";
+@import "scss/app-breabcrumbs";
 @import "scss/app-navigation";
 @import "scss/app-catalog";
 @import "scss/app-footer";
@@ -32,6 +33,11 @@
 @import "scss/index-feedback";
 @import "scss/inputs";
 
+@import "scss/product/product";
+
 @import "scss/pages/error";
+@import "scss/pages/page";
+@import "scss/pages/aside";
+@import "scss/pages/catalog-page";
 
 @import "scss/app-popup";

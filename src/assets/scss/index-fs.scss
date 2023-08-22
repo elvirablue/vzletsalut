@@ -40,6 +40,13 @@
         }
     }
 
+    &__subtitle {
+        display: block;
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -103,10 +110,8 @@
     }
 
     @include media_breakpoint(small-desktop) {
-        &__description {
-            .h1, .h3 {
+        &__title, &__subtitle {
                 max-width: calc(100% - 50px);
-            }
         }
 
         &__list {
@@ -123,10 +128,10 @@
             .card {
                 padding: 40px 20px;
             }
+        }
 
-            .h1, .h3 {
-                //max-width: calc(100% - 120px);
-            }
+        &__subtitle {
+            font-size: 18px;
         }
 
         &__list {

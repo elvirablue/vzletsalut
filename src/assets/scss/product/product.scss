@@ -1,0 +1,58 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px;
+    gap: 20px;
+    border-radius: 20px;
+    border: 0.5px solid var(--surface-color);
+    background: var(--linear, linear-gradient(145deg, #BDBDBD 0%, rgba(255, 255, 255, 0.56) 100%));
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+
+    &__main {
+        display: grid;
+        grid-template-columns: 27% 1fr 1fr 40px;
+        grid-template-areas:
+            "promo title title favorite"
+            "images title title favorite"
+            "images info characteristics characteristics"
+            "images price characteristics characteristics";
+        gap: 20px 40px;
+
+        .a-promo {
+            grid-area: promo;
+        }
+        .a-title {
+            grid-area: title;
+        }
+        .a-favorite {
+            grid-area: favorite;
+        }
+        .a-images {
+            grid-area: images;
+        }
+        .a-info {
+            grid-area: info;
+        }
+        .a-characteristics {
+            grid-area: characteristics;
+        }
+        .a-price {
+            grid-area: price;
+        }
+    }
+
+    &__description {
+        .h3 {
+            padding-bottom: 12px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+    }
+}
