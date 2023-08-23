@@ -75,8 +75,8 @@
                     </div>
 
                     <div class="header-top__contacts --hidden-mobile">
-                        <a href="#" class="button -text">8 495 177 04 27</a>
-                        <a href="#" class="button -text">8 800 177 04 27</a>
+                        <a href="#" class="button -text --no-wrap">8 495 177 04 27</a>
+                        <a href="#" class="button -text --no-wrap">8 800 177 04 27</a>
                     </div>
 
                     <div class="header-top__search">
@@ -364,7 +364,12 @@
         <div class="page-item">
             <div class="container">
                 <div class="catalog-page">
-                    <aside class="aside -left">
+                    <aside id="asideFilters" class="aside -left -filters">
+                        <div class="aside__button-close">
+                            <button id="closeAsideFilters" type="button" class="button -icon --primary-color">
+                                <svg> <use xlink:href="img/sprite.svg#close"/></svg>
+                            </button>
+                        </div>
                         <div class="aside__catalog">
                             <ul class="aside__catalog-list">
                                 <li class="aside__catalog-item">
@@ -432,11 +437,12 @@
                     </aside>
                     <div class="catalog-page__inner">
                         <div class="catalog-page__top">
+                            <button id="openAsideFilters" class="button -outline -small --hidden-desktop">Фильтры</button>
                             <div style="width: 200px; height: 32px; border: 1px solid red;"></div>
                         </div>
                         <div class="product -card">
                             <div class="product__main">
-                                <div class="a-promo flex-row --flex-center --gap-12">
+                                <div class="a-promo">
                                     <span class="large-text --primary-color">WOW-цена</span>
                                     <span class="badge">-50%</span>
                                 </div>
@@ -448,7 +454,7 @@
                                 <div class="a-title">
                                     <div class="h2">Салют Z811 Инкогнито Салют Z811 Инкогнито Салют Z811 Инкогнито Салют Z811 Инкогнито</div>
                                 </div>
-                                <div class="a-info flex-column --gap-12">
+                                <div class="a-info flex-column --flex-ai-center --gap-12">
                                     <div class="h3">(1,2 х 13)</div>
                                     <div class="accent-font">Товар в наличии</div>
                                 </div>
@@ -495,7 +501,7 @@
                                     1. Золотые пальмы с серебристым мерцанием. 2. Красные звезды с мерцанием. 3. Эффект тысячи хризантем.
                                 </div>
                             </div>
-                            <div class="product-actions">
+                            <div class="product-actions --p-0">
                                 <button class="button-accent -vertical">
                                     <svg><use xlink:href="img/sprite.svg#video"/></svg>
                                     <span>Посмотреть видео</span>
@@ -516,7 +522,7 @@
                         </div>
                         <div class="product -card">
                             <div class="product__main">
-                                <div class="a-promo flex-row --flex-center --gap-12">
+                                <div class="a-promo">
                                     <span class="large-text --primary-color">WOW-цена</span>
                                     <span class="badge">-50%</span>
                                 </div>
@@ -528,7 +534,7 @@
                                 <div class="a-title">
                                     <div class="h2">Салют Z811 Инкогнито</div>
                                 </div>
-                                <div class="a-info flex-column --gap-12">
+                                <div class="a-info flex-column --flex-ai-center --gap-12">
                                     <div class="h3">(1,2 х 13)</div>
                                     <div class="accent-font">Товар в наличии</div>
                                 </div>
@@ -575,7 +581,7 @@
                                     1. Золотые пальмы с серебристым мерцанием. 2. Красные звезды с мерцанием. 3. Эффект тысячи хризантем.
                                 </div>
                             </div>
-                            <div class="product-actions">
+                            <div class="product-actions --p-0">
                                 <button class="button-accent -vertical">
                                     <svg><use xlink:href="img/sprite.svg#video"/></svg>
                                     <span>Посмотреть видео</span>
@@ -842,7 +848,7 @@
                                     </button>
                                 </div>
                                 <div class="app-footer__copyright">
-                                    <span class="text-bold">Created by</span>
+                                    <span class="--text-bold">Created by</span>
                                     <a href="#" class="button -text">
                                         <img src="img/logo-media.svg" alt="">
                                     </a>

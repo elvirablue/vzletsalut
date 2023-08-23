@@ -19,7 +19,16 @@
         display: flex;
         width: 100%;
         height: 32px;
+        margin-top: 16px;
         margin-bottom: -16px;
+    }
+
+    @include media_breakpoint(small-desktop) {
+
+    }
+
+    @include media_breakpoint(tablet) {
+        flex-direction: column;
     }
 
 }

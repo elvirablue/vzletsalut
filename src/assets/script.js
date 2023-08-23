@@ -1,5 +1,13 @@
 
     function loaded() {
+        document.querySelector('#openAsideFilters').addEventListener('click', openAside)
+        document.querySelector('#closeAsideFilters').addEventListener('click', closeAside)
+        //const openAsideFilters = document.querySelector('#openAsideFilters')
+        //const closeAsideFilters = document.querySelector('#closeAsideFilters')
+        //if (openAsideFilters && closeAsideFilters) {
+        //    openAsideFilters.addEventListener('onclick', openAside)
+        //    closeAsideFilters.addEventListener('click', closeAside)
+        //}
         window.addEventListener('resize', closeNavigationMobile)
         const headerHeight = document.querySelector('.app-header')?.clientHeight ?? 0;
         const breadcrumbsHeight = document.querySelector('.app-breadcrumbs')?.clientHeight ?? 0;
@@ -17,6 +25,27 @@
             }
         }
 
+    }
+
+    function getHeaderHeight() {
+        const headerHeight = document.querySelector('.header-top').clientHeight || 0;
+        document.body.style.setProperty('--header-height', (`${headerHeight}px`))
+    }
+
+    function openAside() {
+        const elementAside = document.body.querySelector('#asideFilters')
+        getHeaderHeight()
+        elementAside.classList.add('-show');
+        setTimeout(() => {
+            elementAside.classList.add('-open');
+        }, 10)
+    }
+    function closeAside() {
+        const elementAside = document.body.querySelector('#asideFilters')
+        elementAside.classList.remove('-open');
+        setTimeout(() => {
+            elementAside.classList.remove('-show');
+        }, 250)
     }
 
     function isCursorOnElem( event, elem ){
@@ -61,11 +90,10 @@
 
     function openNavigationMobile() {
         document.body.classList.add('--hidden');
+        getHeaderHeight()
 
-        const headerHeight = document.querySelector('.header-top').clientHeight || 0;
         const elementNavigationWrap = document.querySelector('#navigationWrap');
         const elementNavigationContent = document.querySelector('#navigationMobile');
-        document.body.style.setProperty('--header-height', (`${headerHeight}px`))
         elementNavigationWrap.classList.add('-show');
         elementNavigationContent.classList.add('-show');
         setTimeout(() => {
