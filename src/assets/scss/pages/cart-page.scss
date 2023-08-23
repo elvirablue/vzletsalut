@@ -3,16 +3,34 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 16px;
+    gap: 100px;
 
     &__inner {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: flex-start;
         width: 100%;
         gap: 40px;
         padding-bottom: 64px;
+    }
+
+    &__checkout {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 820px;
+        margin: 0 auto;
+        gap: 20px;
+        padding-bottom: 64px;
+
+        .primary-line {
+            max-width: 220px;
+        }
+
+        .values-list {
+            max-width: 600px;
+        }
     }
 
     &__item {
@@ -21,5 +39,9 @@
         width: 100%;
         gap: 32px;
         align-items: center;
+    }
+
+    @include media_breakpoint(desktop) {
+        padding-left: 20px;
     }
 }

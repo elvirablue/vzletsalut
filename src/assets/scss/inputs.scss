@@ -7,10 +7,31 @@
         display: flex;
         align-items: center;
         width: 100%;
+        height: var(--action-large-height);
+        font-size: 20px;
         font-weight: 400;
         line-height: 1;
+        color: var(--text-color);
+        background-color: var(--gray-color);
+        border: 1px solid var(--gray-color);
         border-radius: 20px;
         transition: border ease-in-out 0.2s;
+    }
+
+    &.-decor {
+        .input__field {
+            border: 0.5px solid var(--surface-color);
+            background-color: var(--surface-color);
+            background-image: linear-gradient(rgba(189, 189, 189, 0.5) 0%, rgba(255, 255, 255, 1) 70%);
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        input, textarea, select {
+            &:focus + .input__field {
+                border: 1px solid var(--gray-color);
+            }
+        }
+
     }
 
     &.-simple {
@@ -22,32 +43,60 @@
             border: 1px solid var(--darker-gray-color);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
         }
-    }
 
-    &.-textarea {
-        .input__field {
-            height: 70px;
+        input, textarea, select {
+            top: 13px;
+
+            &:focus + .input__field {
+                border-color: var(--main-color);
+            }
         }
 
-        textarea {
-            padding: 16px 0;
+        &.-textarea {
+            .input__field {
+                height: 70px;
+            }
+
+            textarea {
+                padding-top: 4px;
+            }
         }
     }
 
-    input, textarea {
+    label {
         position: absolute;
-        top: 1px;
+        top: 12px;
+        left: 22px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--text-light-color);
+    }
+
+    input, textarea, select {
+        position: absolute;
+        top: 41px;
         bottom: 1px;
         left: 22px;
         right: 22px;
         display: block;
-        padding: 12px 0;
+        padding: 0 0 12px;
         font: inherit;
         color: inherit;
+        text-overflow: ellipsis;
+
+        option {
+            max-width: 300px;
+            white-space: normal;
+        }
 
         &:focus + .input__field {
-            border-color: var(--main-color);
+            border-color: var(--text-light-color);
         }
+    }
+
+    select {
+        left: 18px;
     }
 }
 

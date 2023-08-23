@@ -45,6 +45,11 @@
     }
 }
 
+.primary-line {
+    display: block;
+    height: 3px;
+   background-color: var(--primary-color);
+}
 .badge {
     flex-shrink: 0;
     display: inline-flex;
@@ -104,24 +109,24 @@
     }
 }
 
-.characteristics {
+.values-list {
     display: block;
     width: 100%;
 
-    &__list {
+    .h3 {
+        padding-bottom: 24px;
+    }
+
+    &__grid {
         display: grid;
-        grid-template-columns: 60% 1fr;
+        grid-template-columns: 1fr auto;
         gap: 10px;
         width: 100%;
-        padding-top: 24px;
 
-        .a-name {
-
-        }
-
-        .a-value {
-            text-align: right;
+        .value {
+            display: block;
             font-weight: 700;
+            text-align: right;
         }
     }
 }
@@ -271,8 +276,13 @@
 .--gap-32 {
     gap: 32px;
 }
+
 .--bg-gray {
     background-color: var(--gray-color);
+}
+
+.--bg-yellow {
+    background-color: var(--yellow-color);
 }
 
 .--primary-color {

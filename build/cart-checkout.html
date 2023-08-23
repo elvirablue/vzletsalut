@@ -342,14 +342,8 @@
                     <svg><use xlink:href="img/sprite.svg#separator"/></svg>
                 </div>
                 <div class="app-breadcrumbs__item">
-                    <a href="#" class="app-breadcrumbs__link">
-                        Каталог
-                    </a>
-                    <svg><use xlink:href="img/sprite.svg#separator"/></svg>
-                </div>
-                <div class="app-breadcrumbs__item">
                     <span class="app-breadcrumbs__link">
-                        Батареи салютов и фейерверков
+                        Корзина
                     </span>
                 </div>
             </nav>
@@ -357,184 +351,73 @@
 
         <div class="page-title">
             <div class="container">
-                <h1 class="h1">Салют Z811 Инкогнито</h1>
+                <h1 class="h1">Оформление заказа</h1>
             </div>
         </div>
 
         <div class="page-item">
             <div class="container">
-                <div class="catalog-page">
-                    <div class="catalog-page__inner">
-                        <div class="catalog-page__top">
-                            <button class="button-accent --ml-auto">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#share"/>
-                                </svg>
-                                <span>Поделиться ссылкой</span>
-                            </button>
-                        </div>
-                        <div class="product">
-                            <div class="product__main">
-                                <div class="a-promo flex-row --flex-center --gap-12">
-                                    <span class="large-text --primary-color">WOW-цена</span>
-                                    <span class="badge">-50%</span>
-                                </div>
-                                <div class="a-favorite flex-row --gap-12 --ml-auto">
-                                    <span>В избранном</span>
-                                    <button class="button -icon -size-36 -favorite -active">
-                                        <svg>
-                                            <use xlink:href="img/sprite.svg#favorite-stroke"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="a-title"></div>
-                                <div class="a-info flex-column --gap-12 --flex-ai-center">
-                                    <div class="h3">Артикул: Z811</div>
-                                    <div class="accent-font">Товар в наличии</div>
-                                </div>
-                                <div class="a-price flex-column --flex-ai-center --gap-12">
-                                    <div class="price">
-                                        <div class="price__new">1650 ₽</div>
-                                        <div class="price__old">3300 ₽</div>
-                                    </div>
-                                    <button type="button" class="button -small">В корзину</button>
-                                    <button type="button" class="button -small -primary-outline">Купить в 1
-                                        клик
-                                    </button>
-                                </div>
-                                <div class="a-images">
-                                    <div class="product__image">
-                                        <img src="img/salut.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="a-characteristics">
-                                    <div class="values-list">
-                                        <div class="h3">Характеристики:</div>
-                                        <div class="values-list__grid">
-                                            <span class="name">Калибр:</span>
-                                            <span class="value">0,8”</span>
-                                            <span class="name">Залпы:</span>
-                                            <span class="value">9</span>
-                                            <span class="name">Время работы:</span>
-                                            <span class="value">до 20с</span>
-                                            <span class="name">Высота фейерверка:</span>
-                                            <span class="value">до 30 м</span>
-                                            <span class="name">Размеры упаковки, мм:</span>
-                                            <span class="value">90 х 85 х 80</span>
-                                            <span class="name">Вес изделия, кг:</span>
-                                            <span class="value">0,600</span>
-                                            <span class="name">Фасовка:</span>
-                                            <span class="value">штука</span>
-                                            <span class="name">Число эффектов:</span>
-                                            <span class="value">3</span>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="cart-page">
+                    <div class="cart-page__checkout">
+                        <div class="h3">Заказ № 123456</div>
+                        <div class="primary-line"></div>
+                        <div class="values-list">
+                            <div class="values-list__grid">
+                                <span>Всего товаров на сумму: </span>
+                                <span class="value">3 250 ₽</span>
+                                <span>Скидки на товары:</span>
+                                <span class="value">-1 250 ₽</span>
+                                <span>Скидка по карте:</span>
+                                <span class="value">-250 ₽</span>
+                                <span>VZLET бонусы:</span>
+                                <span class="value">-250 ₽</span>
+                                <span>Доставка:</span>
+                                <span class="value">500 ₽</span>
                             </div>
                         </div>
+                        <div class="h2 flex-row --gap-32">
+                            <span>Итого:</span>
+                            <span>2 210 ₽</span>
+                        </div>
+                        <div class="input -decor">
+                            <label for="sel-1">Ваш адрес *</label>
+                            <select name="sel-1" id="sel-1">
+                                <option value="address-1">601203, г. Москва, ул. Никулинская, д.25, кв. 46, 1 под., 10 этаж, домофон 45В</option>
+                                <option value="address-2">address-2</option>
+                                <option value="address-3">address-3</option>
+                            </select>
+                            <div class="input__field"></div>
+                        </div>
+                        <div class="input -decor">
+                            <label for="sel-2">Ваша карта *</label>
+                            <select name="sel-2" id="sel-2">
+                                <option value="card-1">ХХХХ ХХХХ ХХХХ 1997</option>
+                                <option value="card-2">ХХХХ ХХХХ ХХХХ 2345</option>
+                                <option value="card-3">ХХХХ ХХХХ ХХХХ 9876</option>
+                            </select>
+                            <div class="input__field"></div>
+                        </div>
+                        <div class="input -decor">
+                            <label for="text-1">Комментарий к заказу</label>
+                            <input id="text-1" name="text-1"/>
+                            <div class="input__field"></div>
+                        </div>
+
+                        <div class="flex-row --flex-jc-center">
+                            <div class="button">Перейти к оплате</div>
+                        </div>
                     </div>
+
+                    <aside class="aside -right -card-checkout">
+                            <div>Проверьте, пожалуйста, правильность всех данных</div>
+                            <div class="promo-text accent-font">
+                                Еще немного, и праздник будет у вас в руках!!!
+                                <svg><use xlink:href="img/sprite.svg#arrow-catalog"/></svg>
+                            </div>
+                    </aside>
                 </div>
             </div>
         </div>
-
-        <div class="page-item --bg-gray --p-0">
-                <div class="container -small">
-                    <div class="product-actions">
-                        <a href="#effects" class="button-accent">
-                            <svg>
-                                <use xlink:href="img/sprite.svg#video"/>
-                            </svg>
-                            <span>Описание и эффекты</span>
-                        </a>
-                        <a href="#video" class="button-accent">
-                            <svg>
-                                <use xlink:href="img/sprite.svg#video"/>
-                            </svg>
-                            <span>Видео и фото</span>
-                        </a>
-                        <button class="button-accent">
-                            <svg>
-                                <use xlink:href="img/sprite.svg#share"/>
-                            </svg>
-                            <span>Как запускать и ТБ</span>
-                        </button>
-                        <a href="#manufacturer" class="button-accent">
-                            <svg>
-                                <use xlink:href="img/sprite.svg#card-list"/>
-                            </svg>
-                            <span>Производитель<br> и сертификаты</span>
-                        </a>
-                        <button class="button-accent">
-                            <svg>
-                                <use xlink:href="img/sprite.svg#card-list"/>
-                            </svg>
-                            <span>Что берут<br> с этим товаром</span>
-                        </button>
-                    </div>
-                </div>
-        </div>
-
-        <div class="page-item">
-            <div class="container -small --gap-32">
-                <div id="effects" class="product-description">
-                    <div class="h2">Описание фейерверка:</div>
-                    <div class="text-contents">
-                        1. Золотые пальмы с серебристым мерцанием. 2. Красные звезды с мерцанием. 3. Эффект тысячи хризантем.
-                    </div>
-                </div>
-                <div class="product-description">
-                    <div class="h2">Эффекты салюта:</div>
-                    <div class="text-contents">
-                        1. Золотые пальмы с серебристым мерцанием. 2. Красные звезды с мерцанием. 3. Эффект тысячи хризантем.
-                    </div>
-                </div>
-                <div id="video" class="product-description">
-                    <div class="h2">Посмотреть видео Салюта Z811 Инкогнито:</div>
-                    <div class="text-contents">
-                        Описательный текст под видео. Описательный текст под видео.Описательный текст под
-                        видео.Описательный текст под видео.Описательный текст под видео.Описательный текст под
-                        видео.Описательный текст под видео.Описательный текст под видео.Описательный текст под
-                        видео.Описательный текст под видео.Описательный текст под видео.Описательный текст под
-                        видео.Описательный текст под видео.Описательный текст под видео.Описательный текст под
-                        видео.Описательный текст под видео.Описательный текст под видео.Описательный текст под
-                        видео.Описательный текст под видео.Описательный текст под видео.Описательный текст под видео.
-                    </div>
-                </div>
-                <div id="manufacturer" class="product-description -manufacturer">
-                    <div class="h2">Производитель Салюта Z811 Инкогнито и техника безопасности:</div>
-                    <div class="flex-row --gap-32">
-                        <div class="logo">
-                            <img src="img/manufacturer-logo.png" alt="">
-                        </div>
-                        <div class="flex-column --gap-12">
-                            <div class="h2">«Русский фейерверк»</div>
-                            <div class="--text-clamp -row-3">«Русский фейерверк» - является одной из наиболее старейших и узнаваемых торговых марок
-                                в России, история которой насчитывает уже более 25 лет. В 1993 году «Русский фейерверк»
-                                вывел на отечественных рынок изделия из Европы, а затем из Китая. Пройдя через все этапы история которой насчитывает уже более 25 лет. В 1993 году «Русский фейерверк»
-                                вывел на отечественных рынок изделия из Европы, а затем из Китая. Пройдя через все этапы
-                            </div>
-                            <a href="#" class="button -outline -small --ml-auto">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-description">
-                    <div class="flex-column --gap-12">
-                        <div class="h2">Сертификаты на салют:</div>
-                        <div class="text-contents">
-                            <p>Товар проходит проверку и сертификацию. Разрешен к использованию на территории Российской
-                                Федерации.</p>
-                            <p> Мы продаем товар только с актуальным сроком годности и очень ответственно подходим к
-                                соблюдениям требований хранения всей нашей продукции.</p>
-                            <p> Наши постоянные покупатели всегда уверенны в качестве всей пиротехники, которую
-                                приобретают у нас. Качество продукции является нашим основным преимуществом, ведь это
-                                ваша безопасность!</p>
-                        </div>
-                        <a href="#" class="button -outline -small --ml-auto">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </main>
 
     <footer class="app-footer">
