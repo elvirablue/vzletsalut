@@ -281,6 +281,10 @@
         padding-left: 30px;
         font: inherit;
         cursor: pointer;
+
+        a {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -299,6 +303,7 @@
         background-color: rgba(0,0,0,0);
         border-radius: 0;
         border: 2px solid var(--main-color);
+        pointer-events: none;
         transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 
         svg {
@@ -328,15 +333,23 @@
         border-radius: 50%;
     }
 
-    &.-small {
+    &.-simple {
+        color: var(--text-light-color);
+
         .checkbox__icon {
-            width: 14px;
-            height: 14px;
+            border: 2px solid var(--text-light-color);
 
             svg {
-                width: 14px;
-                height: 14px;
+                left: 1px;
+                width: 10px;
+                height: 10px;
             }
+        }
+
+        input[type=checkbox]:checked + .checkbox__icon,
+        input[type=radio]:checked + .checkbox__icon {
+            background-color: rgba(0, 0, 0, 0);
+            border-color: var(--text-light-color);
         }
 
         .checkbox__label {
