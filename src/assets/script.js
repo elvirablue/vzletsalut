@@ -67,7 +67,7 @@
         const catalog = document.body.querySelector('#catalog')
         const catalogButton = document.body.querySelector('#catalogButton')
         catalog.classList.add('-show')
-        catalogButton.querySelector('.app-navigation__button').classList.add('-active')
+        catalogButton.querySelector('.button-accent').classList.add('-active')
     }
 
     function trackCursorOnCatalog(event) {
@@ -81,7 +81,7 @@
         console.debug('closeCatalog')
         const catalog = document.body.querySelector('#catalog')
         catalog.classList.remove('-show')
-        document.body.querySelector('.app-navigation__button.-active')?.classList?.remove('-active')
+        document.body.querySelector('.button-accent.-active')?.classList?.remove('-active')
         document.body.removeEventListener( 'mousemove', trackCursorOnCatalog)
     }
     function catalogButtonMouseLeave(event) {

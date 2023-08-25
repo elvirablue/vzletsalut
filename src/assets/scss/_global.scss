@@ -60,3 +60,7 @@ input, select, textarea {
         opacity: 1;
 	}
 }
+
+textarea {
+    resize: none;
+}

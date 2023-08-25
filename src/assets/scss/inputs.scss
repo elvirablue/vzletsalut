@@ -29,8 +29,8 @@
         }
 
         input, textarea, select {
-            top: 13px;
-
+            margin-top: 0;
+            
             &:focus + .input__field {
                 border-color: var(--main-color) !important;
             }
@@ -58,6 +58,7 @@
                 font-size: 30px;
                 left: 12px;
                 right: 12px;
+                width: calc(100% - 24px);
 
                 @include media_breakpoint(mobile) {
                     font-size: 18px;
@@ -88,12 +89,13 @@
 
     input, textarea, select {
         position: absolute;
-        top: 41px;
-        bottom: 1px;
+        top: 50%;
         left: 22px;
         right: 22px;
         display: block;
-        padding: 0 0 12px;
+        width: calc(100% - 44px);
+        margin-top: 12px;
+        transform: translateY(-50%);
         font: inherit;
         color: inherit;
         text-overflow: ellipsis;

@@ -104,6 +104,10 @@ textarea::placeholder {
   opacity: 1;
 }
 
+textarea {
+  resize: none;
+}
+
 .app {
   scrollbar-color: var(--text-light-color) var(--main-color);
   scrollbar-track-color: var(--gray-color);
@@ -693,7 +697,7 @@ textarea::placeholder {
 .input.-simple input,
 .input.-simple textarea,
 .input.-simple select {
-  top: 13px;
+  margin-top: 0;
 }
 
 .input.-simple input:focus + .input__field,
@@ -723,6 +727,7 @@ textarea::placeholder {
   font-size: 30px;
   left: 12px;
   right: 12px;
+  width: calc(100% - 24px);
 }
 
 .input.-textarea .input__field {
@@ -747,12 +752,13 @@ textarea::placeholder {
 .input textarea,
 .input select {
   position: absolute;
-  top: 41px;
-  bottom: 1px;
+  top: 50%;
   left: 22px;
   right: 22px;
   display: block;
-  padding: 0 0 12px;
+  width: calc(100% - 44px);
+  margin-top: 12px;
+  transform: translateY(-50%);
   font: inherit;
   color: inherit;
   text-overflow: ellipsis;
@@ -1560,6 +1566,7 @@ textarea::placeholder {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 24px;
   height: var(--header-bottom-height);
   font-family: "Fira Mono", sans-serif;
 }
@@ -1567,94 +1574,21 @@ textarea::placeholder {
 .app-navigation__item {
   display: inline-flex;
   align-items: center;
-  padding: 0 12px;
-}
-
-.app-navigation__item:first-child {
-  padding-left: 20px;
-}
-
-.app-navigation__item:nth-last-child(-n+2) {
-  padding-right: 20px;
 }
 
 .app-navigation__more {
   display: none;
 }
 
-.app-navigation__button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
+.app-navigation .button-accent {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1;
-  color: var(--main-color);
-  transition-property: background-color, color, opacity, font-weight;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
 }
 
-.app-navigation__button:before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  display: inline-flex;
-  width: 0;
-  height: 3px;
-  background-color: var(--primary-color);
-  transition: width ease-in-out 0.2s;
-}
-
-.app-navigation__button:after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: calc(100% + 2px);
-  display: inline-flex;
-  width: 0;
-  height: 17px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='21' height='17' viewBox='0 0 21 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.646484 0L0.653293 16.7124L20.9992 8.34945L0.646484 0Z' fill='%23E63E1D'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-size: 21px 17px;
-  background-position: center;
-  transition: width ease-in-out 0.05s;
-}
-
-.app-navigation__button svg,
-.app-navigation__button img {
-  flex-shrink: 0;
-  display: inline-flex;
+.app-navigation .button-accent svg,
+.app-navigation .button-accent img {
   width: 24px;
   height: 24px;
-  margin-right: 12px;
-  color: currentColor;
-  transition: color ease-in-out 0.2s;
-}
-
-.app-navigation__button:not(.-disabled):not(:disabled):hover,
-.app-navigation__button.-active {
-  font-weight: 700;
-}
-
-.app-navigation__button:not(.-disabled):not(:disabled):hover:before,
-.app-navigation__button.-active:before {
-  width: 100%;
-}
-
-.app-navigation__button:not(.-disabled):not(:disabled):hover:after,
-.app-navigation__button.-active:after {
-  width: 21px;
-  transition-delay: 0.1s;
-  transition-duration: 0.1s;
-}
-
-.app-navigation__button:not(.-disabled):not(:disabled):hover svg,
-.app-navigation__button:not(.-disabled):not(:disabled):hover img,
-.app-navigation__button.-active svg,
-.app-navigation__button.-active img {
-  color: var(--primary-color);
 }
 
 .app-catalog {
@@ -2640,7 +2574,7 @@ textarea::placeholder {
 .input.-simple input,
 .input.-simple textarea,
 .input.-simple select {
-  top: 13px;
+  margin-top: 0;
 }
 
 .input.-simple input:focus + .input__field,
@@ -2670,6 +2604,7 @@ textarea::placeholder {
   font-size: 30px;
   left: 12px;
   right: 12px;
+  width: calc(100% - 24px);
 }
 
 .input.-textarea .input__field {
@@ -2694,12 +2629,13 @@ textarea::placeholder {
 .input textarea,
 .input select {
   position: absolute;
-  top: 41px;
-  bottom: 1px;
+  top: 50%;
   left: 22px;
   right: 22px;
   display: block;
-  padding: 0 0 12px;
+  width: calc(100% - 44px);
+  margin-top: 12px;
+  transform: translateY(-50%);
   font: inherit;
   color: inherit;
   text-overflow: ellipsis;
@@ -4258,10 +4194,6 @@ textarea::placeholder {
   margin-left: -30px;
 }
 
-.payment__card {
-  background-image: linear-gradient(rgba(189, 189, 189, 0.5) 0%, rgb(255, 255, 255) 70%) !important;
-}
-
 .payment__card .input-wrap {
   display: flex;
   align-items: center;
@@ -4500,6 +4432,10 @@ textarea::placeholder {
     padding: 0 20px;
   }
 
+  .app-navigation {
+    padding: 0 20px;
+  }
+
   .catalog-page {
     padding: 0 20px;
   }
@@ -4539,6 +4475,10 @@ textarea::placeholder {
     font-size: 22px;
   }
 
+  .button.-text {
+    gap: 8px;
+  }
+
   .button-accent {
     gap: 8px;
   }
@@ -4566,10 +4506,7 @@ textarea::placeholder {
 
   .app-navigation {
     justify-content: flex-start;
-  }
-
-  .app-navigation__item:nth-child(n+5) {
-    display: none;
+    gap: 2vw;
   }
 
   .app-navigation__more {
@@ -5207,7 +5144,6 @@ textarea::placeholder {
 
   .app-navigation__item {
     padding-left: 0 !important;
-    padding-bottom: 14px;
   }
 
   .app-navigation__item br {
@@ -5220,11 +5156,6 @@ textarea::placeholder {
 
   .app-navigation__item:nth-child(n+5) {
     display: flex;
-  }
-
-  .app-navigation__button:before,
-  .app-navigation__button:after {
-    content: none;
   }
 
   .app-catalog {
@@ -5819,6 +5750,10 @@ textarea::placeholder {
   .container.-row-md {
     flex-direction: row;
   }
+
+  .--hidden-only-tablet {
+    display: none !important;
+  }
 }
 
 @media (min-width: 1280px) and (max-width: 1600px), only screen and (min-width: 1601px) {
@@ -5915,16 +5850,6 @@ textarea::placeholder {
 
   .--hidden-desktop {
     display: none !important;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1600px), only screen and (max-width: 1279px) {
-  .app-navigation__item:first-child {
-    padding-left: 0;
-  }
-
-  .app-navigation__item:nth-last-child(-n+2) {
-    padding-right: 0;
   }
 }
 

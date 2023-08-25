@@ -172,6 +172,10 @@
                 color: var(--main-color);
             }
         }
+
+        @include media_breakpoint(tablet) {
+            gap: 8px;
+        }
     }
 }
 
