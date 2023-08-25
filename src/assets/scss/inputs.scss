@@ -48,7 +48,7 @@
             top: 13px;
 
             &:focus + .input__field {
-                border-color: var(--main-color);
+                border-color: var(--main-color) !important;
             }
         }
 
@@ -56,10 +56,33 @@
             .input__field {
                 height: 70px;
             }
+        }
 
-            textarea {
-                padding-top: 4px;
+        &.-card {
+            .input__field {
+                border-radius: var(--root-radius);
+                background-color: var(--gray-color);
+                border-color: var(--gray-color);
+                box-shadow: none;
             }
+
+            input, textarea, select {
+                font-size: 30px;
+
+                @include media_breakpoint(mobile) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    &.-textarea {
+        .input__field {
+            height: 100px;
+        }
+
+        textarea {
+            padding-top: 4px;
         }
     }
 
@@ -289,6 +312,8 @@
 }
 
 .checkbox {
+    min-width: 18px;
+
     &__icon {
         position: relative;
         flex-shrink: 0;
@@ -334,6 +359,7 @@
     }
 
     &.-simple {
+
         color: var(--text-light-color);
 
         .checkbox__icon {

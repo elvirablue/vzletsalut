@@ -70,10 +70,6 @@
         max-width: 100%;
     }
 
-    .col-none {
-        display: none;
-    }
-
     .col-12 {
         flex: 0 0 100%;
         max-width: 100%;
@@ -193,6 +189,10 @@
             max-width: 8.3333333333%;
         }
 
+        .col-md-none {
+            display: none;
+        }
+
         .col-md-auto {
             flex: 0 0 auto;
             width: auto;
@@ -286,6 +286,10 @@
     }
 
     @include media_breakpoint(mobile) {
+        .col-sm-none {
+            display: none;
+        }
+
         &.-dense-sm {
             margin: -10px;
 

@@ -285,6 +285,147 @@
 
 }
 
+.addresses {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+}
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        padding-left: 30px;
+
+        .checkbox {
+            margin-left: -30px;
+        }
+    }
+
+    &__card {
+        background-image: linear-gradient(rgba(189, 189, 189, 0.5) 0%, rgba(255, 255, 255, 1) 70%) !important;
+
+        .input-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+
+    &__card-title {
+        display: block;
+        padding-bottom: 12px;
+        font-weight: 700;
+        color: var(--text-light-color);
+    }
+
+    @include media_breakpoint(mobile) {
+        &__item {
+            padding-left: 0;
+
+            .checkbox {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.payment-item, .addresses-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-top: -6px;
+        gap: 12px;
+        color: var(--text-light-color);
+
+        .checkbox.-simple {
+            min-width: 30px;
+            margin-left: 0;
+            margin-top: 6px;
+
+            .checkbox__label {
+                height: 30px;
+            }
+
+            .checkbox__icon {
+                margin-right: -30px;
+                width: 29px;
+                height: 29px;
+                border-width: 3px;
+                transition: border ease-in-out 0.1s;
+
+                svg {
+                    left: auto;
+                    bottom: auto;
+                    width: 70%;
+                    height: 70%;
+                }
+            }
+
+            &:hover {
+                .checkbox__icon {
+                    border-color: var(--primary-color) !important;
+                }
+            }
+        }
+    }
+
+    .svg-card {
+        flex-shrink: 0;
+        width: 57px;
+        height: 35px;
+        color: var(--text-light-color);
+    }
+
+    @include media_breakpoint(mobile) {
+        flex-wrap: wrap;
+
+        &__actions {
+            transform: scale(0.75);
+        }
+
+        .svg-card {
+            flex-shrink: 0;
+            width: 40px;
+            height: 25px;
+            color: var(--text-light-color);
+        }
+    }
+}
+
+.addresses-item {
+    @include media_breakpoint(desktop) {
+        gap: 40px;
+    }
+
+    @include media_breakpoint(mobile) {
+        .input {
+            //max-width: 400px;
+        }
+        //flex-wrap: nowrap;
+    }
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;

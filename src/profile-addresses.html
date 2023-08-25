@@ -351,7 +351,7 @@
 
         <div class="page-title">
             <div class="container">
-                <h1 class="h1">Купленные товары</h1>
+                <h1 class="h1">Мои адреса</h1>
                 <div class="subtitle">ID 234056</div>
             </div>
         </div>
@@ -377,7 +377,7 @@
                                     <button class="button -text ">Заказы</button>
                                 </li>
                                 <li class="aside__nav-item">
-                                    <button class="button -text -active">Купленные товары</button>
+                                    <button class="button -text">Купленные товары</button>
                                 </li>
                                 <li class="aside__nav-item">
                                     <button class="button -text">Избранное</button>
@@ -386,7 +386,7 @@
                                     <button class="button -text">Способы оплаты</button>
                                 </li>
                                 <li class="aside__nav-item">
-                                    <button class="button -text">Адреса</button>
+                                    <button class="button -text -active">Адреса</button>
                                 </li>
                                 <li class="aside__nav-item">
                                     <button class="button -text">Выход</button>
@@ -399,8 +399,135 @@
                         <div class="profile-page__top --hidden-desktop">
                             <button id="openAsideProfile" class="button -outline -small">Личный кабинет</button>
                         </div>
-                        <div class="profile-page__inner">
+                        <div>
+                            Введите адрес, куда вам удобнее всего будет получать доставку. Можно ввести несколько адресов.
+                        </div>
 
+                        <div class="addresses">
+                            <div class="addresses__item">
+                                <div class="addresses-item">
+                                    <div class="input -textarea">
+                                        <label>Ваш адрес</label>
+                                        <textarea disabled type="text">601203, г. Москва, ул. Никулинская, д.25, кв. 46, 1 под., 10 этаж, домофон 45В ул. Никулинская, д.25, кв. 46, 1 под., 10 этаж, домофон 45В</textarea>
+                                        <div class="input__field"></div>
+                                    </div>
+                                    <div class="addresses-item__actions">
+                                        <div class="checkbox -simple">
+                                            <input hidden type="checkbox" id="ch-3" name="ch-3" checked>
+                                            <span class="checkbox__icon">
+                                                    <svg><use xlink:href="img/sprite.svg#check"/></svg>
+                                                </span>
+                                            <label for="ch-3" class="checkbox__label"></label>
+                                        </div>
+                                        <button class="button -icon -size-36">
+                                            <svg><use xlink:href="img/sprite.svg#trash"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="addresses__item">
+                                <div class="addresses-item">
+                                    <div class="input -textarea">
+                                        <label>Ваш адрес</label>
+                                        <textarea disabled type="text">601203, г. Москва, ул. Никулинская, д.25, кв. 46, 1 под., 10 этаж, домофон 45В</textarea>
+                                        <div class="input__field"></div>
+                                    </div>
+                                    <div class="addresses-item__actions">
+                                        <div class="checkbox -simple">
+                                            <input hidden type="checkbox" id="ch-1" name="ch-1" checked>
+                                            <span class="checkbox__icon">
+                                                    <svg><use xlink:href="img/sprite.svg#check"/></svg>
+                                                </span>
+                                            <label for="ch-1" class="checkbox__label"></label>
+                                        </div>
+                                        <button class="button -icon -size-36">
+                                            <svg><use xlink:href="img/sprite.svg#trash"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-row --flex-jc-center">
+                                <button class="button -small -outline">Добавить еще один адрес</button>
+                            </div>
+
+                            <form class="profile-page__form">
+                                <div>Введите ваш адрес:</div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Индекс</label>
+                                        <input type="number">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Область</label>
+                                        <input type="text">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Город</label>
+                                        <input type="text">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Улица, проезд, переулок, проспект (полностью)</label>
+                                        <input type="text">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Дом</label>
+                                        <input type="text">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Корпус, строение</label>
+                                        <input type="text">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Квартира</label>
+                                        <input type="number">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Подъезд</label>
+                                        <input type="text">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Этаж</label>
+                                        <input type="text">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+                                <div class="profile-page__form-item">
+                                    <div class="input">
+                                        <label>Домофон</label>
+                                        <input type="text">
+                                        <div class="input__field"></div>
+                                    </div>
+                                </div>
+
+                                <div class="flex-row --flex-jc-center">
+                                    <button class="button -small -outline">Сохранить адрес</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
 

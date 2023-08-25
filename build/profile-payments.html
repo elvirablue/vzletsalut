@@ -399,9 +399,131 @@
                         <div class="profile-page__top --hidden-desktop">
                             <button id="openAsideProfile" class="button -outline -small">Личный кабинет</button>
                         </div>
-                        <div class="profile-page__inner">
 
-                        </div>
+                            <div>
+                                <div class="h2">Выберите удобный для вас способ оплаты: </div>
+                                <div>Выбранный способ оплаты будет использоваться по умолчанию. При этом вы в любое время его сможете изменить на другой в данном разделе личного кабинета.</div>
+                            </div>
+
+                            <div class="payment">
+                                <div class="payment__item">
+                                    <div class="checkbox">
+                                        <input hidden type="checkbox" id="ch-1" name="ch-1" checked>
+                                        <span class="checkbox__icon">
+                                                <svg><use xlink:href="img/sprite.svg#check"/></svg>
+                                            </span>
+                                        <label for="ch-1" class="checkbox__label h3">Банковская карта</label>
+                                    </div>
+                                </div>
+
+                                <div class="payment__item">
+                                    <div class="payment-item">
+                                        <svg class="svg-card"><use xlink:href="img/sprite.svg#card"/></svg>
+                                        <div class="largest-text --no-wrap">ХХХХ ХХХХ ХХХХ 1997</div>
+                                        <div class="payment-item__actions">
+                                            <div class="checkbox -simple">
+                                                <input hidden type="checkbox" id="ch-3" name="ch-3" checked>
+                                                <span class="checkbox__icon">
+                                                    <svg><use xlink:href="img/sprite.svg#check"/></svg>
+                                                </span>
+                                                <label for="ch-3" class="checkbox__label"></label>
+                                            </div>
+                                            <button class="button -icon -size-36">
+                                                <svg><use xlink:href="img/sprite.svg#trash"/></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="payment__item">
+                                    <div class="payment-item">
+                                        <svg class="svg-card"><use xlink:href="img/sprite.svg#card"/></svg>
+                                        <div class="largest-text --no-wrap">ХХХХ ХХХХ ХХХХ 1997</div>
+                                        <div class="payment-item__actions">
+                                            <div class="checkbox -simple">
+                                                <input hidden type="checkbox" id="ch-4" name="ch-4" checked>
+                                                <span class="checkbox__icon">
+                                                    <svg><use xlink:href="img/sprite.svg#check"/></svg>
+                                                </span>
+                                                <label for="ch-4" class="checkbox__label"></label>
+                                            </div>
+                                            <button class="button -icon -size-36">
+                                                <svg><use xlink:href="img/sprite.svg#trash"/></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="payment__item">
+                                    <div class="payment-item">
+                                        <svg class="svg-card"><use xlink:href="img/sprite.svg#card"/></svg>
+                                        <span class="largest-text">ХХХХ ХХХХ ХХХХ 1997</span>
+                                    </div>
+
+                                    <div>Введите данные карты:</div>
+
+                                    <form class="payment__card card-color --bg-gray-gradient">
+                                        <div class="row -dense">
+                                            <div class="col-12">
+                                                <div class="payment__card-title">Введите номер карты</div>
+                                                <div class="input -simple -card">
+                                                    <input type="text" placeholder=""/>
+                                                    <div class="input__field"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-7 col-8">
+                                                <div class="payment__card-title">Срок действия</div>
+                                                <div class="input-wrap">
+                                                    <div class="input -simple -card">
+                                                        <input type="text" placeholder=""/>
+                                                        <div class="input__field"></div>
+                                                    </div>
+                                                    <div>/</div>
+                                                    <div class="input -simple -card">
+                                                        <input type="text" placeholder=""/>
+                                                        <div class="input__field"></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-3 col-md-1 col-sm-none "></div>
+                                            <div class="col-lg-3 col-md-4 col-4">
+                                                <div class="payment__card-title">Код</div>
+                                                <div class="input -simple -card">
+                                                    <input type="text" placeholder=""/>
+                                                    <div class="input__field"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                    <div>Мы не передаем никакие ваши данные третьим лицам. Сохраняем информацию исключительно для вашего удобства осуществления покупок.</div>
+
+                                    <div class="flex-row --flex-jc-center">
+                                        <button class="button -small -outline">Сохранить карту</button>
+                                    </div>
+                                </div>
+
+                                <div class="flex-row --flex-jc-center">
+                                    <button class="button -small -outline">Добавить еще одну карту</button>
+                                </div>
+
+                                <div class="payment__item">
+                                    <div class="checkbox">
+                                        <input hidden type="checkbox" id="ch-2" name="ch-2">
+                                        <span class="checkbox__icon">
+                                            <svg><use xlink:href="img/sprite.svg#check"/></svg>
+                                        </span>
+                                        <label for="ch-2" class="checkbox__label h3">Наличная оплата курьеру</label>
+                                    </div>
+                                </div>
+                                <div class="payment__item">
+                                    <div class="large-text --text-center">
+                                Если вам удобнее другие способы оплаты, созвонитесь, пожалуйста, с нашим менеджером, и мы обязательно решим этот вопрос.
+                                    </div>
+                                </div>
+                            </div>
                     </div>
 
                     <aside class="aside -right">

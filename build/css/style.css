@@ -278,10 +278,6 @@ textarea::placeholder {
   max-width: 100%;
 }
 
-.row .col-none {
-  display: none;
-}
-
 .row .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
@@ -347,15 +343,15 @@ textarea::placeholder {
 .h2 {
   display: block;
   margin: 0;
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 30px !important;
+  font-weight: 700 !important;
 }
 
 .h3 {
   display: block;
   margin: 0;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 24px !important;
+  font-weight: 500 !important;
 }
 
 .large-text {
@@ -363,6 +359,13 @@ textarea::placeholder {
   margin: 0;
   font-size: 20px;
   font-weight: 700;
+}
+
+.largest-text {
+  display: block;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
 }
 
 .small-text {
@@ -474,6 +477,11 @@ textarea::placeholder {
 .button.-icon.-size-20 {
   width: 20px;
   height: 20px;
+}
+
+.button.-icon.-size-30 {
+  width: 30px;
+  height: 30px;
 }
 
 .button.-icon.-size-36 {
@@ -704,14 +712,31 @@ textarea::placeholder {
 .input.-simple input:focus + .input__field,
 .input.-simple textarea:focus + .input__field,
 .input.-simple select:focus + .input__field {
-  border-color: var(--main-color);
+  border-color: var(--main-color) !important;
 }
 
 .input.-simple.-textarea .input__field {
   height: 70px;
 }
 
-.input.-simple.-textarea textarea {
+.input.-simple.-card .input__field {
+  border-radius: var(--root-radius);
+  background-color: var(--gray-color);
+  border-color: var(--gray-color);
+  box-shadow: none;
+}
+
+.input.-simple.-card input,
+.input.-simple.-card textarea,
+.input.-simple.-card select {
+  font-size: 30px;
+}
+
+.input.-textarea .input__field {
+  height: 100px;
+}
+
+.input.-textarea textarea {
   padding-top: 4px;
 }
 
@@ -946,6 +971,10 @@ textarea::placeholder {
 .checkbox__label a,
 .switch__label a {
   text-decoration: underline;
+}
+
+.checkbox {
+  min-width: 18px;
 }
 
 .checkbox__icon {
@@ -2596,14 +2625,31 @@ textarea::placeholder {
 .input.-simple input:focus + .input__field,
 .input.-simple textarea:focus + .input__field,
 .input.-simple select:focus + .input__field {
-  border-color: var(--main-color);
+  border-color: var(--main-color) !important;
 }
 
 .input.-simple.-textarea .input__field {
   height: 70px;
 }
 
-.input.-simple.-textarea textarea {
+.input.-simple.-card .input__field {
+  border-radius: var(--root-radius);
+  background-color: var(--gray-color);
+  border-color: var(--gray-color);
+  box-shadow: none;
+}
+
+.input.-simple.-card input,
+.input.-simple.-card textarea,
+.input.-simple.-card select {
+  font-size: 30px;
+}
+
+.input.-textarea .input__field {
+  height: 100px;
+}
+
+.input.-textarea textarea {
   padding-top: 4px;
 }
 
@@ -2838,6 +2884,10 @@ textarea::placeholder {
 .checkbox__label a,
 .switch__label a {
   text-decoration: underline;
+}
+
+.checkbox {
+  min-width: 18px;
 }
 
 .checkbox__icon {
@@ -3423,7 +3473,7 @@ textarea::placeholder {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  width: 340px;
+  width: 320px;
 }
 
 .aside.-left {
@@ -4128,6 +4178,115 @@ textarea::placeholder {
   background-color: currentColor;
 }
 
+.addresses {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+}
+
+.addresses__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+}
+
+.payment__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  padding-left: 30px;
+}
+
+.payment__item .checkbox {
+  margin-left: -30px;
+}
+
+.payment__card {
+  background-image: linear-gradient(rgba(189, 189, 189, 0.5) 0%, rgb(255, 255, 255) 70%) !important;
+}
+
+.payment__card .input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment__card-title {
+  display: block;
+  padding-bottom: 12px;
+  font-weight: 700;
+  color: var(--text-light-color);
+}
+
+.payment-item,
+.addresses-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-item__actions,
+.addresses-item__actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-top: -6px;
+  gap: 12px;
+  color: var(--text-light-color);
+}
+
+.payment-item__actions .checkbox.-simple,
+.addresses-item__actions .checkbox.-simple {
+  min-width: 30px;
+  margin-left: 0;
+  margin-top: 6px;
+}
+
+.payment-item__actions .checkbox.-simple .checkbox__label,
+.addresses-item__actions .checkbox.-simple .checkbox__label {
+  height: 30px;
+}
+
+.payment-item__actions .checkbox.-simple .checkbox__icon,
+.addresses-item__actions .checkbox.-simple .checkbox__icon {
+  margin-right: -30px;
+  width: 29px;
+  height: 29px;
+  border-width: 3px;
+  transition: border ease-in-out 0.1s;
+}
+
+.payment-item__actions .checkbox.-simple .checkbox__icon svg,
+.addresses-item__actions .checkbox.-simple .checkbox__icon svg {
+  left: auto;
+  bottom: auto;
+  width: 70%;
+  height: 70%;
+}
+
+.payment-item__actions .checkbox.-simple:hover .checkbox__icon,
+.addresses-item__actions .checkbox.-simple:hover .checkbox__icon {
+  border-color: var(--primary-color) !important;
+}
+
+.payment-item .svg-card,
+.addresses-item .svg-card {
+  flex-shrink: 0;
+  width: 57px;
+  height: 35px;
+  color: var(--text-light-color);
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -4267,6 +4426,10 @@ textarea::placeholder {
   .profile-page {
     padding: 0 20px;
   }
+
+  .addresses-item {
+    gap: 40px;
+  }
 }
 
 @media only screen and (max-width: 1279px) {
@@ -4284,6 +4447,10 @@ textarea::placeholder {
 
   .large-text {
     font-size: 18px;
+  }
+
+  .largest-text {
+    font-size: 24px;
   }
 
   .button-accent {
@@ -4711,6 +4878,10 @@ textarea::placeholder {
 }
 
 @media only screen and (max-width: 768px) {
+  .row .col-sm-none {
+    display: none;
+  }
+
   .row.-dense-sm {
     margin: -10px;
   }
@@ -4719,8 +4890,18 @@ textarea::placeholder {
     padding: 10px;
   }
 
+  .largest-text {
+    font-size: 20px;
+  }
+
   .button-accent.-vertical {
     flex-direction: row;
+  }
+
+  .input.-simple.-card input,
+  .input.-simple.-card textarea,
+  .input.-simple.-card select {
+    font-size: 18px;
   }
 
   .card.-catalog-item {
@@ -5219,6 +5400,12 @@ textarea::placeholder {
     width: 100%;
   }
 
+  .input.-simple.-card input,
+  .input.-simple.-card textarea,
+  .input.-simple.-card select {
+    font-size: 18px;
+  }
+
   .product {
     padding: 12px;
   }
@@ -5399,6 +5586,32 @@ textarea::placeholder {
     gap: 8px;
   }
 
+  .payment__item {
+    padding-left: 0;
+  }
+
+  .payment__item .checkbox {
+    margin-left: 0;
+  }
+
+  .payment-item,
+  .addresses-item {
+    flex-wrap: wrap;
+  }
+
+  .payment-item__actions,
+  .addresses-item__actions {
+    transform: scale(0.75);
+  }
+
+  .payment-item .svg-card,
+  .addresses-item .svg-card {
+    flex-shrink: 0;
+    width: 40px;
+    height: 25px;
+    color: var(--text-light-color);
+  }
+
   .--hidden-mobile {
     display: none !important;
   }
@@ -5466,6 +5679,10 @@ textarea::placeholder {
   .row .col-md-1 {
     flex: 0 0 8.3333333333%;
     max-width: 8.3333333333%;
+  }
+
+  .row .col-md-none {
+    display: none;
   }
 
   .row .col-md-auto {
