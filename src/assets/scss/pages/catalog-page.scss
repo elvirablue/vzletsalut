@@ -23,8 +23,8 @@
         margin-bottom: -16px;
     }
 
-    @include media_breakpoint(small-desktop) {
-
+    @include media_breakpoint(desktop) {
+        padding: 0 20px;
     }
 
     @include media_breakpoint(tablet) {

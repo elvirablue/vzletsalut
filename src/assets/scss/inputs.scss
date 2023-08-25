@@ -463,10 +463,12 @@
 .counter {
     display: flex;
     width: 120px;
+    font-size: 16px;
     height: var(--action-small-height);
     border: 1px solid var(--primary-color);
     border-radius: var(--root-radius);
     overflow: hidden;
+    background-color: var(--surface-color);
 
     .minus, .plus {
         flex-shrink: 0;
@@ -481,10 +483,59 @@
         background-color: var(--primary-color);
     }
 
+    &.-small {
+        width: 100px;
+        height: 24px;
+        font-size: 14px;
+        border-color: var(--text-light-color);
+
+        .minus, .plus {
+            width: 24px;
+            height: 24px;
+            font-size: 22px;
+            line-height: 20px;
+            color: var(--text-light-color);
+            background-color: var(--surface-color);
+        }
+        .minus {
+            border-right: 1px solid var(--text-light-color);
+        }
+        .plus {
+            border-left: 1px solid var(--text-light-color);
+        }
+    }
+
     input {
         width: 100%;
         padding: 0 10px;
         text-align: center;
+    }
+}
+
+.input-photo {
+    display: inline-flex;
+    transition: color ease-in-out 0.2s;
+
+    label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 18px;
+        height: 18px;
+        color: var(--primary-color);
+    }
+
+    input {
+        display: none;
+    }
+
+    &:hover {
+        color: var(--primary-color);
     }
 
 }

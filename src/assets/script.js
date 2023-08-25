@@ -1,7 +1,9 @@
 
     function loaded() {
-        document.querySelector('#openAsideFilters').addEventListener('click', openAside)
-        document.querySelector('#closeAsideFilters').addEventListener('click', closeAside)
+        document.querySelector('#openAsideFilters')?.addEventListener('click', openAside)
+        document.querySelector('#openAsideProfile')?.addEventListener('click', openAside)
+        document.querySelector('#closeAsideFilters')?.addEventListener('click', closeAside)
+        document.querySelector('#closeAsideProfile')?.addEventListener('click', closeAside)
         //const openAsideFilters = document.querySelector('#openAsideFilters')
         //const closeAsideFilters = document.querySelector('#closeAsideFilters')
         //if (openAsideFilters && closeAsideFilters) {
@@ -33,7 +35,7 @@
     }
 
     function openAside() {
-        const elementAside = document.body.querySelector('#asideFilters')
+        const elementAside = document.body.querySelector(`#aside`)
         getHeaderHeight()
         elementAside.classList.add('-show');
         setTimeout(() => {
@@ -41,7 +43,7 @@
         }, 10)
     }
     function closeAside() {
-        const elementAside = document.body.querySelector('#asideFilters')
+        const elementAside = document.body.querySelector(`#aside`)
         elementAside.classList.remove('-open');
         setTimeout(() => {
             elementAside.classList.remove('-show');
