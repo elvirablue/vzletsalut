@@ -334,7 +334,15 @@
         color: var(--text-light-color);
     }
 
+    @include media_breakpoint(tablet) {
+        &__card {
+            padding: 20px 12px;
+        }
+    }
     @include media_breakpoint(mobile) {
+        &__card {
+            padding: 20px 12px;
+        }
         &__item {
             padding-left: 0;
 
@@ -361,7 +369,7 @@
         .checkbox.-simple {
             min-width: 30px;
             margin-left: 0;
-            margin-top: 6px;
+            margin-top: 4px;
 
             .checkbox__label {
                 height: 30px;
@@ -377,8 +385,18 @@
                 svg {
                     left: auto;
                     bottom: auto;
-                    width: 70%;
-                    height: 70%;
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+
+            &.-main-item {
+                .checkbox__icon {
+                    color: var(--text-color);
+                    border-color: currentColor !important;
+                    svg {
+                        color: inherit;
+                    }
                 }
             }
 
@@ -397,6 +415,16 @@
         color: var(--text-light-color);
     }
 
+    @include media_breakpoint(tablet) {
+        &__actions {
+            transform: scale(0.85);
+        }
+
+        .svg-card {
+            width: 40px;
+            height: 25px;
+        }
+    }
     @include media_breakpoint(mobile) {
         flex-wrap: wrap;
 
@@ -405,10 +433,8 @@
         }
 
         .svg-card {
-            flex-shrink: 0;
             width: 40px;
             height: 25px;
-            color: var(--text-light-color);
         }
     }
 }
@@ -440,17 +466,11 @@
     justify-content: flex-start;
 }
 
-// Глобальные модификаторы
-
-.--no-wrap {
-    white-space: nowrap !important;
-}
-
-.--text-clamp {
+.text-clamp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
     overflow: hidden;
-    transition: height 0.4s ease-in-out;
 
     &.-row-2 {
         -webkit-line-clamp: 2;
@@ -459,6 +479,42 @@
     &.-row-3 {
         -webkit-line-clamp: 3;
     }
+}
+
+.tooltip-hover {
+    position: relative;
+
+    &__content {
+        position: absolute;
+        bottom: -16px;
+        right: 10px;
+        z-index: -1;
+        opacity: 0;
+        pointer-events: none;
+        display: block;
+        font-size: 12px;
+        color: var(--main-color);
+        transition: all ease-in-out 0.2s;
+    }
+
+    &:hover {
+        .tooltip-hover__content {
+            opacity: 1;
+            z-index: 1;
+            pointer-events: auto;
+        }
+    }
+}
+
+.separator {
+    display: block;
+    margin: 0 auto;
+}
+
+// Глобальные модификаторы
+
+.--no-wrap {
+    white-space: nowrap !important;
 }
 
 .--p-0 {
@@ -500,7 +556,7 @@
 }
 
 .--bg-gray-gradient {
-    background-image: linear-gradient(145deg, #BDBDBD 0%, rgba(255, 255, 255, 0.56) 100%);
+    background-image: linear-gradient(145deg, #D9D9D9 0%, rgba(255, 255, 255, 0.56) 100%);
 }
 
 .--bg-yellow {

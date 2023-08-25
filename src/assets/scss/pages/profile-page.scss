@@ -54,9 +54,7 @@
     .card-color.-personal,
     .card-color.-card,
     .card-color.-bonuses, {
-        height: 20vw;
-        max-height: 300px;
-        min-height: 200px;
+        height: 300px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -82,68 +80,70 @@
                 object-fit: cover;
             }
         }
+    }
 
-        &.-personal {
-            display: flex;
-            align-items: center;
+    .card-color.-personal {
+        display: flex;
+        align-items: center;
 
-            .title {
-                display: block;
-                margin-top: auto;
-                width: 100%;
+        .title {
+            display: block;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .number {
+            display: block;
+            padding-top: 48px;
+            font-size: 20px;
+        }
+    }
+
+    .card-color.-card {
+        display: flex;
+        flex-direction: column;
+        padding-left: 50%;
+        background-image: url("../img/profile-personal-card.jpeg");
+
+        .discount {
+            span:first-child {
+                font-size: 120px;
+                line-height: 100px;
+                font-weight: 700;
             }
 
-            .number {
-                display: block;
-                padding-top: 48px;
-                font-size: 20px;
+            span:nth-child(2) {
+                font-size: 60px;
+                font-weight: 500;
             }
         }
 
-        &.-card {
-            display: flex;
-            flex-direction: column;
-            padding-left: 50%;
-            background-image: url("../img/profile-personal-card.jpeg");
+        .number {
+            display: block;
+            margin-top: auto;
+            padding-top: 20px;
+            font-size: 20px;
+            text-align: right;
+        }
+    }
 
-            .discount {
-                span:first-child {
-                    font-size: 120px;
-                    line-height: 100px;
-                    font-weight: 700;
-                }
-                span:nth-child(2) {
-                    font-size: 60px;
-                    font-weight: 500;
-                }
-            }
+    .card-color.-bonuses {
+        display: flex;
+        flex-direction: column;
+        background-image: url("../img/profile-bonuses-card.jpeg");
 
-            .number {
-                display: block;
-                margin-top: auto;
-                padding-top: 20px;
-                font-size: 20px;
-                text-align: right;
+        .discount {
+            span:first-child {
+                font-size: 120px;
+                line-height: 100px;
+                font-weight: 700;
             }
         }
 
-        &.-bonuses {
-            display: flex;
-            flex-direction: column;
-            background-image: url("../img/profile-bonuses-card.jpeg");
-
-            .discount {
-                span:first-child {
-                    font-size: 120px;
-                    line-height: 100px;
-                    font-weight: 700;
-                }
-            }
-            .number {
-                display: block;
-                margin-top: auto;
-                padding-top: 20px;
-            }
+        .number {
+            display: block;
+            margin-top: auto;
+            padding-top: 20px;
         }
     }
 
@@ -263,43 +263,55 @@
             }
         }
 
-        .card-color {
+        .card-color.-personal,
+        .card-color.-card,
+        .card-color.-bonuses, {
             padding: 12px !important;
+            height: 250px;
+        }
 
-            &.-card, &.-bonuses {
-                .discount {
-                    span:first-child {
-                        font-size: 80px;
-                        line-height: 60px;
-                    }
+        .card-color.-card,
+        .card-color.-bonuses {
+            .discount {
+                span:first-child {
+                    font-size: 80px;
+                    line-height: 60px;
+                }
 
-                    span:nth-child(2) {
-                        font-size: 40px;
-                    }
+                span:nth-child(2) {
+                    font-size: 40px;
                 }
             }
+        }
 
-            &.-bonuses {
-                    .number {
-                        max-width: 60%;
-                        font-size: 14px;
-                    }
+        .card-color.-card {
+            .discount {
+                width: 55%;
+                min-width: 180px;
+                margin-left: auto;
+            }
+        }
+
+        .card-color.-bonuses {
+            .number {
+                max-width: 60%;
+                font-size: 14px;
+            }
+        }
+
+        .card-color.-order {
+            .card-color__item {
+                flex-direction: column;
+                gap: 12px;
             }
 
-            &.-order {
-                .card-color__item {
-                    flex-direction: column;
-                    gap: 12px;
-                }
-
-                .info, .amount {
-                    gap: 8px;
-                }
-
+            .info, .amount {
+                gap: 8px;
             }
         }
 
         .aside.-right {
+            padding: 20px 12px;
             width: 100%;
         }
     }

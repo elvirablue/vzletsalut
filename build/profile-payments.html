@@ -421,16 +421,22 @@
                                         <svg class="svg-card"><use xlink:href="img/sprite.svg#card"/></svg>
                                         <div class="largest-text --no-wrap">ХХХХ ХХХХ ХХХХ 1997</div>
                                         <div class="payment-item__actions">
-                                            <div class="checkbox -simple">
-                                                <input hidden type="checkbox" id="ch-3" name="ch-3" checked>
-                                                <span class="checkbox__icon">
-                                                    <svg><use xlink:href="img/sprite.svg#check"/></svg>
-                                                </span>
-                                                <label for="ch-3" class="checkbox__label"></label>
+                                            <div class="tooltip-hover">
+                                                <div class="checkbox -simple -main-item">
+                                                    <input hidden type="checkbox" id="ch-3" name="payment" checked>
+                                                    <span class="checkbox__icon">
+                                                        <svg><use xlink:href="img/sprite.svg#check"/></svg>
+                                                    </span>
+                                                    <label for="ch-3" class="checkbox__label"></label>
+                                                </div>
+                                                <div class="tooltip-hover__content --no-wrap">Основная карта</div>
                                             </div>
-                                            <button class="button -icon -size-36">
-                                                <svg><use xlink:href="img/sprite.svg#trash"/></svg>
-                                            </button>
+                                            <div class="tooltip-hover">
+                                                <button class="button -icon -size-36">
+                                                    <svg><use xlink:href="img/sprite.svg#trash"/></svg>
+                                                </button>
+                                                <div class="tooltip-hover__content --no-wrap">Удалить карту</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -439,18 +445,28 @@
                                         <svg class="svg-card"><use xlink:href="img/sprite.svg#card"/></svg>
                                         <div class="largest-text --no-wrap">ХХХХ ХХХХ ХХХХ 1997</div>
                                         <div class="payment-item__actions">
-                                            <div class="checkbox -simple">
-                                                <input hidden type="checkbox" id="ch-4" name="ch-4" checked>
-                                                <span class="checkbox__icon">
-                                                    <svg><use xlink:href="img/sprite.svg#check"/></svg>
-                                                </span>
-                                                <label for="ch-4" class="checkbox__label"></label>
+                                            <div class="tooltip-hover">
+                                                <div class="checkbox -simple">
+                                                    <input hidden type="checkbox" id="ch-4" name="payment" >
+                                                    <span class="checkbox__icon">
+                                                        <svg><use xlink:href="img/sprite.svg#check"/></svg>
+                                                    </span>
+                                                    <label for="ch-4" class="checkbox__label"></label>
+                                                </div>
+                                                <div class="tooltip-hover__content --no-wrap">Сделать основной</div>
                                             </div>
-                                            <button class="button -icon -size-36">
-                                                <svg><use xlink:href="img/sprite.svg#trash"/></svg>
-                                            </button>
+                                            <div class="tooltip-hover">
+                                                <button class="button -icon -size-36">
+                                                    <svg><use xlink:href="img/sprite.svg#trash"/></svg>
+                                                </button>
+                                                <div class="tooltip-hover__content --no-wrap">Удалить карту</div>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="flex-row --flex-jc-center">
+                                    <button class="button -small -outline">Добавить еще одну карту</button>
                                 </div>
 
                                 <div class="payment__item">
@@ -462,36 +478,38 @@
                                     <div>Введите данные карты:</div>
 
                                     <form class="payment__card card-color --bg-gray-gradient">
-                                        <div class="row -dense">
+                                        <div class="row -dense-sm">
                                             <div class="col-12">
-                                                <div class="payment__card-title">Введите номер карты</div>
-                                                <div class="input -simple -card">
-                                                    <input type="text" placeholder=""/>
+                                                <div class="payment__card-title">Номер карты</div>
+                                                <div class="input -simple -card -error">
+                                                    <input type="text" placeholder="ХХХХ ХХХХ ХХХХ ХХХХ"/>
                                                     <div class="input__field"></div>
+                                                    <div class="message-error">Введите номер карты</div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-lg-6 col-md-7 col-8">
+                                            <div class="col-lg-7 col-md-7 col-7">
                                                 <div class="payment__card-title">Срок действия</div>
                                                 <div class="input-wrap">
-                                                    <div class="input -simple -card">
-                                                        <input type="text" placeholder=""/>
+                                                    <div class="input -simple -card -error">
+                                                        <input type="text" placeholder="ММ"/>
                                                         <div class="input__field"></div>
                                                     </div>
                                                     <div>/</div>
-                                                    <div class="input -simple -card">
-                                                        <input type="text" placeholder=""/>
+                                                    <div class="input -simple -card -error">
+                                                        <input type="text" placeholder="ГГ"/>
                                                         <div class="input__field"></div>
                                                     </div>
                                                 </div>
-
+                                                <div class="message-error -show">Введите срок действия</div>
                                             </div>
-                                            <div class="col-lg-3 col-md-1 col-sm-none "></div>
-                                            <div class="col-lg-3 col-md-4 col-4">
+                                            <div class="separator"></div>
+                                            <div class="col-lg-4 col-md-4 col-5">
                                                 <div class="payment__card-title">Код</div>
-                                                <div class="input -simple -card">
-                                                    <input type="text" placeholder=""/>
+                                                <div class="input -simple -card -error">
+                                                    <input type="text" placeholder="CVC"/>
                                                     <div class="input__field"></div>
+                                                    <div class="message-error --no-wrap">Введите CVC-код</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -503,10 +521,6 @@
                                     <div class="flex-row --flex-jc-center">
                                         <button class="button -small -outline">Сохранить карту</button>
                                     </div>
-                                </div>
-
-                                <div class="flex-row --flex-jc-center">
-                                    <button class="button -small -outline">Добавить еще одну карту</button>
                                 </div>
 
                                 <div class="payment__item">

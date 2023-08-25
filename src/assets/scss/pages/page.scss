@@ -7,6 +7,10 @@
         padding-top: 20px;
         font-size: 20px;
     }
+
+    @include media_breakpoint(mobile) {
+        padding-top: 12px;
+    }
 }
 
 .page-item {

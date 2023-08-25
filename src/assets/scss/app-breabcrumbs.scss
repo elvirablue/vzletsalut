@@ -38,4 +38,8 @@
     @include media_breakpoint(desktop) {
         padding: 0 20px;
     }
+
+    @include media_breakpoint(mobile) {
+        padding-top: 8px;
+    }
 }
