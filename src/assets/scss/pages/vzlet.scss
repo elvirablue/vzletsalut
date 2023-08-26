@@ -1,0 +1,418 @@
+.vzlet-page {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 32px;
+
+        .h2 {
+            padding-top: 16px;
+        }
+    }
+
+    &__text {
+        display: block;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+        font-size: 18px;
+
+        .primary-line {
+            width: 50%;
+            max-width: 220px;
+            margin: 32px auto 0;
+        }
+    }
+
+    &__table {
+        display: flex;
+        align-items: center;
+
+        table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-spacing: 8px;
+
+            th {
+                height: 80px;
+                font-weight: 700;
+                border: 1px solid var(--main-color);
+                background-color: var(--gray-color);
+            }
+
+            td {
+                padding: 10px;
+                text-align: center;
+                border: 1px solid var(--main-color);
+            }
+        }
+    }
+
+    .card.-vzlet-about,
+    .card.-vzlet-shops,
+    .card.-vzlet-delivery {
+        display: block;
+        width: 100%;
+        height: 464px;
+        padding: 5px 20px;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        background-color: var(--gray-color);
+        box-shadow: 0 0 0 8px #FFFFFF, 0 0 0 10px #ffffff;
+        transition: box-shadow ease-in-out 0.2s;
+
+        &:hover {
+            box-shadow: 0 0 0 8px #FFFFFF, 0 0 0 10px var(--main-color);
+        }
+
+        .card__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+        }
+    }
+
+    .card.-vzlet-about {
+        background-image: url("../img/vzlet-about.png");
+    }
+
+    .card.-vzlet-shops {
+        background-image: url("../img/vzlet-shops.png");
+    }
+
+    .card.-vzlet-delivery {
+        background-image: url("../img/vzlet-delivery.png");
+    }
+
+    .card.-vzlet-about-main {
+        display: block;
+        padding: 86px 60px;
+        background-color: #FDBE01;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url("../img/vzlet-about-big.png");
+        overflow: hidden;
+
+        .primary-line {
+            width: 220px;
+            margin: 20px 0;
+        }
+
+        .card__title {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            max-width: 590px;
+            font-size: 50px;
+        }
+        .card__text {
+            max-width: 590px;
+            font-size: 20px;
+            line-height: 1.75;
+        }
+    }
+
+    .card.-vzlet-about-benefits {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 60px 60px 850px 60px;
+        font-size: 20px;
+        background-color: var(--gray-color);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+        background-image: url("../img/vzlet-about-benefits.png");
+        overflow: hidden;
+
+        .markers-list {
+            width: 100%;
+            max-width: 920px;
+        }
+    }
+
+    .card.-vzlet-delivery-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 555px;
+        padding: 60px;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: cover;
+        background-color: #E35E85;
+        background-image: url("../img/vzlet-delivery-main.jpeg");
+        overflow: hidden;
+
+        .primary-line {
+            position: relative;
+            z-index: 1;
+            width: 220px;
+            margin: 40px 0 20px;
+            background-color: var(--main-color);
+        }
+
+        .card__title {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            max-width: 590px;
+            font-size: 50px;
+            color: var(--yellow-color);
+        }
+
+        .card__text {
+            max-width: 620px;
+            font-size: 24px;
+
+            > * {
+                padding: 10px 0;
+            }
+
+            .accent-font {
+                font-size: 30px;
+                line-height: 1.3;
+            }
+        }
+    }
+
+    @include media_breakpoint(tablet) {
+        .card.-vzlet-about,
+        .card.-vzlet-shops,
+        .card.-vzlet-delivery {
+            max-height: 380px;
+
+            &:hover {
+                box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 6px var(--main-color);
+            }
+
+            &__title {
+                font-size: 26px;
+            }
+        }
+
+        .card.-vzlet-about-main {
+            padding: 6vw 4vw;
+            background-position: center;
+
+            .card__title {
+                width: 420px;
+                max-width: 55%;
+                font-size: 34px;
+            }
+
+            .card__text {
+                width: 430px;
+                max-width: 60%;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+
+        .card.-vzlet-about-benefits {
+            padding: 6vw 4vw 650px;
+        }
+
+        .card.-vzlet-delivery-main {
+            padding: 6vw 4vw;
+            height: 400px;
+
+            .card__title {
+                font-size: 34px;
+            }
+
+            .card__text {
+                width: 530px;
+                max-width: 54%;
+                font-size: 18px;
+
+                .accent-font {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    @include media_breakpoint(mobile) {
+        &__content {
+            gap: 20px;
+        }
+
+        &__text {
+            font-size: 16px;
+
+            .primary-line {
+                margin-top: 20px;
+            }
+        }
+
+        &__table {
+            font-size: 12px;
+
+            table {
+                border-spacing: 0;
+                border-collapse: collapse;
+                word-break: break-word;
+
+                td {
+                    padding: 10px 4px;
+                }
+            }
+        }
+
+        .card.-vzlet-about,
+        .card.-vzlet-shops,
+        .card.-vzlet-delivery {
+            display: flex;
+            align-items: center;
+            padding: 40px 20px 40px 160px;
+            max-width: 450px;
+            height: 150px;
+            margin: 0 auto;
+            background-position: left center;
+            background-size: contain;
+
+            &:hover {
+                box-shadow: none;
+            }
+
+            .card__title {
+                height: auto;
+                font-size: 20px;
+                text-align: left;
+            }
+        }
+
+        .card.-vzlet-about-main {
+            padding: 0;
+            background-size: auto 240px;
+            background-position: right top;
+
+            .card__title {
+                max-width: 60%;
+                padding: 30px 20px 20px;
+                font-size: 5vw;
+                background-image: linear-gradient(-90deg, rgba(253, 190, 1, 0) 50%, rgba(253, 190, 1, 1) 100%);
+            }
+            .card__text {
+                width: 100%;
+                padding: 20px 20px 30px;
+                margin-top: -40px;
+                max-width: none;
+                font-size: 16px;
+                background-image: linear-gradient(rgba(253, 190, 1, 0) 0%, rgba(253, 190, 1, 1) 30%);
+            }
+        }
+
+        .card.-vzlet-about-benefits {
+            padding: 0 0 50vw;
+            font-size: 16px;
+            background-size: 100% auto;
+
+            .markers-list {
+                padding: 30px 20px 0;
+                background-image: linear-gradient(rgba(239, 164, 184, 1) 60%, rgba(239, 164, 184, 0) 100%);
+            }
+        }
+
+        .card.-vzlet-delivery-main {
+            height: auto;
+            padding: 0;
+            background-size: auto 200px;
+            background-position: right -30px;
+
+            .card__title {
+                max-width: 60%;
+                padding: 30px 20px 0;
+                font-size: 30px;
+                background-image: linear-gradient(-90deg, rgba(193, 64, 101, 0) 0%, rgba(193, 64, 101, 1) 40%);
+            }
+            .card__text {
+                width: 100%;
+                padding: 60px 20px 30px;
+                margin-top: -60px;
+                max-width: none;
+                font-size: 16px;
+                background-image: linear-gradient(rgba(40, 166, 191, 0) 5%, rgba(243, 171, 191, 1) 30%);
+            }
+        }
+
+    }
+
+    @include media_breakpoint(small-mobile) {
+        .card.-vzlet-about-main {
+            background-image: none;
+
+            .primary-line {
+                width: 50%;
+            }
+
+            .card__title {
+                width: 100%;
+                max-width: none;
+                height: auto;
+                padding-top: 30px;
+                font-size: 26px;
+                background-image: none;
+            }
+            .card__text {
+                width: 100%;
+                max-width: 100%;
+                line-height: 1.2;
+                font-size: 14px;
+                background-image: none;
+            }
+        }
+
+        .card.-vzlet-about-benefits {
+            padding: 0 0 60vw;
+            font-size: 14px;
+            background-size: 110% auto;
+
+            .markers-list {
+                padding: 30px 20px 0;
+                background-image: linear-gradient(rgba(239, 164, 184, 1) 80%, rgba(239, 164, 184, 0) 100%);
+            }
+        }
+
+        .card.-vzlet-delivery-main {
+            background-color: rgba(255,255,255,0);
+            background-size: 100% 100%;
+            background-position: center;
+            background-image: linear-gradient(120deg, rgba(193, 64, 101, 1) 0%, rgba(243, 171, 191, 1) 100%);
+
+            .primary-line {
+                width: 50%;
+                margin-top: 20px;
+            }
+
+            .card__title {
+                width: 100%;
+                max-width: none;
+                padding-bottom: 0;
+                background-image: none;
+            }
+
+            .card__text {
+                margin-top: 0;
+                padding-top: 0;
+                font-size: 14px;
+                background-image: none;
+
+                .accent-font {
+                    padding-top: 0;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

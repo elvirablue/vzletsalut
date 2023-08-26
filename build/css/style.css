@@ -3384,6 +3384,104 @@ textarea {
   grid-area: action;
 }
 
+.employee {
+  display: block;
+}
+
+.employee__title {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.employee__position {
+  grid-area: position;
+  display: block;
+  font-size: 20px;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+
+.employee__image {
+  float: left;
+  display: block;
+  width: 710px;
+  height: 555px;
+  margin-right: 60px;
+  margin-bottom: 40px;
+}
+
+.employee__description {
+  display: block;
+  padding: 0 100px 40px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.employee__description > * {
+  margin: 0;
+  padding-bottom: 12px;
+}
+
+.employee__actions .button {
+  white-space: normal;
+}
+
+.employee-preview {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 20px 60px;
+  padding-bottom: 100px;
+}
+
+.employee-preview:nth-child(odd) {
+  grid-template-areas: "image title" "image position" "image description" "image actions";
+  grid-template-columns: 50% 1fr;
+}
+
+.employee-preview:nth-child(even) {
+  grid-template-areas: "title image " "position image " "description image " "actions image";
+  grid-template-columns: 1fr 50%;
+}
+
+.employee-preview .a-image {
+  grid-area: image;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 555px;
+  margin-bottom: auto;
+  overflow: hidden;
+}
+
+.employee-preview .a-title {
+  grid-area: title;
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.employee-preview .a-position {
+  grid-area: position;
+  display: block;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.employee-preview .a-description {
+  grid-area: description;
+  display: flex;
+  font-size: 14px;
+  gap: 12px;
+}
+
+.employee-preview .a-actions {
+  grid-area: actions;
+  margin-bottom: auto;
+}
+
 .error-page {
   display: block;
   background-image: url("../img/error-page.png");
@@ -3912,6 +4010,197 @@ textarea {
 
 .profile-page .card-color.-order .status.-canceled svg {
   color: var(--text-light-color);
+}
+
+.vzlet-page__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
+.vzlet-page__content .h2 {
+  padding-top: 16px;
+}
+
+.vzlet-page__text {
+  display: block;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.vzlet-page__text .primary-line {
+  width: 50%;
+  max-width: 220px;
+  margin: 32px auto 0;
+}
+
+.vzlet-page__table {
+  display: flex;
+  align-items: center;
+}
+
+.vzlet-page__table table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-spacing: 8px;
+}
+
+.vzlet-page__table table th {
+  height: 80px;
+  font-weight: 700;
+  border: 1px solid var(--main-color);
+  background-color: var(--gray-color);
+}
+
+.vzlet-page__table table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid var(--main-color);
+}
+
+.vzlet-page .card.-vzlet-about,
+.vzlet-page .card.-vzlet-shops,
+.vzlet-page .card.-vzlet-delivery {
+  display: block;
+  width: 100%;
+  height: 464px;
+  padding: 5px 20px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: var(--gray-color);
+  box-shadow: 0 0 0 8px #FFFFFF, 0 0 0 10px #ffffff;
+  transition: box-shadow ease-in-out 0.2s;
+}
+
+.vzlet-page .card.-vzlet-about:hover,
+.vzlet-page .card.-vzlet-shops:hover,
+.vzlet-page .card.-vzlet-delivery:hover {
+  box-shadow: 0 0 0 8px #FFFFFF, 0 0 0 10px var(--main-color);
+}
+
+.vzlet-page .card.-vzlet-about .card__title,
+.vzlet-page .card.-vzlet-shops .card__title,
+.vzlet-page .card.-vzlet-delivery .card__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.vzlet-page .card.-vzlet-about {
+  background-image: url("../img/vzlet-about.png");
+}
+
+.vzlet-page .card.-vzlet-shops {
+  background-image: url("../img/vzlet-shops.png");
+}
+
+.vzlet-page .card.-vzlet-delivery {
+  background-image: url("../img/vzlet-delivery.png");
+}
+
+.vzlet-page .card.-vzlet-about-main {
+  display: block;
+  padding: 86px 60px;
+  background-color: #FDBE01;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/vzlet-about-big.png");
+  overflow: hidden;
+}
+
+.vzlet-page .card.-vzlet-about-main .primary-line {
+  width: 220px;
+  margin: 20px 0;
+}
+
+.vzlet-page .card.-vzlet-about-main .card__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 590px;
+  font-size: 50px;
+}
+
+.vzlet-page .card.-vzlet-about-main .card__text {
+  max-width: 590px;
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.vzlet-page .card.-vzlet-about-benefits {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 60px 60px 850px 60px;
+  font-size: 20px;
+  background-color: var(--gray-color);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-image: url("../img/vzlet-about-benefits.png");
+  overflow: hidden;
+}
+
+.vzlet-page .card.-vzlet-about-benefits .markers-list {
+  width: 100%;
+  max-width: 920px;
+}
+
+.vzlet-page .card.-vzlet-delivery-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 555px;
+  padding: 60px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  background-color: #E35E85;
+  background-image: url("../img/vzlet-delivery-main.jpeg");
+  overflow: hidden;
+}
+
+.vzlet-page .card.-vzlet-delivery-main .primary-line {
+  position: relative;
+  z-index: 1;
+  width: 220px;
+  margin: 40px 0 20px;
+  background-color: var(--main-color);
+}
+
+.vzlet-page .card.-vzlet-delivery-main .card__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 590px;
+  font-size: 50px;
+  color: var(--yellow-color);
+}
+
+.vzlet-page .card.-vzlet-delivery-main .card__text {
+  max-width: 620px;
+  font-size: 24px;
+}
+
+.vzlet-page .card.-vzlet-delivery-main .card__text > * {
+  padding: 10px 0;
+}
+
+.vzlet-page .card.-vzlet-delivery-main .card__text .accent-font {
+  font-size: 30px;
+  line-height: 1.3;
 }
 
 .app-modal {
@@ -4450,6 +4739,22 @@ textarea {
   pointer-events: auto;
 }
 
+.markers-list {
+  display: grid;
+  gap: 30px;
+}
+
+.markers-list__item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.markers-list__item svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
 .separator {
   display: block;
   margin: 0 auto;
@@ -4527,6 +4832,14 @@ textarea {
   text-align: right;
 }
 
+.--text-left {
+  text-align: left;
+}
+
+.--text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
 .--flex-center {
   justify-content: center;
   align-items: center;
@@ -4534,6 +4847,10 @@ textarea {
 
 .--flex-jc-center {
   justify-content: center !important;
+}
+
+.--flex-jc-end {
+  justify-content: flex-end !important;
 }
 
 .--flex-ai-center {
@@ -4581,11 +4898,11 @@ textarea {
   }
 
   .h2 {
-    font-size: 26px;
+    font-size: 26px !important;
   }
 
   .h3 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .large-text {
@@ -4868,6 +5185,30 @@ textarea {
     gap: 8px;
   }
 
+  .employee__image {
+    width: 40vw;
+    height: 31vw;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+
+  .employee__description {
+    padding: 0 0 40px;
+  }
+
+  .employee-preview {
+    gap: 20px 40px;
+    padding-bottom: 60px;
+  }
+
+  .employee-preview:nth-child(odd) {
+    grid-template-columns: 40% 1fr;
+  }
+
+  .employee-preview:nth-child(even) {
+    grid-template-columns: 1fr 40%;
+  }
+
   .error-page__content {
     max-height: 700px;
   }
@@ -4991,6 +5332,65 @@ textarea {
     width: 320px;
   }
 
+  .vzlet-page .card.-vzlet-about,
+  .vzlet-page .card.-vzlet-shops,
+  .vzlet-page .card.-vzlet-delivery {
+    max-height: 380px;
+  }
+
+  .vzlet-page .card.-vzlet-about:hover,
+  .vzlet-page .card.-vzlet-shops:hover,
+  .vzlet-page .card.-vzlet-delivery:hover {
+    box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 6px var(--main-color);
+  }
+
+  .vzlet-page .card.-vzlet-about__title,
+  .vzlet-page .card.-vzlet-shops__title,
+  .vzlet-page .card.-vzlet-delivery__title {
+    font-size: 26px;
+  }
+
+  .vzlet-page .card.-vzlet-about-main {
+    padding: 6vw 4vw;
+    background-position: center;
+  }
+
+  .vzlet-page .card.-vzlet-about-main .card__title {
+    width: 420px;
+    max-width: 55%;
+    font-size: 34px;
+  }
+
+  .vzlet-page .card.-vzlet-about-main .card__text {
+    width: 430px;
+    max-width: 60%;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .vzlet-page .card.-vzlet-about-benefits {
+    padding: 6vw 4vw 650px;
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main {
+    padding: 6vw 4vw;
+    height: 400px;
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main .card__title {
+    font-size: 34px;
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main .card__text {
+    width: 530px;
+    max-width: 54%;
+    font-size: 18px;
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main .card__text .accent-font {
+    font-size: 24px;
+  }
+
   .app-modal {
     padding: 20px;
   }
@@ -5040,6 +5440,10 @@ textarea {
     height: 25px;
   }
 
+  .markers-list {
+    gap: 20px;
+  }
+
   .--hidden-tablet {
     display: none !important;
   }
@@ -5082,6 +5486,14 @@ textarea {
 
   .row.-dense-sm > [class*=col-] {
     padding: 10px;
+  }
+
+  .h1 {
+    font-size: 26px;
+  }
+
+  .h2 {
+    font-size: 22px !important;
   }
 
   .largest-text {
@@ -5666,6 +6078,49 @@ textarea {
     grid-template-columns: 50px 1fr auto;
   }
 
+  .employee__image {
+    float: none;
+    width: 70vw;
+    height: 54vw;
+    margin: 0 auto 20px;
+  }
+
+  .employee__title {
+    padding-top: 0;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .employee__position {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
+  .employee__description {
+    padding: 0 0 20px;
+  }
+
+  .employee-preview {
+    grid-template-rows: auto 1fr auto auto;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  .employee-preview:nth-child(odd),
+  .employee-preview:nth-child(even) {
+    grid-template-areas: "image title" "image position" "description description" "actions actions";
+    grid-template-columns: minmax(120px, 25%) 1fr;
+  }
+
+  .employee-preview .a-title {
+    font-size: 20px;
+  }
+
+  .employee-preview .a-position {
+    margin-bottom: auto;
+    font-size: 16px;
+  }
+
   .error-page {
     height: 400px;
     background-position: 50% top;
@@ -5783,6 +6238,115 @@ textarea {
     width: 100%;
   }
 
+  .vzlet-page__content {
+    gap: 20px;
+  }
+
+  .vzlet-page__text {
+    font-size: 16px;
+  }
+
+  .vzlet-page__text .primary-line {
+    margin-top: 20px;
+  }
+
+  .vzlet-page__table {
+    font-size: 12px;
+  }
+
+  .vzlet-page__table table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    word-break: break-word;
+  }
+
+  .vzlet-page__table table td {
+    padding: 10px 4px;
+  }
+
+  .vzlet-page .card.-vzlet-about,
+  .vzlet-page .card.-vzlet-shops,
+  .vzlet-page .card.-vzlet-delivery {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px 40px 160px;
+    max-width: 450px;
+    height: 150px;
+    margin: 0 auto;
+    background-position: left center;
+    background-size: contain;
+  }
+
+  .vzlet-page .card.-vzlet-about:hover,
+  .vzlet-page .card.-vzlet-shops:hover,
+  .vzlet-page .card.-vzlet-delivery:hover {
+    box-shadow: none;
+  }
+
+  .vzlet-page .card.-vzlet-about .card__title,
+  .vzlet-page .card.-vzlet-shops .card__title,
+  .vzlet-page .card.-vzlet-delivery .card__title {
+    height: auto;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .vzlet-page .card.-vzlet-about-main {
+    padding: 0;
+    background-size: auto 240px;
+    background-position: right top;
+  }
+
+  .vzlet-page .card.-vzlet-about-main .card__title {
+    max-width: 60%;
+    padding: 30px 20px 20px;
+    font-size: 5vw;
+    background-image: linear-gradient(-90deg, rgba(253, 190, 1, 0) 50%, rgb(253, 190, 1) 100%);
+  }
+
+  .vzlet-page .card.-vzlet-about-main .card__text {
+    width: 100%;
+    padding: 20px 20px 30px;
+    margin-top: -40px;
+    max-width: none;
+    font-size: 16px;
+    background-image: linear-gradient(rgba(253, 190, 1, 0) 0%, rgb(253, 190, 1) 30%);
+  }
+
+  .vzlet-page .card.-vzlet-about-benefits {
+    padding: 0 0 50vw;
+    font-size: 16px;
+    background-size: 100% auto;
+  }
+
+  .vzlet-page .card.-vzlet-about-benefits .markers-list {
+    padding: 30px 20px 0;
+    background-image: linear-gradient(rgb(239, 164, 184) 60%, rgba(239, 164, 184, 0) 100%);
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main {
+    height: auto;
+    padding: 0;
+    background-size: auto 200px;
+    background-position: right -30px;
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main .card__title {
+    max-width: 60%;
+    padding: 30px 20px 0;
+    font-size: 30px;
+    background-image: linear-gradient(-90deg, rgba(193, 64, 101, 0) 0%, rgb(193, 64, 101) 40%);
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main .card__text {
+    width: 100%;
+    padding: 60px 20px 30px;
+    margin-top: -60px;
+    max-width: none;
+    font-size: 16px;
+    background-image: linear-gradient(rgba(40, 166, 191, 0) 5%, rgb(243, 171, 191) 30%);
+  }
+
   .app-modal__close {
     top: 2px;
     right: 2px;
@@ -5839,8 +6403,87 @@ textarea {
     height: 25px;
   }
 
+  .markers-list {
+    gap: 12px;
+  }
+
+  .markers-list__item svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+
   .--hidden-mobile {
     display: none !important;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .vzlet-page .card.-vzlet-about-main {
+    background-image: none;
+  }
+
+  .vzlet-page .card.-vzlet-about-main .primary-line {
+    width: 50%;
+  }
+
+  .vzlet-page .card.-vzlet-about-main .card__title {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    padding-top: 30px;
+    font-size: 26px;
+    background-image: none;
+  }
+
+  .vzlet-page .card.-vzlet-about-main .card__text {
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.2;
+    font-size: 14px;
+    background-image: none;
+  }
+
+  .vzlet-page .card.-vzlet-about-benefits {
+    padding: 0 0 60vw;
+    font-size: 14px;
+    background-size: 110% auto;
+  }
+
+  .vzlet-page .card.-vzlet-about-benefits .markers-list {
+    padding: 30px 20px 0;
+    background-image: linear-gradient(rgb(239, 164, 184) 80%, rgba(239, 164, 184, 0) 100%);
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main {
+    background-color: rgba(255, 255, 255, 0);
+    background-size: 100% 100%;
+    background-position: center;
+    background-image: linear-gradient(120deg, rgb(193, 64, 101) 0%, rgb(243, 171, 191) 100%);
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main .primary-line {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main .card__title {
+    width: 100%;
+    max-width: none;
+    padding-bottom: 0;
+    background-image: none;
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main .card__text {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 14px;
+    background-image: none;
+  }
+
+  .vzlet-page .card.-vzlet-delivery-main .card__text .accent-font {
+    padding-top: 0;
+    font-size: 20px;
   }
 }
 

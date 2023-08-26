@@ -712,50 +712,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="app-modal" id="modal">
-        <div class="container">
-            <div class="app-modal__inner">
-                <div class="app-modal__header">
-                    <div class="app-modal__title">Брониро&shy;ва&shy;ние билетов</div>
-                    <div class="app-modal__close">
-                        <button type="button" class="button -icon -dark" onclick="closeModal()">
-                            <img src="img/close.svg" alt="">
-                        </button>
-                    </div>
-                </div>
-                <div class="app-modal__content" id="modalContent">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <template id="formBuyTicket">
-        <form class="form" onsubmit="submitFormBuyTicket(event)">
-            <div class="form__item -fields">
-                <div class="input">
-                    <div class="input__label">Дата заезда</div>
-                    <input type="date">
-                </div>
-                <div class="input">
-                    <div class="input__label">Дата выезда</div>
-                    <input type="date">
-                </div>
-                <div class="input">
-                    <div class="input__label">Количество</div>
-                    <input type="number" min="1" max="10" value="1" onchange="changeInputNumber(event)">
-                    <div class="input__unit">человек</div>
-                </div>
-            </div>
-            <div class="form__item">
-                <div class="--hidden-mobile"></div>
-                <div class="--hidden-mobile"></div>
-                <button type="submit" class="button -dark">Купить билеты</button>
-            </div>
-        </form>
-
-        <div id="formSuccess" class="form -success">Покупка прошла успешно!</div>
-    </template>
 </div>
 
 </body>
