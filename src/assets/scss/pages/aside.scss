@@ -152,6 +152,16 @@
     }
 
     @include media_breakpoint(tablet) {
+        .aside__button-close {
+            position: sticky;
+            top: 0;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 50px;
+        }
+
         &.-right {
             width: 100%;
 
@@ -170,9 +180,11 @@
             bottom: 0;
             left: 0;
             right: 0;
+            padding: 0 30px 42px;
             border-radius: 0;
             transform: translateX(-400px);
             transition: transform ease-in-out 0.3s;
+            overflow-y: auto;
 
             &.-show {
                 display: flex;
@@ -180,11 +192,6 @@
 
             &.-open {
                 transform: translateX(0);
-            }
-
-            .aside__button-close {
-                display: flex;
-                justify-content: flex-end;
             }
         }
 

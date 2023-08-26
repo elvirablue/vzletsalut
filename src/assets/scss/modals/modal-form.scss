@@ -1,0 +1,23 @@
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__title, &__subtitle {
+        display: block;
+        text-align: center;
+    }
+
+    &__subtitle {
+        padding-top: 8px;
+        font-weight: 500;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+}

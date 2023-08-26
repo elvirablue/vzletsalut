@@ -364,9 +364,9 @@
         <div class="page-item">
             <div class="container">
                 <div class="catalog-page">
-                    <aside id="aside" class="aside -left -filters">
+                    <aside id="asideFilters" class="aside -left -filters">
                         <div class="aside__button-close">
-                            <button id="closeAsideFilters" type="button" class="button -icon --primary-color">
+                            <button id="buttonCloseAsideFilters" type="button" class="button -icon --primary-color">
                                 <svg> <use xlink:href="img/sprite.svg#close"/></svg>
                             </button>
                         </div>
@@ -384,6 +384,20 @@
                                         <li class="aside__nav-item">
                                             <button class="button -text">Веерные салюты</button>
                                         </li>
+
+                                        <li class="aside__nav-item">
+                                            <button class="button -text">Большие фейерверки</button>
+                                        </li>
+                                        <li class="aside__nav-item">
+                                            <button class="button -text">Веерные салюты</button>
+                                        </li>
+
+                                        <li class="aside__nav-item">
+                                            <button class="button -text">Большие фейерверки</button>
+                                        </li>
+                                        <li class="aside__nav-item">
+                                            <button class="button -text">Веерные салюты</button>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -395,6 +409,14 @@
                                     <span class="rangeValues"></span> ₽
                                     <input value="500" min="50" max="50000" step="10" type="range">
                                     <input value="50000" min="50" max="50000" step="10" type="range">
+                                </div>
+                            </div>
+                            <div class="aside__filters-item">
+                                <div class="aside__filters-title">Калибр</div>
+                                <div class="range-slider">
+                                    <span class="rangeValues"></span>”
+                                    <input value="0" min="0" max="10" step="0.1" type="range">
+                                    <input value="2" min="0" max="10" step="0.1" step="10" type="range">
                                 </div>
                             </div>
                             <div class="aside__filters-item">
@@ -437,7 +459,7 @@
                     </aside>
                     <div class="catalog-page__inner">
                         <div class="catalog-page__top">
-                            <button id="openAsideFilters" class="button -outline -small --hidden-desktop">Фильтры</button>
+                            <button id="buttonOpenAsideFilters" class="button -outline -small --hidden-desktop">Фильтры</button>
                             <div style="width: 200px; height: 32px; border: 1px solid red;"></div>
                         </div>
                         <div class="product -card">
@@ -861,18 +883,18 @@
         </div>
     </footer>
 
-    <div class="app-popup" id="popup">
+    <div class="app-modal" id="modal">
         <div class="container">
-            <div class="app-popup__inner">
-                <div class="app-popup__header">
-                    <div class="app-popup__title">Брониро&shy;ва&shy;ние билетов</div>
-                    <div class="app-popup__close">
-                        <button type="button" class="button -icon -dark" onclick="closePopup()">
+            <div class="app-modal__inner">
+                <div class="app-modal__header">
+                    <div class="app-modal__title">Брониро&shy;ва&shy;ние билетов</div>
+                    <div class="app-modal__close">
+                        <button type="button" class="button -icon -dark" onclick="closeModal()">
                             <img src="img/close.svg" alt="">
                         </button>
                     </div>
                 </div>
-                <div class="app-popup__content" id="popupContent">
+                <div class="app-modal__content" id="modalContent">
                 </div>
             </div>
         </div>

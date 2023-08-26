@@ -1,32 +1,41 @@
 
     function loaded() {
-        document.querySelector('#openAsideFilters')?.addEventListener('click', openAside)
-        document.querySelector('#openAsideProfile')?.addEventListener('click', openAside)
-        document.querySelector('#closeAsideFilters')?.addEventListener('click', closeAside)
-        document.querySelector('#closeAsideProfile')?.addEventListener('click', closeAside)
-        //const openAsideFilters = document.querySelector('#openAsideFilters')
-        //const closeAsideFilters = document.querySelector('#closeAsideFilters')
-        //if (openAsideFilters && closeAsideFilters) {
-        //    openAsideFilters.addEventListener('onclick', openAside)
-        //    closeAsideFilters.addEventListener('click', closeAside)
-        //}
-        window.addEventListener('resize', closeNavigationMobile)
+        document.querySelector('#buttonOpenAsideFilters')?.addEventListener('click', () => openAside('asideFilters'))
+        document.querySelector('#buttonCloseAsideFilters')?.addEventListener('click', () => closeAside('asideFilters'))
+
+        document.querySelector('#buttonOpenAsideProfile')?.addEventListener('click', () => openAside('asideProfile'))
+        document.querySelector('#closeAsideProfile')?.addEventListener('click', () => closeAside('asideProfile'))
+
+        document.querySelector('#buttonOpenNavigationMobile')?.addEventListener('click', openNavigationMobile)
+        document.querySelector('#buttonCloseNavigationMobile')?.addEventListener('click', closeNavigationMobile)
+
+        document.querySelector('#buttonOpenContactsModal')?.addEventListener('click', openContactsModal)
+
+
+
+        const buttonCatalogMenu = document.querySelector('#buttonCatalogMenu')
+        buttonCatalogMenu?.addEventListener('click', openCatalog)
+        buttonCatalogMenu?.addEventListener('mouseenter', openCatalog)
+        buttonCatalogMenu?.addEventListener('mouseleave', catalogButtonMouseLeave)
+
+        window.addEventListener('resize', closeAll )
         const headerHeight = document.querySelector('.app-header')?.clientHeight ?? 0;
         const breadcrumbsHeight = document.querySelector('.app-breadcrumbs')?.clientHeight ?? 0;
         document.body.style.setProperty('--header-height', (`${headerHeight + breadcrumbsHeight}px`))
 
-        let sliderSections = document.getElementsByClassName("range-slider");
-        for( let x = 0; x < sliderSections.length; x++ ){
-            let sliders = sliderSections[x].getElementsByTagName("input");
-            for( let y = 0; y < sliders.length; y++ ){
-                if( sliders[y].type ==="range" ){
-                    sliders[y].oninput = getValuesRange;
-                    // Manually trigger event first time to display values
-                    sliders[y].oninput();
+        const sliderSections = document.querySelectorAll(".range-slider")
+        if (sliderSections.length) {
+            for (let x = 0; x < sliderSections.length; x++) {
+                let sliders = sliderSections[x].getElementsByTagName("input");
+                for (let y = 0; y < sliders.length; y++) {
+                    if (sliders[y].type === "range") {
+                        sliders[y].oninput = () => getValuesRange(sliders[y]);
+                        // Manually trigger event first time to display values
+                        sliders[y].oninput();
+                    }
                 }
             }
         }
-
     }
 
     function getHeaderHeight() {
@@ -34,20 +43,27 @@
         document.body.style.setProperty('--header-height', (`${headerHeight}px`))
     }
 
-    function openAside() {
-        const elementAside = document.body.querySelector(`#aside`)
+    function openAside(idAside) {
+        const elementAside = document.body.querySelector(`#${idAside}`)
         getHeaderHeight()
+        closeNavigationMobile()
         elementAside.classList.add('-show');
         setTimeout(() => {
             elementAside.classList.add('-open');
         }, 10)
     }
-    function closeAside() {
-        const elementAside = document.body.querySelector(`#aside`)
+    function closeAside(idAside) {
+        let elementAside = null
+        if (idAside) {
+            elementAside = document.body.querySelector(`#${idAside}`)
+        } else {
+            elementAside = document.body.querySelector('.aside.-open.-show')
+        }
         elementAside.classList.remove('-open');
         setTimeout(() => {
             elementAside.classList.remove('-show');
-        }, 250)
+            }, 250)
+
     }
 
     function isCursorOnElem( event, elem ){
@@ -63,7 +79,6 @@
     }
 
     function openCatalog() {
-    console.debug('openCatalog')
         const catalog = document.body.querySelector('#catalog')
         const catalogButton = document.body.querySelector('#catalogButton')
         catalog.classList.add('-show')
@@ -78,7 +93,6 @@
     }
 
     function closeCatalog() {
-        console.debug('closeCatalog')
         const catalog = document.body.querySelector('#catalog')
         catalog.classList.remove('-show')
         document.body.querySelector('.button-accent.-active')?.classList?.remove('-active')
@@ -93,6 +107,7 @@
     function openNavigationMobile() {
         document.body.classList.add('--hidden');
         getHeaderHeight()
+        closeAside()
 
         const elementNavigationWrap = document.querySelector('#navigationWrap');
         const elementNavigationContent = document.querySelector('#navigationMobile');
@@ -117,10 +132,9 @@
         }, 500)
     }
 
-
-    function getValuesRange(){
+    function getValuesRange(slider){
         // Get slider values
-        let parent = document.querySelector('.range-slider');
+        let parent = slider.parentElement
         let slides = parent.getElementsByTagName("input");
         let slide1 = parseFloat( slides[0].value );
         let slide2 = parseFloat( slides[1].value );
@@ -143,51 +157,45 @@
 
     function changeInputNumber(event) {
         const unit = event.target.nextElementSibling;
-        console.debug(unit, event.target.value)
         unit.textContent = transChoose(Number(event.target.value), ['человек', 'человека', 'человек']);
     }
 
-    function openPopupBuyTicket() {
-        const template = document.querySelector('#formBuyTicket');
+    function openContactsModal() {
+        const template = document.querySelector('#formContacts');
         const clone = template.content.cloneNode(true);
-        openPopup(clone);
+        openModal(clone);
     }
 
-    function openPopup(clone) {
+    function openModal(clone) {
         document.body.classList.add('--hidden');
-        const elementPopup = document.querySelector('#popup');
-        const popupContent = document.querySelector('#popupContent');
-        const headerPopup = elementPopup.querySelector('.app-popup__header')
-        popupContent.appendChild(clone);
-        elementPopup.style.setProperty('--popup-header-height', (headerPopup?.clientHeight ?? 0).toString() + 'px');
-        elementPopup.classList.add('-show');
+        const elementModal = document.querySelector('#modal');
+        const elementModalOuter = document.querySelector('#modalOuter');
+        elementModalOuter?.addEventListener('click', closeModal);
+        const modalContent = document.querySelector('#modalContent');
+        modalContent.appendChild(clone);
+        elementModal.classList.add('-show');
         setTimeout(() => {
-            elementPopup.classList.add('-animate');
+            elementModal.classList.add('-animate');
         }, 20)
     }
 
-    function submitFormBuyTicket(event) {
-        event.preventDefault();
-        const popupContent = document.querySelector('#popupContent');
-        const form = popupContent.querySelector('.form');
-        form.classList.add('-hide');
+    function closeModal() {
+        const elementModal = document.querySelector('#modal');
+        elementModal.classList.remove('-animate');
         setTimeout(() => {
-            form.style.display = 'none';
-            popupContent.querySelector('#formSuccess').classList.add('-show');
-        }, 200)
-    }
-
-    function closePopup() {
-        const elementPopup = document.querySelector('#popup');
-        elementPopup.classList.remove('-animate');
-        setTimeout(() => {
-            elementPopup.classList.remove('-show');
+            elementModal.classList.remove('-show');
             document.body.classList.remove('--hidden');
         }, 500)
         setTimeout(() => {
-            const popupContent = document.querySelector('#popupContent');
-            popupContent.innerHTML = '';
+            const modalContent = document.querySelector('#modalContent');
+            modalContent.innerHTML = '';
         }, 800)
+    }
+
+    function closeAll() {
+        closeNavigationMobile()
+        closeModal()
+        closeAside()
     }
 
 

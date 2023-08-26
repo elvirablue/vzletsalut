@@ -359,7 +359,7 @@
         <div class="page-item -small-padding">
             <div class="container">
                 <div class="profile-page">
-                    <aside id="aside" class="aside -left -profile">
+                    <aside id="asideProfile" class="aside -left -profile">
                         <div class="aside__button-close">
                             <button id="closeAsideProfile" type="button" class="button -icon --primary-color">
                                 <svg> <use xlink:href="img/sprite.svg#close"/></svg>
@@ -397,7 +397,7 @@
 
                     <div class="profile-page__inner">
                         <div class="profile-page__top --hidden-desktop">
-                            <button id="openAsideProfile" class="button -outline -small">Личный кабинет</button>
+                            <button id="buttonOpenAsideProfile" class="button -outline -small">Личный кабинет</button>
                         </div>
                         <div>
                             Введите адрес, куда вам удобнее всего будет получать доставку. Можно ввести несколько адресов.
@@ -847,18 +847,18 @@
         </div>
     </footer>
 
-    <div class="app-popup" id="popup">
+    <div class="app-modal" id="modal">
         <div class="container">
-            <div class="app-popup__inner">
-                <div class="app-popup__header">
-                    <div class="app-popup__title">Брониро&shy;ва&shy;ние билетов</div>
-                    <div class="app-popup__close">
-                        <button type="button" class="button -icon -dark" onclick="closePopup()">
+            <div class="app-modal__inner">
+                <div class="app-modal__header">
+                    <div class="app-modal__title">Брониро&shy;ва&shy;ние билетов</div>
+                    <div class="app-modal__close">
+                        <button type="button" class="button -icon -dark" onclick="closeModal()">
                             <img src="img/close.svg" alt="">
                         </button>
                     </div>
                 </div>
-                <div class="app-popup__content" id="popupContent">
+                <div class="app-modal__content" id="modalContent">
                 </div>
             </div>
         </div>

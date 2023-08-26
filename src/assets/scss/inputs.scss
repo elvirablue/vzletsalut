@@ -12,7 +12,7 @@
         font-weight: 400;
         line-height: 1;
         color: var(--text-color);
-        background-color: var(--gray-color);
+        background-color: var(--light-gray-color);
         border: 1px solid var(--gray-color);
         border-radius: 20px;
         transition: border ease-in-out 0.2s;
@@ -30,7 +30,7 @@
 
         input, textarea, select {
             margin-top: 0;
-            
+
             &:focus + .input__field {
                 border-color: var(--main-color) !important;
             }
@@ -321,7 +321,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.2;
     font-weight: 400;
     color: var(--text-color);
     cursor: pointer;
@@ -337,8 +337,11 @@
     }
 
     &__label {
-        display: block;
+        display:block;
+        min-height: 18px;
+        gap: 0.35em;
         padding-left: 30px;
+        padding-top: 2px;
         font: inherit;
         cursor: pointer;
 
@@ -396,7 +399,6 @@
     }
 
     &.-simple {
-
         color: var(--text-light-color);
 
         .checkbox__icon {
@@ -417,6 +419,14 @@
 
         .checkbox__label {
             line-height: 18px;
+        }
+    }
+
+    &.-small {
+        font-size: 12px;
+
+        .checkbox__label {
+            //padding-top: 3px;
         }
     }
 

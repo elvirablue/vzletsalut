@@ -1,0 +1,138 @@
+.app-modal {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    padding: 40px;
+
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &.-show {
+        display: flex;
+    }
+
+    &.-animate {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+    &__outer {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        background-color: var(--main-color);
+        opacity: 0.8;
+    }
+
+    &__scroll-y {
+        display: block;
+        padding: 0 20px;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 850px;
+        height: auto;
+        max-height: 100%;
+        padding: 60px 40px;
+        border-radius: var(--root-radius);
+        background-color: var(--gray-color);
+    }
+
+    &__header {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo {
+        display: flex;
+        width: 414px;
+        height: 64px;
+        margin-bottom: 60px;
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 2;
+        top: -14px;
+        right: -120px;
+
+        .button.-icon {
+            width: 80px;
+            height: 80px;
+            color: var(--surface-color);
+        }
+    }
+
+    @include media_breakpoint(tablet) {
+        padding: 20px;
+
+        &__scroll-y {
+            padding: 0 10px;
+        }
+
+        &__close {
+            top: -10px;
+            right: -60px;
+
+            .button.-icon {
+                width: 55px;
+                height: 55px;
+            }
+        }
+
+        &__inner {
+            max-width: 650px;
+            padding: 40px 20px;
+        }
+
+        &__logo {
+            width: 300px;
+            height: 46px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include media_breakpoint(mobile) {
+        &__close {
+            top: 2px;
+            right: 2px;
+
+            .button.-icon {
+                width: 40px;
+                height: 40px;
+                color: var(--main-color);
+            }
+        }
+
+        &__inner {
+            padding: 20px 10px;
+        }
+
+    }
+    @include media_breakpoint(small-mobile) {
+
+    }
+}

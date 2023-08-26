@@ -679,7 +679,7 @@ textarea {
   font-weight: 400;
   line-height: 1;
   color: var(--text-color);
-  background-color: var(--gray-color);
+  background-color: var(--light-gray-color);
   border: 1px solid var(--gray-color);
   border-radius: 20px;
   transition: border ease-in-out 0.2s;
@@ -984,7 +984,7 @@ textarea {
   align-items: flex-start;
   justify-content: flex-start;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.2;
   font-weight: 400;
   color: var(--text-color);
   cursor: pointer;
@@ -1007,7 +1007,10 @@ textarea {
 .checkbox__label,
 .switch__label {
   display: block;
+  min-height: 18px;
+  gap: 0.35em;
   padding-left: 30px;
+  padding-top: 2px;
   font: inherit;
   cursor: pointer;
 }
@@ -1084,6 +1087,10 @@ textarea {
 
 .checkbox.-simple .checkbox__label {
   line-height: 18px;
+}
+
+.checkbox.-small {
+  font-size: 12px;
 }
 
 .checkbox.-disabled {
@@ -2556,7 +2563,7 @@ textarea {
   font-weight: 400;
   line-height: 1;
   color: var(--text-color);
-  background-color: var(--gray-color);
+  background-color: var(--light-gray-color);
   border: 1px solid var(--gray-color);
   border-radius: 20px;
   transition: border ease-in-out 0.2s;
@@ -2861,7 +2868,7 @@ textarea {
   align-items: flex-start;
   justify-content: flex-start;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.2;
   font-weight: 400;
   color: var(--text-color);
   cursor: pointer;
@@ -2884,7 +2891,10 @@ textarea {
 .checkbox__label,
 .switch__label {
   display: block;
+  min-height: 18px;
+  gap: 0.35em;
   padding-left: 30px;
+  padding-top: 2px;
   font: inherit;
   cursor: pointer;
 }
@@ -2961,6 +2971,10 @@ textarea {
 
 .checkbox.-simple .checkbox__label {
   line-height: 18px;
+}
+
+.checkbox.-small {
+  font-size: 12px;
 }
 
 .checkbox.-disabled {
@@ -3900,8 +3914,115 @@ textarea {
   color: var(--text-light-color);
 }
 
-.app-popup {
+.app-modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  padding: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.app-modal.-show {
+  display: flex;
+}
+
+.app-modal.-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.app-modal__outer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: var(--main-color);
+  opacity: 0.8;
+}
+
+.app-modal__scroll-y {
+  display: block;
+  padding: 0 20px;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.app-modal__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  max-height: 100%;
+  padding: 60px 40px;
+  border-radius: var(--root-radius);
+  background-color: var(--gray-color);
+}
+
+.app-modal__header {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-modal__logo {
+  display: flex;
+  width: 414px;
+  height: 64px;
+  margin-bottom: 60px;
+}
+
+.app-modal__close {
+  position: absolute;
+  z-index: 2;
+  top: -14px;
+  right: -120px;
+}
+
+.app-modal__close .button.-icon {
+  width: 80px;
+  height: 80px;
+  color: var(--surface-color);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal-form__title,
+.modal-form__subtitle {
+  display: block;
+  text-align: center;
+}
+
+.modal-form__subtitle {
+  padding-top: 8px;
+  font-weight: 500;
+}
+
+.modal-form__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .container {
@@ -4789,6 +4910,16 @@ textarea {
     padding-bottom: 32px;
   }
 
+  .aside .aside__button-close {
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+  }
+
   .aside.-right {
     width: 100%;
   }
@@ -4807,9 +4938,11 @@ textarea {
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 0 30px 42px;
     border-radius: 0;
     transform: translateX(-400px);
     transition: transform ease-in-out 0.3s;
+    overflow-y: auto;
   }
 
   .aside.-filters.-show,
@@ -4820,12 +4953,6 @@ textarea {
   .aside.-filters.-open,
   .aside.-profile.-open {
     transform: translateX(0);
-  }
-
-  .aside.-filters .aside__button-close,
-  .aside.-profile .aside__button-close {
-    display: flex;
-    justify-content: flex-end;
   }
 
   .aside.-card-checkout {
@@ -4862,6 +4989,35 @@ textarea {
 
   .profile-page .aside.-right {
     width: 320px;
+  }
+
+  .app-modal {
+    padding: 20px;
+  }
+
+  .app-modal__scroll-y {
+    padding: 0 10px;
+  }
+
+  .app-modal__close {
+    top: -10px;
+    right: -60px;
+  }
+
+  .app-modal__close .button.-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .app-modal__inner {
+    max-width: 650px;
+    padding: 40px 20px;
+  }
+
+  .app-modal__logo {
+    width: 300px;
+    height: 46px;
+    margin-bottom: 20px;
   }
 
   .container {
@@ -5625,6 +5781,21 @@ textarea {
   .profile-page .aside.-right {
     padding: 20px 12px;
     width: 100%;
+  }
+
+  .app-modal__close {
+    top: 2px;
+    right: 2px;
+  }
+
+  .app-modal__close .button.-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--main-color);
+  }
+
+  .app-modal__inner {
+    padding: 20px 10px;
   }
 
   .container {
