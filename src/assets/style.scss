@@ -10,31 +10,28 @@
 @import "scss/card";
 @import "scss/owl-carousel";
 
-@import "scss/app";
-@import "scss/header-top";
-@import "scss/header-bottom";
-@import "scss/app-breabcrumbs";
-@import "scss/app-navigation";
-@import "scss/app-catalog";
-@import "scss/app-footer";
-@import "scss/footer-catalog";
+@import "scss/app/app";
+@import "scss/app/header-top";
+@import "scss/app/header-bottom";
+@import "scss/app/app-breabcrumbs";
+@import "scss/app/app-navigation";
+@import "scss/app/app-catalog";
+@import "scss/app/app-footer";
+@import "scss/app/footer-catalog";
+@import "scss/modals/app-modal";
+@import "scss/modals/modal-form";
 
-@import "scss/index-fs";
-@import "scss/index-catalog";
-@import "scss/index-sale";
+@import "scss/pages/index/index-fs";
+@import "scss/pages/index/index-catalog";
+@import "scss/pages/index/index-sale";
+@import "scss/pages/index/index-communication";
+@import "scss/pages/index/index-buy";
+@import "scss/pages/index/index-certificates";
+@import "scss/pages/index/index-map-shops";
+@import "scss/pages/index/index-feedback";
 @import "scss/sale-carousel";
 @import "scss/certificates-carousel";
 @import "scss/feedback-carousel";
-@import "scss/index-communication";
-@import "scss/index-buy";
-@import "scss/index-certificates";
-@import "scss/index-map-shops";
-@import "scss/index-feedback";
-@import "scss/inputs";
-
-@import "scss/product/product";
-@import "scss/product/cart-item";
-@import "scss/employee";
 
 @import "scss/pages/error";
 @import "scss/pages/page";
@@ -43,7 +40,11 @@
 @import "scss/pages/cart-page";
 @import "scss/pages/profile-page";
 @import "scss/pages/vzlet";
+@import "scss/pages/shop-page";
 
-@import "scss/modals/app-modal";
-@import "scss/modals/modal-form";
+@import "scss/product/product";
+@import "scss/product/cart-item";
+@import "scss/employee";
+@import "scss/address-shop";
+
 @import "scss/helpers";

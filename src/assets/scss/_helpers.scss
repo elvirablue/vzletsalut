@@ -50,6 +50,7 @@
     height: 3px;
    background-color: var(--primary-color);
 }
+
 .badge {
     flex-shrink: 0;
     display: inline-flex;
@@ -535,6 +536,84 @@
     }
 }
 
+.number-accent-list {
+    display: grid;
+    gap: 20px;
+    list-style-type: decimal;
+    counter-reset: counter;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        &::marker {
+            content: "";
+        }
+
+        &::before {
+            flex-shrink: 0;
+            box-sizing: border-box;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 8px 4px 0;
+            font-family: "Chianti", Arial, sans-serif;
+            font-size: 36px;
+            line-height: 1;
+            font-weight: 400;
+            font-style: italic;
+            content: counter(counter);
+            counter-increment: counter;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 3px solid currentColor;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        &:last-child {
+            font-weight: 700;
+
+            &:before {
+                content: "+";
+                justify-content: center;
+                font-style: normal;
+                padding: 0 0 6px 0;
+                background-color: #D26003;
+            }
+        }
+
+        @include media_breakpoint(mobile) {
+            align-items: flex-start;
+            gap: 10px;
+
+            &::before {
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+                padding: 2px 4px 4px 0;
+            }
+        }
+
+    }
+
+    @include media_breakpoint(tablet) {
+        gap: 20px;
+    }
+    @include media_breakpoint(mobile) {
+        gap: 12px;
+
+        &__item {
+            svg {
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
 .separator {
     display: block;
     margin: 0 auto;
@@ -582,6 +661,10 @@
 
 .--bg-gray {
     background-color: var(--gray-color);
+}
+
+.--bg-pink {
+    background-color: var(--pink-color);
 }
 
 .--bg-gray-gradient {

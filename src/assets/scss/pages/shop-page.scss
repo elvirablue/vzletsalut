@@ -1,0 +1,330 @@
+.shop-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 64px;
+    padding-top: 64px;
+
+    &__item {
+        display: block;
+
+        &.-inner-padding {
+            padding: 64px 0;
+        }
+
+        &.-benefits {
+            .bg-image {
+                background-image: url("../img/shop-page-benefits.png");
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 55vw auto;
+
+                @include media_breakpoint(desktop) {
+                    background-size: auto;
+                }
+                @include media_breakpoint(tablet) {
+                    background-size: 45vw auto;
+                    background-position: center 3vw ;
+                }
+                @include media_breakpoint(mobile) {
+                    background-size: 400px auto;
+                    background-position: center 10px ;
+                }
+            }
+
+        }
+
+        &.-map {
+            margin-bottom: 150px;
+        }
+
+        .h2 {
+            padding-bottom: 32px;
+        }
+
+        .primary-line {
+            width: 50%;
+            max-width: 220px;
+            margin: 0 auto 20px;
+        }
+    }
+
+    &__carousel {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__route {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 40px;
+
+        .text-contents {
+            font-size: 14px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        gap: 40px;
+    }
+
+    @include media_breakpoint(tablet) {
+        &__item {
+            &.-map {
+                margin-bottom: 110px;
+            }
+        }
+
+        &__route {
+            grid-template-columns: 200px 1fr;
+            gap: 20px;
+            padding: 0 40px;
+        }
+    }
+
+    @include media_breakpoint(mobile) {
+        gap: 40px;
+
+        &__item {
+            &.-inner-padding {
+                padding: 40px 0;
+            }
+
+            &.-map {
+                margin-bottom: 110px;
+            }
+
+            .h2 {
+                padding-bottom: 20px;
+            }
+        }
+
+        &__carousel {
+            margin: 0 calc(-1 * var(--mobile-padding));
+        }
+
+        &__route {
+            grid-template-columns: 1fr;
+            padding: 0;
+        }
+    }
+
+    .markers-list {
+        font-size: 30px;
+        gap: 20px;
+    }
+
+    .number-accent-list {
+        padding: 120px 0;
+        font-size: 14px;
+
+        @include media_breakpoint(tablet) {
+            padding: 27vw 0 40px;
+            max-width: 750px;
+        }
+        @include media_breakpoint(mobile) {
+            padding-top: 200px;
+        }
+    }
+
+    .address-shop {
+        &__list {
+            padding: 0;
+        }
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    .image-arrow {
+        position: absolute;
+
+        svg {
+            width: 70px;
+            height: 92px;
+            color: var(--primary-color);
+        }
+    }
+
+    .card.-shop-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+        gap: 60px;
+    }
+
+    .card.-image {
+        display: block;
+        height: 555px;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+        }
+
+        @include media_breakpoint(tablet) {
+            height: 450px;
+        }
+        @include media_breakpoint(mobile) {
+            height: 300px;
+        }
+    }
+
+    .card.-products {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 40px;
+
+        .card__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 4px;
+            padding-left: 20px;
+
+            .button {
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+
+        .image-arrow {
+            top: 96px;
+            right: -48px;
+        }
+
+        @include media_breakpoint(tablet) {
+            padding: 40px 20px;
+
+            .card__list {
+                .button {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        @include media_breakpoint(mobile) {
+            padding: 20px;
+
+            .h2 {
+                padding-bottom: 20px;
+            }
+
+            .card__list {
+                padding-left: 0;
+                .button {
+                    font-size: 16px;
+                }
+            }
+
+            .image-arrow {
+                top: auto;
+                bottom: -60px;
+                right: 20px;
+                transform: rotate(90deg) scale(0.75);
+            }
+        }
+    }
+
+    .card.-products-sale {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        min-height: 555px;
+        padding: 40px;
+        background-image: url("../img/shop-page-sale.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .h2 {
+            padding-bottom: 74px;
+        }
+
+        .card__text {
+            display: block;
+            max-width: 340px;
+            font-size: 24px;
+            line-height: 1.25;
+        }
+
+        @include media_breakpoint(tablet) {
+            min-height: 450px;
+            padding: 40px 20px;
+
+            .h2 {
+                padding-bottom: 32px;
+            }
+
+            .card__text {
+                width: 300px;
+                max-width: 60%;
+                font-size: 20px;
+            }
+        }
+
+        @include media_breakpoint(mobile) {
+            min-height: auto;
+
+            .card__text {
+                font-size: 18px;
+            }
+        }
+
+    }
+
+    .card.-additionally {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 40px;
+
+        .card__text {
+            display: block;
+            max-width: 550px;
+            font-size: 24px;
+            line-height: 1.25;
+        }
+
+        .card__title {
+            display: block;
+            max-width: 550px;
+            font-size: 40px;
+            text-transform: uppercase;
+            padding-bottom: 54px;
+        }
+
+        @include media_breakpoint(tablet) {
+            padding: 40px 20px;
+
+            .card__title {
+                padding-bottom: 32px;
+                font-size: 34px;
+            }
+            .card__text {
+                max-width: none;
+                font-size: 20px;
+            }
+        }
+        @include media_breakpoint(mobile) {
+            .card__title {
+                padding-bottom: 20px;
+                font-size: 26px;
+            }
+            .card__text {
+                font-size: 18px;
+            }
+        }
+    }
+}

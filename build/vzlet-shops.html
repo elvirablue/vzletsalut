@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+
+    <title>Интернет-магазин | Фейерверки, салюты, пиротехника</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name = "format-detection" content = "telephone=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+    <link href="https://myfonts.ru/myfonts?fonts=chianti-bdit-win95bt" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.cdnfonts.com/css/fira-mono" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body onload="loaded();">
+<div class="app">
+    <header class="app-header">
+        <div class="header-top">
+            <div class="container -row-lg -row-md">
+                <div class="header-top__brand">
+                    <a href="/" class="header-top__logo">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                    <div class="header-top__description">
+                        <span>Интернет-магазин</span>
+                        <span>Фейерверки, салюты, пиротехника</span>
+                        <span>Оптом и в розницу</span>
+                    </div>
+                </div>
+
+                <div class="header-top__actions">
+                    <div class="header-top__social --hidden-tablet">
+                        <a href="#" class="button -icon -size-20">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#vk"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="button -icon -size-20">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#youtube"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="button -icon -size-20">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#instagram"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="button -icon -size-20">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#telegram"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="header-top__contacts --hidden-mobile">
+                        <a href="#" class="button -text --no-wrap">8 495 177 04 27</a>
+                        <a href="#" class="button -text --no-wrap">8 800 177 04 27</a>
+                    </div>
+
+                    <div class="header-top__search">
+                        <div class="search">
+                            <input type="text" placeholder=""/>
+                            <svg><use xlink:href="img/sprite.svg#magnify"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="header-top__user">
+                        <button class="button -icon">
+                            <svg><use xlink:href="img/sprite.svg#account"/></svg>
+                        </button>
+                        <button class="button -icon">
+                            <svg><use xlink:href="img/sprite.svg#favorite"/></svg>
+                        </button>
+                        <button class="button -icon -cart">
+                            <svg><use xlink:href="img/sprite.svg#cart"/></svg>
+                            <span class="badge -small">20</span>
+                        </button>
+                        <span class="header-top__cart-amount">21 650 ₽</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom"><!-- -fixed -->
+            <div class="header-bottom__navigation-wrap" id="navigationWrap"></div>
+            <div class="header-bottom__navigation" id="navigationMobile">
+                <div class="container -row-lg -row-md">
+                    <div class="header-bottom__mobile-top">
+                        <button onclick="closeNavigationMobile()" type="button" class="button -icon --primary-color">
+                            <svg> <use xlink:href="img/sprite.svg#close"/></svg>
+                        </button>
+                    </div>
+                    <nav class="app-navigation" id="navigation">
+                        <div id="catalogButton" class="app-navigation__item">
+                            <button
+                                    onclick="openCatalog()"
+                                    onmouseenter="openCatalog()"
+                                    onmouseleave="catalogButtonMouseLeave()"
+                                    type="button" class="button-accent">
+                                <svg class="--primary-color">
+                                    <use xlink:href="img/sprite.svg#menu"/>
+                                </svg>
+                                <span>Каталог</span>
+                            </button>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="button-accent">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#smail"/>
+                                </svg>
+                                <span>Система<br/> лояльности</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="button-accent">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#percent"/>
+                                </svg>
+                                <span>Вход&nbsp;в&nbsp;ЛК</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="button-accent">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#mens"/>
+                                </svg>
+                                <span>Оптовые<br/> закупки</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="button-accent">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#car"/>
+                                </svg>
+                                <span>Доставка<br/> и оплата</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item --hidden-only-tablet">
+                            <a href="#" class="button-accent">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#box"/>
+                                </svg>
+                                <span>Производители</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item --hidden-only-tablet">
+                            <a href="#" class="button-accent">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#medal"/>
+                                </svg>
+                                <span>ТМ&nbsp;Взлёт</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item --hidden-only-tablet">
+                            <a href="#" class="button-accent">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#book"/>
+                                </svg>
+                                <span>ПироБлог</span>
+                            </a>
+                        </div>
+                        <div class="app-navigation__item">
+                            <a href="#" class="button-accent">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#mail"/>
+                                </svg>
+                                <span>Магазины</span>
+                            </a>
+                        </div>
+
+                        <div class="app-navigation__more">
+                            <a href="#" class="button -text -more">
+                                <svg> <use xlink:href="img/sprite.svg#more"/> </svg>
+                                <span>Ещё</span>
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="header-bottom__mobile-bottom">
+                        <div class="header-bottom__mobile-item">
+                            <a href="#" class="button -text">8 495 177 04 27</a>
+                            <a href="#" class="button -text">8 800 177 04 27</a>
+                        </div>
+                        <div class="header-bottom__mobile-item">
+                            <button type="button" class="button -outline -small">Свяжитесь со мной</button>
+                        </div>
+                        <div class="header-bottom__mobile-item">
+                            <div class="header-bottom__social">
+                                <a href="#" class="button -icon -size-20">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#vk"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="button -icon -size-20">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#youtube"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="button -icon -size-20">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#instagram"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="button -icon -size-20">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#telegram"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom__mobile">
+                <div class="container -row">
+                    <div class="header-bottom__contacts">
+                        <a href="#" class="button -text">8 495 177 04 27</a>
+                        <a href="#" class="button -text">8 800 177 04 27</a>
+                    </div>
+                    <div class="header-bottom__actions">
+                        <div type="button" class="button -icon">
+                            <svg> <use xlink:href="img/sprite.svg#smail"/></svg>
+                        </div>
+                        <div type="button" class="button -icon --primary-color">
+                            <svg> <use xlink:href="img/sprite.svg#menu"/></svg>
+                        </div>
+                        <button onclick="openNavigationMobile()" type="button" class="button -icon --primary-color">
+                            <svg> <use xlink:href="img/sprite.svg#more"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="catalog" class="header-bottom__catalog">
+                <div class="container">
+                    <div class="app-catalog">
+                        <div class="app-catalog__mobile-back">
+                            <button onclick="closeCatalog()" type="button" class="button -text">
+                                < Назад
+                            </button>
+                        </div>
+                        <div  class="app-catalog__columns">
+                        <ul class="app-catalog__list">
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>СУПЕРпредложения</span>
+                                </a>
+                                <ul class="app-catalog__list">
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">Распродажа</a>
+                                    </li>
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">Новинки</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Особый повод</span>
+                                </a>
+                                <ul class="app-catalog__list">
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">Свадьба</a>
+                                    </li>
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">День рождения</a>
+                                    </li>
+                                    <li class="app-catalog__item">
+                                        <a href="#" class="app-catalog__link">Гендер-пати</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Готовые наборы</span>
+                                </a>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Батареи салютов и фейерверков</span>
+                                </a>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Петарды</span>
+                                </a>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Фонтаны пиротехнические</span>
+                                </a>
+                            </li>
+                            <li class="app-catalog__item">
+                                <a href="#" class="app-catalog__title">
+                                    <svg><use xlink:href="img/sprite.svg#arrow-catalog"/></svg>
+                                    <span>Ракеты</span>
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <div class="container">
+            <nav class="app-breadcrumbs">
+                <div class="app-breadcrumbs__item">
+                    <a href="/" class="app-breadcrumbs__link">
+                        Главная
+                    </a>
+                    <svg><use xlink:href="img/sprite.svg#separator"/></svg>
+                </div>
+                <div class="app-breadcrumbs__item">
+                    <a href="/" class="app-breadcrumbs__link">
+                        ТМ Взлёт
+                    </a>
+                    <svg><use xlink:href="img/sprite.svg#separator"/></svg>
+                </div>
+                <div class="app-breadcrumbs__item">
+                    <a href="/" class="app-breadcrumbs__link">
+                        О нас
+                    </a>
+                    <svg><use xlink:href="img/sprite.svg#separator"/></svg>
+                </div>
+                <div class="app-breadcrumbs__item">
+                    <span class="app-breadcrumbs__link">
+                        Сеть розничных магазинов
+                    </span>
+                </div>
+            </nav>
+        </div>
+
+        <div class="page-title">
+            <div class="container">
+                <h1 class="h1">Сеть розничных магазинов</h1>
+            </div>
+        </div>
+
+        <div class="page-item -small-padding">
+            <div class="container">
+                <div class="vzlet-page">
+                    <div class="vzlet-page__content">
+                        <div class="card -vzlet-shops-map">
+                            <div class="h2 --text-center">Вы также можете заказать любую пиротехнику в сети наших
+                                фирменных магазинов.
+                            </div>
+                            <div class="card__map">
+                                <img src="img/map-example.png" alt="">
+                            </div>
+                        </div>
+                        <div class="h2 --text-center">Адреса розничных магазинов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-item --bg-gray">
+            <div class="container">
+                <div class="vzlet-page address-shop">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 -center">
+                            <div class="address-shop__image">
+                                <img src="img/shop-example.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12 -center">
+                            <ul class="address-shop__list">
+                                <li class="address-shop__list-item">
+                                    <svg><use xlink:href="img/sprite.svg#clock-bold"/></svg>
+                                    <div class="--text-bold">График работы:</div>
+                                    <div>10:00 до 21:00 Без выходных</div>
+                                </li>
+                                <li class="address-shop__list-item">
+                                    <svg><use xlink:href="img/sprite.svg#home"/></svg>
+                                    <div class="--text-bold">Адрес:</div>
+                                    <div>МО, г.Чехов, автодорога Чепелево-Вельяминово,
+                                        2-й километр, вл1. с1</div>
+                                </li>
+                                <li class="address-shop__list-item">
+                                    <svg><use xlink:href="img/sprite.svg#phone"/></svg>
+                                    <div class="--text-bold">Телефон:</div>
+                                    <div>+7 926 633 39 70 (тел., WhatsApp)</div>
+                                </li>
+                                <li class="address-shop__list-item">
+                                    <svg><use xlink:href="img/sprite.svg#telegram-simple"/></svg>
+                                    <div class="--text-bold">Другие контакты:</div>
+                                    <div>Telg.@chehovvzlet</div>
+                                </li>
+                                <li class="address-shop__list-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="flex-row"><a href="#" class="button -small -outline">Подробнее</a></div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="page-item -small-padding"></div>
+
+        <div class="page-item --bg-gray">
+            <div class="container">
+                <div class="vzlet-page address-shop">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-12 -center">
+                            <div class="address-shop__image">
+                                <img src="img/shop-example.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-12 -center">
+                            <ul class="address-shop__list">
+                                <li class="address-shop__list-item">
+                                    <svg><use xlink:href="img/sprite.svg#clock-bold"/></svg>
+                                    <div class="--text-bold">График работы:</div>
+                                    <div>10:00 до 21:00 Без выходных</div>
+                                </li>
+                                <li class="address-shop__list-item">
+                                    <svg><use xlink:href="img/sprite.svg#home"/></svg>
+                                    <div class="--text-bold">Адрес:</div>
+                                    <div>МО, г.Чехов, автодорога Чепелево-Вельяминово,
+                                        2-й километр, вл1. с1</div>
+                                </li>
+                                <li class="address-shop__list-item">
+                                    <svg><use xlink:href="img/sprite.svg#phone"/></svg>
+                                    <div class="--text-bold">Телефон:</div>
+                                    <div>+7 926 633 39 70 (тел., WhatsApp)</div>
+                                </li>
+                                <li class="address-shop__list-item">
+                                    <svg><use xlink:href="img/sprite.svg#telegram-simple"/></svg>
+                                    <div class="--text-bold">Другие контакты:</div>
+                                    <div>Telg.@chehovvzlet</div>
+                                </li>
+                                <li class="address-shop__list-item">
+                                    <div></div>
+                                    <div></div>
+                                    <div class="flex-row"><a href="#" class="button -small -outline">Подробнее</a></div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="page-item -small-padding"></div>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container">
+            <div class="app-footer__logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <div class="row -dense">
+                <div class="col-lg-8 col-md-9 col-12">
+                    <div class="app-footer__item">
+                        <div class="app-footer__columns-catalog">
+                            <ul class="footer-catalog">
+                                <li class="footer-catalog__item">
+                                    <a href="#" class="footer-catalog__link">Каталог</a>
+                                    <ul class="footer-catalog">
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Батареи салютов и фейерверков</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Петарды</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Фонтаны пиротехнические</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Римские свечи</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Дневная пиротехника</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Цветной дым и огонь</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Хлопушки и пневмохлопушки</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Бенгальские огни</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Ракеты</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Фестивальные шары</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Сопутствующие&nbsp;товары</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Готовые наборы</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="footer-catalog__item">
+                                    <a href="#" class="footer-catalog__link">Особый повод</a>
+                                    <ul class="footer-catalog">
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Свадьба</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">День рождения</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Гендер-пати</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Детский праздник</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Новый год</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Корпоратив</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="footer-catalog__item">
+                                    <a href="#" class="footer-catalog__link">Спецпредложения</a>
+                                    <ul class="footer-catalog">
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Распродажа фейерверков</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Распродажа петард</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Новинки 2022/23</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Акции</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="footer-catalog__item">
+                                    <a href="#" class="footer-catalog__link">Каталог</a>
+                                    <ul class="footer-catalog">
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Батареи салютов и фейерверков</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Петарды</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Фонтаны пиротехнические</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Римские свечи</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Дневная пиротехника</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Цветной дым и огонь</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Хлопушки и пневмохлопушки</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Бенгальские огни</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Ракеты</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Фестивальные шары</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Сопутствующие&nbsp;товары</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Готовые наборы</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="footer-catalog__item">
+                                    <a href="#" class="footer-catalog__link">Особый повод</a>
+                                    <ul class="footer-catalog">
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Свадьба</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">День рождения</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Гендер-пати</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Детский праздник</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Новый год</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Корпоратив</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="footer-catalog__item">
+                                    <a href="#" class="footer-catalog__link">Спецпредложения</a>
+                                    <ul class="footer-catalog">
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Распродажа фейерверков</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Распродажа петард</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Новинки 2022/23</a>
+                                        </li>
+                                        <li class="footer-catalog__item">
+                                            <a href="#" class="footer-catalog__link">Акции</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-3 col-12">
+                    <div class="row -dense -fill-height-lg">
+                        <div class="col-lg-6 col-md-12 col-6">
+                            <div class="app-footer__item">
+                                <div class="app-footer__social">
+                                    <a href="#" class="button -icon -size-20">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#vk"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="button -icon -size-20">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#youtube"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="button -icon -size-20">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#instagram"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="button -icon -size-20">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#telegram"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="app-footer__contacts">
+                                    <a href="tel:8 495 177 04 27" class="button -text">8 495 177 04 27</a>
+                                    <a href="tel:8 800 177 04 27" class="button -text">8 800 177 04 27</a>
+                                    <a href="mailto:info@vzletsalut.ru" class="button -text">info@vzletsalut.ru</a>
+                                    <a href="mailto:opt@vzletsalut.ru" class="button -text">opt@vzletsalut.ru</a>
+                                </div>
+                                <div class="app-footer__actions">
+                                    <button type="button" class="button -primary-outline -small">
+                                        Зарегистрироваться
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-12 col-6">
+                            <div class="app-footer__item">
+                                <div class="app-footer__users">
+                                    <button class="button -icon">
+                                        <svg><use xlink:href="img/sprite.svg#account"/></svg>
+                                    </button>
+                                    <button class="button -icon">
+                                        <svg><use xlink:href="img/sprite.svg#favorite"/></svg>
+                                    </button>
+                                    <button class="button -icon -cart">
+                                        <svg><use xlink:href="img/sprite.svg#cart"/></svg>
+                                        <span class="badge -small">20</span>
+                                    </button>
+                                </div>
+                                <div class="app-footer__copyright">
+                                    <span class="--text-bold">Created by</span>
+                                    <a href="#" class="button -text">
+                                        <img src="img/logo-media.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
