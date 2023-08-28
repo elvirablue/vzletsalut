@@ -1,0 +1,75 @@
+.shop-location-page {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 64px;
+        padding: 0;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    @include media_breakpoint(tablet) {
+        &__content {
+            gap: 32px;
+        }
+    }
+
+    .card.-shop-location-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 555px;
+        padding: 60px;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: cover;
+        background-color: #95D298;
+        background-image: url(../img/shop-location.png);
+        overflow: hidden;
+
+        .markers-list {
+            margin-left: 50%;
+            padding-top: 10%;
+            font-size: 30px;
+        }
+
+        @include media_breakpoint(tablet) {
+            height: 400px;
+            background-image: linear-gradient(90deg, rgba(149, 210, 152, 0) 70%, rgba(149, 210, 152, 1) 100%), url(../img/shop-location.png);
+
+            .markers-list {
+                font-size: 24px;
+            }
+        }
+
+        @include media_breakpoint(mobile) {
+            height: 40vw;
+            padding: 40px 20px;
+            //background-position: -60px top;
+
+            .markers-list {
+                width: 48vw;
+                margin-left: auto;
+                font-size: 20px;
+            }
+        }
+
+        @include media_breakpoint(small-mobile) {
+            height: 250px;
+            padding: 40px 10px;
+            background-position: -60px top;
+            background-image: url(../img/shop-location.png);
+
+            .markers-list {
+                font-size: 18px;
+            }
+        }
+    }
+}

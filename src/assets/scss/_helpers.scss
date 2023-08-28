@@ -242,8 +242,9 @@
     }
 
     a {
-        color: var(--text-light-color);
-        text-decoration: none;
+        color: var(--main-color);
+        font-weight: 700;
+        text-decoration: underline;
         transition: color 0.1s ease-in-out;
 
         &:hover {
@@ -252,12 +253,13 @@
     }
 
     ol, ul {
+        list-style-type: initial;
         padding-left: 40px;
 
         > li {
             position: relative;
             display: block;
-            padding-bottom: 10px;
+            padding-bottom: 4px;
 
             &:before {
                 color: currentColor;
@@ -478,6 +480,10 @@
     &.-row-3 {
         -webkit-line-clamp: 3;
     }
+
+    &.-row-4 {
+        -webkit-line-clamp: 4;
+    }
 }
 
 .tooltip-hover {
@@ -514,6 +520,7 @@
         align-items: flex-start;
 
         svg {
+            flex-shrink: 0;
             width: 24px;
             height: 24px;
             margin-right: 16px;

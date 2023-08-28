@@ -57,12 +57,17 @@
     @include media_breakpoint(tablet) {
         font-size: 22px;
     }
+
     @include media_breakpoint(mobile) {
         font-size: 20px;
     }
 }
 
 .small-text {
+    font-size: 14px;
+}
+
+.smaller-text {
     font-size: 12px;
 }
 
