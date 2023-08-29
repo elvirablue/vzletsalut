@@ -39,6 +39,17 @@
         }
     }
 
+    .primary-line {
+        width: 50%;
+        max-width: 220px;
+        margin: 30px 0;
+        background-color: currentColor;
+
+        @include media_breakpoint(mobile) {
+            margin: 20px 0;
+        }
+    }
+
     @include media_breakpoint(tablet) {
         &__content {
             gap: 32px;
@@ -74,6 +85,70 @@
     .card.-corporate-purchase {
         background-image: url("../img/box-corporate-purchase.png");
     }
+    .card.-for-you {
+        font-size: 20px;
+
+        @include media_breakpoint(tablet) {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        @include media_breakpoint(mobile) {
+            font-size: 16px;
+        }
+    }
+
+    .card.-wholesale-corporate {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 555px;
+        padding: 60px 40px 60px 57%;
+        color: var(--surface-color);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        background-color: #DB003D;
+        background-image: url(../img/corporate-purchase.png);
+
+        .card__title {
+            display: block;
+            font-size: 50px;
+        }
+
+        .card__text {
+            display: block;
+            font-size: 20px;
+        }
+
+        @include media_breakpoint(tablet) {
+            height: auto;
+            padding-left: 52%;
+
+            .card__title {
+                font-size: 40px;
+            }
+            .card__text {
+                font-size: 18px;
+            }
+        }
+
+        @include media_breakpoint(mobile) {
+            padding: 40px 20px 60vw;
+            background-position: top left, bottom left;
+            background-size: 100% calc(100% - 57vw), auto 60vw;
+            background-image: linear-gradient( #D50036 0%, #E4093F 90%, rgba(255,255,255, 0) 100%), url(../img/corporate-purchase.png);
+
+            .card__title {
+                font-size: 34px;
+            }
+            .card__text {
+                font-size: 16px;
+            }
+        }
+    }
 
     .card.-wholesale-pyro {
         display: flex;
@@ -85,7 +160,7 @@
         background-repeat: no-repeat;
         background-position: top left;
         background-size: cover;
-        background-color: #95D298;
+        background-color: #CC6C84;
         background-image: url(../img/wholesale-pyro.png);
         overflow: hidden;
 
@@ -119,7 +194,6 @@
         @include media_breakpoint(small-mobile) {
             height: auto;
             padding: 40px 10px 68vw;
-            background-color: #CC6C84;
             background-size: 100% calc(100% - 65vw), auto 70vw;
             background-position: left top, left bottom;
             background-image: linear-gradient( #CC6C84 0%, #ECA2AF 90%, rgba(255,255,255, 0) 100%), url(../img/wholesale-pyro.png);
@@ -228,6 +302,48 @@
             .card__text {
                 margin-top: 20px;
                 margin-bottom: 63vw;
+            }
+        }
+    }
+
+    .card.-conditions {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 555px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #F4C946;
+        background-image: url(../img/wholesale-conditions.png);
+
+        .image-arrow {
+            top: 20px;
+            right: -48px;
+        }
+
+        @include media_breakpoint(tablet) {
+            justify-content: flex-start;
+            height: 100%;
+            min-height: 450px;
+            padding: 40px 20px;
+            //background-position: left top;
+        }
+
+        @include media_breakpoint(mobile) {
+            height: 80vw;
+            min-height: 350px;
+            max-height: 450px;
+            background-position: center;
+
+            .image-arrow {
+                top: auto;
+                bottom: -60px;
+                right: 20px;
+                transform: rotate(90deg) scale(0.75);
             }
         }
     }

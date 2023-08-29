@@ -3702,6 +3702,13 @@ textarea {
   color: var(--primary-color);
 }
 
+.wholesale-page .primary-line {
+  width: 50%;
+  max-width: 220px;
+  margin: 30px 0;
+  background-color: currentColor;
+}
+
 .wholesale-page .card.-pyrotechnics {
   background-image: url("../img/box-pyrotechnics.png");
 }
@@ -3714,6 +3721,36 @@ textarea {
   background-image: url("../img/box-corporate-purchase.png");
 }
 
+.wholesale-page .card.-for-you {
+  font-size: 20px;
+}
+
+.wholesale-page .card.-wholesale-corporate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 555px;
+  padding: 60px 40px 60px 57%;
+  color: var(--surface-color);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: #DB003D;
+  background-image: url(../img/corporate-purchase.png);
+}
+
+.wholesale-page .card.-wholesale-corporate .card__title {
+  display: block;
+  font-size: 50px;
+}
+
+.wholesale-page .card.-wholesale-corporate .card__text {
+  display: block;
+  font-size: 20px;
+}
+
 .wholesale-page .card.-wholesale-pyro {
   display: flex;
   flex-direction: column;
@@ -3724,7 +3761,7 @@ textarea {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
-  background-color: #95D298;
+  background-color: #CC6C84;
   background-image: url(../img/wholesale-pyro.png);
   overflow: hidden;
 }
@@ -3776,6 +3813,26 @@ textarea {
   text-align: left;
   background-repeat: no-repeat;
   background-image: linear-gradient(132deg, rgba(255, 255, 255, 0.36) 0.02%, rgba(255, 255, 255, 0.56) 100%);
+}
+
+.wholesale-page .card.-conditions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 555px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #F4C946;
+  background-image: url(../img/wholesale-conditions.png);
+}
+
+.wholesale-page .card.-conditions .image-arrow {
+  top: 20px;
+  right: -48px;
 }
 
 .wholesale-page .card.-new-business {
@@ -4936,7 +4993,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 8px 4px 0;
+  padding: 0 0 4px 0;
   font-family: "Chianti", Arial, sans-serif;
   font-size: 36px;
   line-height: 1;
@@ -5725,6 +5782,25 @@ textarea {
     column-count: 3;
   }
 
+  .wholesale-page .card.-for-you {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+
+  .wholesale-page .card.-wholesale-corporate {
+    height: auto;
+    padding-left: 52%;
+  }
+
+  .wholesale-page .card.-wholesale-corporate .card__title {
+    font-size: 40px;
+  }
+
+  .wholesale-page .card.-wholesale-corporate .card__text {
+    font-size: 18px;
+  }
+
   .wholesale-page .card.-wholesale-pyro {
     height: 400px;
     background-image: linear-gradient(90deg, rgba(204, 108, 132, 0) 70%, rgb(204, 108, 132) 100%), url(../img/wholesale-pyro.png);
@@ -5750,6 +5826,13 @@ textarea {
   .wholesale-page .card.-wholesale-sale .card__text {
     margin: 14px -40px 0;
     padding: 12px 40px;
+  }
+
+  .wholesale-page .card.-conditions {
+    justify-content: flex-start;
+    height: 100%;
+    min-height: 450px;
+    padding: 40px 20px;
   }
 
   .wholesale-page .card.-new-business {
@@ -6838,9 +6921,32 @@ textarea {
     font-size: 18px;
   }
 
+  .wholesale-page .primary-line {
+    margin: 20px 0;
+  }
+
   .wholesale-page__columns {
     -moz-column-count: 2;
     column-count: 2;
+  }
+
+  .wholesale-page .card.-for-you {
+    font-size: 16px;
+  }
+
+  .wholesale-page .card.-wholesale-corporate {
+    padding: 40px 20px 60vw;
+    background-position: top left, bottom left;
+    background-size: 100% calc(100% - 57vw), auto 60vw;
+    background-image: linear-gradient(#D50036 0%, #E4093F 90%, rgba(255, 255, 255, 0) 100%), url(../img/corporate-purchase.png);
+  }
+
+  .wholesale-page .card.-wholesale-corporate .card__title {
+    font-size: 34px;
+  }
+
+  .wholesale-page .card.-wholesale-corporate .card__text {
+    font-size: 16px;
   }
 
   .wholesale-page .card.-wholesale-pyro {
@@ -6874,6 +6980,20 @@ textarea {
 
   .wholesale-page .card.-wholesale-sale .card__text {
     font-size: 14px;
+  }
+
+  .wholesale-page .card.-conditions {
+    height: 80vw;
+    min-height: 350px;
+    max-height: 450px;
+    background-position: center;
+  }
+
+  .wholesale-page .card.-conditions .image-arrow {
+    top: auto;
+    bottom: -60px;
+    right: 20px;
+    transform: rotate(90deg) scale(0.75);
   }
 
   .wholesale-page .card.-new-business {
@@ -7308,7 +7428,6 @@ textarea {
   .wholesale-page .card.-wholesale-pyro {
     height: auto;
     padding: 40px 10px 68vw;
-    background-color: #CC6C84;
     background-size: 100% calc(100% - 65vw), auto 70vw;
     background-position: left top, left bottom;
     background-image: linear-gradient(#CC6C84 0%, #ECA2AF 90%, rgba(255, 255, 255, 0) 100%), url(../img/wholesale-pyro.png);
