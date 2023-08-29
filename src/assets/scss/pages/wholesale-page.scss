@@ -43,7 +43,6 @@
         width: 50%;
         max-width: 220px;
         margin: 30px 0;
-        background-color: currentColor;
 
         @include media_breakpoint(mobile) {
             margin: 20px 0;
@@ -70,6 +69,7 @@
             column-count: 2;
         }
     }
+
     @include media_breakpoint(small-mobile) {
         &__columns {
             column-count: 1;
@@ -88,6 +88,12 @@
     .card.-for-you {
         font-size: 20px;
 
+        .card__promo {
+            margin: -20px 0 32px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
         @include media_breakpoint(tablet) {
             max-width: 900px;
             margin: 0 auto;
@@ -95,6 +101,75 @@
         }
         @include media_breakpoint(mobile) {
             font-size: 16px;
+        }
+    }
+
+    .card.-wholesale-business {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 555px;
+        padding: 60px 40px 60px 57%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        background-color: #B4DBE0;
+        background-image: url(../img/business.png);
+
+        .card__title {
+            display: block;
+            font-size: 50px;
+        }
+
+        .card__text {
+            display: block;
+            font-size: 20px;
+        }
+
+        .card__promo {
+            display: block;
+            font-size: 40px;
+            padding-top: 30px;
+        }
+
+        @include media_breakpoint(tablet) {
+            height: auto;
+            min-height: 450px;
+            padding: 20px 20px 20px 55%;
+
+            .card__title {
+                max-width: 400px;
+                font-size: 38px;
+            }
+            .card__text {
+                font-size: 18px;
+            }
+            .card__promo {
+                max-width: 350px;
+                font-size: 34px;
+            }
+        }
+
+        @include media_breakpoint(mobile) {
+            padding: 40px 20px 57vw;
+            background-position: top left, bottom left;
+            background-size: 100% calc(100% - 55vw), auto 60vw;
+            background-image: linear-gradient( #86B7BB 0%, #B4DBE0 90%, rgba(255,255,255, 0) 100%), url(../img/business.png);
+
+            .card__title {
+                font-size: 30px;
+            }
+            .card__text {
+                font-size: 16px;
+            }
+
+            .card__promo {
+                max-width: none;
+                font-size: 28px;
+                padding-top: 20px;
+            }
         }
     }
 
@@ -206,6 +281,89 @@
         }
     }
 
+    .card.-luck {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        min-height: 740px;
+        padding: 20px 40px 40px;
+        gap: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #8C789D;
+        background-image: url(../img/wholesale-luck.png);
+
+        .card__title {
+            font-size: 100px;
+            background-image: linear-gradient(132deg, rgba(255, 255, 255, 0.36) 0.02%, rgba(255, 255, 255, 0.56) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .number-accent-list {
+            font-size: 30px;
+            max-width: 770px;
+            padding-left: 40px;
+
+            + * {
+                max-width: 770px;
+            }
+        }
+
+        @include media_breakpoint(tablet) {
+            padding: 40px 20px;
+            min-height: auto;
+
+            .card__title {
+                font-size: 7vw;
+            }
+
+            .number-accent-list {
+                font-size: 2vw;
+                max-width: 65%;
+                + * {
+                    max-width: 65%;
+                    font-size: 1.75vw;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 540px) {
+            gap: 20px;
+            padding: 20px 20px 60vw;
+            background-size: 100% calc(100% - 60vw), auto 70vw;
+            background-position: top center, bottom right;
+            background-image: linear-gradient(#75638B 20%, #9884A7 90%, rgba(255,255,255, 0) 100%), url(../img/wholesale-luck.png);
+
+            .card__title {
+                font-size: 35px;
+            }
+
+            .number-accent-list {
+                font-size: 16px;
+                max-width: none;
+                padding-left: 20px;
+
+                + * {
+                    height: 80px;
+                    max-width: none;
+                    font-size: 12px;
+                    text-align: left;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 540px) {
+            .card__title {
+
+            }
+        }
+    }
+
     .card.-wholesale-sale {
         display: flex;
         flex-direction: column;
@@ -306,6 +464,34 @@
         }
     }
 
+    .card.-delivery {
+        .text-contents {
+            font-size: 20px;
+            font-weight: 500;
+
+            ul li {
+                padding-bottom: 12px;
+            }
+        }
+
+        .card__promo {
+            padding-top: 52px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+
+    .card.-help {
+        background-color: #EAB2BF;
+        background-image: url(../img/box-help.png);
+    }
+
+    .card.-conditions {
+        background-color: #F4C946;
+        background-image: url(../img/wholesale-conditions.png);
+    }
+
+    .card.-help,
     .card.-conditions {
         position: relative;
         display: flex;
@@ -317,8 +503,6 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-color: #F4C946;
-        background-image: url(../img/wholesale-conditions.png);
 
         .image-arrow {
             top: 20px;

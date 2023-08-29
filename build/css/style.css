@@ -3706,7 +3706,6 @@ textarea {
   width: 50%;
   max-width: 220px;
   margin: 30px 0;
-  background-color: currentColor;
 }
 
 .wholesale-page .card.-pyrotechnics {
@@ -3723,6 +3722,43 @@ textarea {
 
 .wholesale-page .card.-for-you {
   font-size: 20px;
+}
+
+.wholesale-page .card.-for-you .card__promo {
+  margin: -20px 0 32px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.wholesale-page .card.-wholesale-business {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 555px;
+  padding: 60px 40px 60px 57%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: #B4DBE0;
+  background-image: url(../img/business.png);
+}
+
+.wholesale-page .card.-wholesale-business .card__title {
+  display: block;
+  font-size: 50px;
+}
+
+.wholesale-page .card.-wholesale-business .card__text {
+  display: block;
+  font-size: 20px;
+}
+
+.wholesale-page .card.-wholesale-business .card__promo {
+  display: block;
+  font-size: 40px;
+  padding-top: 30px;
 }
 
 .wholesale-page .card.-wholesale-corporate {
@@ -3772,6 +3808,39 @@ textarea {
   font-size: 30px;
 }
 
+.wholesale-page .card.-luck {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 740px;
+  padding: 20px 40px 40px;
+  gap: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #8C789D;
+  background-image: url(../img/wholesale-luck.png);
+}
+
+.wholesale-page .card.-luck .card__title {
+  font-size: 100px;
+  background-image: linear-gradient(132deg, rgba(255, 255, 255, 0.36) 0.02%, rgba(255, 255, 255, 0.56) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wholesale-page .card.-luck .number-accent-list {
+  font-size: 30px;
+  max-width: 770px;
+  padding-left: 40px;
+}
+
+.wholesale-page .card.-luck .number-accent-list + * {
+  max-width: 770px;
+}
+
 .wholesale-page .card.-wholesale-sale {
   display: flex;
   flex-direction: column;
@@ -3815,6 +3884,32 @@ textarea {
   background-image: linear-gradient(132deg, rgba(255, 255, 255, 0.36) 0.02%, rgba(255, 255, 255, 0.56) 100%);
 }
 
+.wholesale-page .card.-delivery .text-contents {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.wholesale-page .card.-delivery .text-contents ul li {
+  padding-bottom: 12px;
+}
+
+.wholesale-page .card.-delivery .card__promo {
+  padding-top: 52px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.wholesale-page .card.-help {
+  background-color: #EAB2BF;
+  background-image: url(../img/box-help.png);
+}
+
+.wholesale-page .card.-conditions {
+  background-color: #F4C946;
+  background-image: url(../img/wholesale-conditions.png);
+}
+
+.wholesale-page .card.-help,
 .wholesale-page .card.-conditions {
   position: relative;
   display: flex;
@@ -3826,10 +3921,9 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: #F4C946;
-  background-image: url(../img/wholesale-conditions.png);
 }
 
+.wholesale-page .card.-help .image-arrow,
 .wholesale-page .card.-conditions .image-arrow {
   top: 20px;
   right: -48px;
@@ -5788,6 +5882,26 @@ textarea {
     font-size: 18px;
   }
 
+  .wholesale-page .card.-wholesale-business {
+    height: auto;
+    min-height: 450px;
+    padding: 20px 20px 20px 55%;
+  }
+
+  .wholesale-page .card.-wholesale-business .card__title {
+    max-width: 400px;
+    font-size: 38px;
+  }
+
+  .wholesale-page .card.-wholesale-business .card__text {
+    font-size: 18px;
+  }
+
+  .wholesale-page .card.-wholesale-business .card__promo {
+    max-width: 350px;
+    font-size: 34px;
+  }
+
   .wholesale-page .card.-wholesale-corporate {
     height: auto;
     padding-left: 52%;
@@ -5810,6 +5924,26 @@ textarea {
     font-size: 24px;
   }
 
+  .wholesale-page .card.-luck {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .wholesale-page .card.-luck .card__title {
+    font-size: 7vw;
+  }
+
+  .wholesale-page .card.-luck .number-accent-list {
+    font-size: 2vw;
+    max-width: 65%;
+  }
+
+  .wholesale-page .card.-luck .number-accent-list + * {
+    max-width: 65%;
+    font-size: 1.75vw;
+    font-weight: 500;
+  }
+
   .wholesale-page .card.-wholesale-sale {
     padding: 40px 40px 24px;
     height: auto;
@@ -5828,6 +5962,7 @@ textarea {
     padding: 12px 40px;
   }
 
+  .wholesale-page .card.-help,
   .wholesale-page .card.-conditions {
     justify-content: flex-start;
     height: 100%;
@@ -6934,6 +7069,27 @@ textarea {
     font-size: 16px;
   }
 
+  .wholesale-page .card.-wholesale-business {
+    padding: 40px 20px 57vw;
+    background-position: top left, bottom left;
+    background-size: 100% calc(100% - 55vw), auto 60vw;
+    background-image: linear-gradient(#86B7BB 0%, #B4DBE0 90%, rgba(255, 255, 255, 0) 100%), url(../img/business.png);
+  }
+
+  .wholesale-page .card.-wholesale-business .card__title {
+    font-size: 30px;
+  }
+
+  .wholesale-page .card.-wholesale-business .card__text {
+    font-size: 16px;
+  }
+
+  .wholesale-page .card.-wholesale-business .card__promo {
+    max-width: none;
+    font-size: 28px;
+    padding-top: 20px;
+  }
+
   .wholesale-page .card.-wholesale-corporate {
     padding: 40px 20px 60vw;
     background-position: top left, bottom left;
@@ -6982,6 +7138,7 @@ textarea {
     font-size: 14px;
   }
 
+  .wholesale-page .card.-help,
   .wholesale-page .card.-conditions {
     height: 80vw;
     min-height: 350px;
@@ -6989,6 +7146,7 @@ textarea {
     background-position: center;
   }
 
+  .wholesale-page .card.-help .image-arrow,
   .wholesale-page .card.-conditions .image-arrow {
     top: auto;
     bottom: -60px;
@@ -7474,6 +7632,33 @@ textarea {
   .pirotype-preview:nth-child(even) {
     grid-template-areas: "image title " "description description" "actions actions";
     grid-template-columns: minmax(120px, 25%) 1fr;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .wholesale-page .card.-luck {
+    gap: 20px;
+    padding: 20px 20px 60vw;
+    background-size: 100% calc(100% - 60vw), auto 70vw;
+    background-position: top center, bottom right;
+    background-image: linear-gradient(#75638B 20%, #9884A7 90%, rgba(255, 255, 255, 0) 100%), url(../img/wholesale-luck.png);
+  }
+
+  .wholesale-page .card.-luck .card__title {
+    font-size: 35px;
+  }
+
+  .wholesale-page .card.-luck .number-accent-list {
+    font-size: 16px;
+    max-width: none;
+    padding-left: 20px;
+  }
+
+  .wholesale-page .card.-luck .number-accent-list + * {
+    height: 80px;
+    max-width: none;
+    font-size: 12px;
+    text-align: left;
   }
 }
 
