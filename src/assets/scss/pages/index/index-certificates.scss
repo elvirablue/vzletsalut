@@ -34,6 +34,10 @@
     &__content {
         display: block;
         background-color: var(--purple-color);
+
+        &.-bg-light-yellow {
+            background-color: #F9F188;
+        }
     }
 
     &__image {
@@ -105,18 +109,19 @@
         }
 
         &__title {
-            max-width: 550px;
-            margin: auto;
+            width: 380px;
+            max-width: 70vw;
+            margin: auto 0 auto auto;
             padding-top: 32px;
-            padding-left: 28vw;
+            padding-left: 20px;
             padding-right: 20px;
             font-size: 24px;
-            text-align: right;
+            //text-align: right;
         }
 
         &__image-arrow {
-            right: 20px;
-            bottom: -100px;
+            right: 40px;
+            bottom: -80px;
             transform: rotate(90deg) scale(0.75);
         }
     }

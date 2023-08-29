@@ -62,12 +62,16 @@
         }
 
         @include media_breakpoint(small-mobile) {
-            height: 250px;
-            padding: 40px 10px;
-            background-position: -60px top;
-            background-image: url(../img/shop-location.png);
+            height: auto;
+            padding: 40px 10px 70vw;
+            background-size: 100% calc(100% - 63vw), auto 70vw;
+            background-position: right top, left bottom;
+            background-image: linear-gradient(#81C386 0%, #88CA8D 90%, rgba(255,255,255, 0) 100%), url(../img/shop-location.png);
 
             .markers-list {
+                margin: 0;
+                padding: 0 10px;
+                width: 100%;
                 font-size: 18px;
             }
         }

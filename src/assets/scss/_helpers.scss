@@ -569,7 +569,6 @@
             font-size: 36px;
             line-height: 1;
             font-weight: 400;
-            font-style: italic;
             content: counter(counter);
             counter-increment: counter;
             width: 50px;
@@ -577,18 +576,6 @@
             border-radius: 50px;
             border: 3px solid currentColor;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-        }
-
-        &:last-child {
-            font-weight: 700;
-
-            &:before {
-                content: "+";
-                justify-content: center;
-                font-style: normal;
-                padding: 0 0 6px 0;
-                background-color: #D26003;
-            }
         }
 
         @include media_breakpoint(mobile) {
@@ -603,6 +590,35 @@
             }
         }
 
+    }
+
+    &.-last-plus {
+        .number-accent-list__item {
+            &:last-child {
+                font-weight: 700;
+
+                &:before {
+                    content: "+";
+                    justify-content: center;
+                    font-style: normal;
+                    padding: 0 0 6px 0;
+                    background-color: #D26003;
+                }
+            }
+        }
+    }
+
+    &.-simple {
+        .number-accent-list__item {
+            gap: 20px;
+
+            &::before {
+                width: auto;
+                height: auto;
+                border: none;
+                box-shadow: none;
+            }
+        }
     }
 
     @include media_breakpoint(tablet) {

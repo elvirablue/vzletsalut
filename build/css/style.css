@@ -1316,20 +1316,20 @@ textarea {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25), 0 0 0 7px #FFFFFF, 0 0 0 10px var(--primary-color);
 }
 
-.card.-vzlet-shops-map {
+.card.-shops-map {
   display: block;
   padding: 60px;
   border-radius: var(--root-radius);
   background-image: linear-gradient(180deg, #B99ECB 0%, #B296C7 100%);
 }
 
-.card.-vzlet-shops-map .h2 {
+.card.-shops-map .h2 {
   max-width: 920px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
 
-.card.-vzlet-shops-map .card__map {
+.card.-shops-map .card__map {
   display: block;
   width: 100%;
   height: 555px;
@@ -1337,12 +1337,12 @@ textarea {
   overflow: hidden;
 }
 
-.card.-vzlet-shops-map .card__map img {
+.card.-shops-map .card__map img {
   -o-object-fit: cover;
   object-fit: cover;
 }
 
-.card.-vzlet-shops-map .card__map-text {
+.card.-shops-map .card__map-text {
   position: relative;
   display: block;
   width: 350px;
@@ -1352,7 +1352,7 @@ textarea {
   background-color: var(--gray-color);
 }
 
-.card.-vzlet-shops-map .card__map-text .image-arrow {
+.card.-shops-map .card__map-text .image-arrow {
   position: absolute;
   right: -30px;
   bottom: -55px;
@@ -2394,6 +2394,10 @@ textarea {
   background-color: var(--purple-color);
 }
 
+.index-certificates__content.-bg-light-yellow {
+  background-color: #F9F188;
+}
+
 .index-certificates__image {
   display: block;
   margin-left: auto;
@@ -2662,6 +2666,7 @@ textarea {
 .certificates-carousel {
   position: relative;
   padding: 0 56px;
+  min-height: 290px;
 }
 
 .certificates-carousel__container {
@@ -3655,6 +3660,48 @@ textarea {
   background-image: url("../img/box-corporate.png");
 }
 
+.wholesale-page__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 64px;
+  padding: 0;
+}
+
+.wholesale-page__content.-padding {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.wholesale-page__columns {
+  display: block;
+  -moz-column-count: 5;
+  column-count: 5;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  width: 100%;
+  max-width: 1160px;
+  padding: 120px 20px 0;
+  margin: 0 auto;
+}
+
+.wholesale-page .city-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text-color);
+}
+
+.wholesale-page .image-arrow {
+  position: absolute;
+}
+
+.wholesale-page .image-arrow svg {
+  width: 70px;
+  height: 92px;
+  color: var(--primary-color);
+}
+
 .wholesale-page .card.-pyrotechnics {
   background-image: url("../img/box-pyrotechnics.png");
 }
@@ -3665,6 +3712,172 @@ textarea {
 
 .wholesale-page .card.-corporate-purchase {
   background-image: url("../img/box-corporate-purchase.png");
+}
+
+.wholesale-page .card.-wholesale-pyro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 555px;
+  padding: 60px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  background-color: #95D298;
+  background-image: url(../img/wholesale-pyro.png);
+  overflow: hidden;
+}
+
+.wholesale-page .card.-wholesale-pyro .markers-list {
+  margin-left: 50%;
+  padding-top: 7%;
+  font-size: 30px;
+}
+
+.wholesale-page .card.-wholesale-sale {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 555px;
+  padding: 60px 60px 24px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: #01ACE4;
+  background-image: url(../img/wholesale-sale.png);
+  overflow: hidden;
+}
+
+.wholesale-page .card.-wholesale-sale .card__title {
+  font-size: 100px;
+  background-image: linear-gradient(132deg, rgba(255, 255, 255, 0.36) 0.02%, rgba(255, 255, 255, 0.56) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wholesale-page .card.-wholesale-sale .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 30px;
+  gap: 12px;
+  padding-top: 36px;
+  padding-bottom: 14px;
+}
+
+.wholesale-page .card.-wholesale-sale .card__text {
+  display: block;
+  padding: 12px 60px;
+  margin: 14px -60px 0;
+  font-weight: 500;
+  text-align: left;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(132deg, rgba(255, 255, 255, 0.36) 0.02%, rgba(255, 255, 255, 0.56) 100%);
+}
+
+.wholesale-page .card.-new-business {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 555px;
+  padding: 60px 40px;
+  gap: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #F4C946;
+  background-image: url(../img/wholesale-busines.png);
+}
+
+.wholesale-page .card.-new-business .card__text {
+  display: flex;
+  max-width: 360px;
+  margin-left: auto;
+  font-size: 30px;
+}
+
+.wholesale-page .card.-new-business .card__title {
+  display: block;
+  max-width: 310px;
+  margin-left: auto;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.wholesale-page .card.-new-business .image-arrow {
+  bottom: 96px;
+  right: -48px;
+}
+
+.wholesale-page .card.-new-business-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 60px 40px 20px;
+}
+
+.wholesale-page .card.-new-business-text .card__text {
+  display: block;
+  max-width: 380px;
+  margin-left: auto;
+  padding-top: 40px;
+  font-size: 30px;
+}
+
+.wholesale-page .card.-communication {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+  min-height: 340px;
+  max-width: 320px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.wholesale-page .card.-communication.-request {
+  background-color: #3FC4EA;
+}
+
+.wholesale-page .card.-communication.-phone {
+  background-color: #E38799;
+}
+
+.wholesale-page .card.-communication.-mail {
+  background-color: #F9D25E;
+}
+
+.wholesale-page .card.-communication svg {
+  width: 120px;
+  height: 80px;
+}
+
+.wholesale-page .wholesale-benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.wholesale-page .wholesale-benefit svg {
+  width: 130px;
+  height: 80px;
 }
 
 .purchaser-page .card.-loyalty {
@@ -4728,7 +4941,6 @@ textarea {
   font-size: 36px;
   line-height: 1;
   font-weight: 400;
-  font-style: italic;
   content: counter(counter);
   counter-increment: counter;
   width: 50px;
@@ -4738,16 +4950,27 @@ textarea {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.number-accent-list__item:last-child {
+.number-accent-list.-last-plus .number-accent-list__item:last-child {
   font-weight: 700;
 }
 
-.number-accent-list__item:last-child:before {
+.number-accent-list.-last-plus .number-accent-list__item:last-child:before {
   content: "+";
   justify-content: center;
   font-style: normal;
   padding: 0 0 6px 0;
   background-color: #D26003;
+}
+
+.number-accent-list.-simple .number-accent-list__item {
+  gap: 20px;
+}
+
+.number-accent-list.-simple .number-accent-list__item::before {
+  width: auto;
+  height: auto;
+  border: none;
+  box-shadow: none;
 }
 
 .separator {
@@ -4949,15 +5172,15 @@ textarea {
     height: 30px;
   }
 
-  .card.-vzlet-shops-map {
+  .card.-shops-map {
     padding: 40px 20px;
   }
 
-  .card.-vzlet-shops-map .card__map {
+  .card.-shops-map .card__map {
     height: 400px;
   }
 
-  .card.-vzlet-shops-map .card__map-text {
+  .card.-shops-map .card__map-text {
     width: 280px;
     margin-bottom: -120px;
     font-size: 24px;
@@ -5488,6 +5711,80 @@ textarea {
     font-size: 20px;
   }
 
+  .wholesale-page__content {
+    gap: 32px;
+  }
+
+  .wholesale-page__content.-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .wholesale-page__columns {
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+
+  .wholesale-page .card.-wholesale-pyro {
+    height: 400px;
+    background-image: linear-gradient(90deg, rgba(204, 108, 132, 0) 70%, rgb(204, 108, 132) 100%), url(../img/wholesale-pyro.png);
+  }
+
+  .wholesale-page .card.-wholesale-pyro .markers-list {
+    font-size: 24px;
+  }
+
+  .wholesale-page .card.-wholesale-sale {
+    padding: 40px 40px 24px;
+    height: auto;
+  }
+
+  .wholesale-page .card.-wholesale-sale .card__title {
+    font-size: 7vw;
+  }
+
+  .wholesale-page .card.-wholesale-sale .card__content {
+    font-size: 24px;
+  }
+
+  .wholesale-page .card.-wholesale-sale .card__text {
+    margin: 14px -40px 0;
+    padding: 12px 40px;
+  }
+
+  .wholesale-page .card.-new-business {
+    justify-content: flex-start;
+    height: 100%;
+    padding: 40px 20px;
+    background-position: left top;
+  }
+
+  .wholesale-page .card.-new-business .card__text {
+    font-size: 24px;
+  }
+
+  .wholesale-page .card.-new-business .card__title {
+    max-width: 260px;
+    margin-top: auto;
+    font-size: 34px;
+  }
+
+  .wholesale-page .card.-new-business-text {
+    height: auto;
+    min-height: 100%;
+    padding: 40px 20px;
+  }
+
+  .wholesale-page .card.-new-business-text .card__text {
+    max-width: 300px;
+    font-size: 24px;
+  }
+
+  .wholesale-page .wholesale-benefit svg {
+    width: 110px;
+    height: 65px;
+  }
+
   .piroblog-page .piroblog-type {
     gap: 30px;
   }
@@ -5626,6 +5923,23 @@ textarea {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .wholesale-page .card.-new-business {
+    gap: 12px;
+    align-items: flex-start;
+    min-height: 600px;
+  }
+
+  .wholesale-page .card.-new-business .card__text {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .wholesale-page .card.-new-business .card__text br {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 889px) {
   .index-buy.-test .index-buy__content {
     background: none;
@@ -5702,15 +6016,15 @@ textarea {
     padding: 20px;
   }
 
-  .card.-vzlet-shops-map .h2 {
+  .card.-shops-map .h2 {
     padding-bottom: 20px;
   }
 
-  .card.-vzlet-shops-map .card__map {
+  .card.-shops-map .card__map {
     height: 300px;
   }
 
-  .card.-vzlet-shops-map .card__map-text .image-arrow {
+  .card.-shops-map .card__map-text .image-arrow {
     transform: rotate(90deg) scale(0.75);
   }
 
@@ -6135,18 +6449,18 @@ textarea {
   }
 
   .index-certificates__title {
-    max-width: 550px;
-    margin: auto;
+    width: 380px;
+    max-width: 70vw;
+    margin: auto 0 auto auto;
     padding-top: 32px;
-    padding-left: 28vw;
+    padding-left: 20px;
     padding-right: 20px;
     font-size: 24px;
-    text-align: right;
   }
 
   .index-certificates__image-arrow {
-    right: 20px;
-    bottom: -100px;
+    right: 40px;
+    bottom: -80px;
     transform: rotate(90deg) scale(0.75);
   }
 
@@ -6524,6 +6838,95 @@ textarea {
     font-size: 18px;
   }
 
+  .wholesale-page__columns {
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+
+  .wholesale-page .card.-wholesale-pyro {
+    height: 40vw;
+    padding: 40px 20px;
+  }
+
+  .wholesale-page .card.-wholesale-pyro .markers-list {
+    width: 48vw;
+    margin-left: auto;
+    font-size: 20px;
+  }
+
+  .wholesale-page .card.-wholesale-sale {
+    padding: 20px 10px 0;
+    height: auto;
+    background-size: auto 300px;
+    background-position: 100% 100%, top center;
+    background-image: linear-gradient(rgba(204, 108, 132, 0) 65%, #01ACE4 85%), url(../img/wholesale-sale.png);
+  }
+
+  .wholesale-page .card.-wholesale-sale .card__title {
+    font-size: 50px;
+  }
+
+  .wholesale-page .card.-wholesale-sale .card__content {
+    gap: 8px;
+    padding: 20px 0;
+    font-size: 22px;
+  }
+
+  .wholesale-page .card.-wholesale-sale .card__text {
+    font-size: 14px;
+  }
+
+  .wholesale-page .card.-new-business {
+    gap: 20px;
+    padding: 40px 10px;
+    min-height: 300px;
+    background-size: 100% 100%, auto 100%;
+    background-position: center, left bottom;
+    background-image: linear-gradient(-90deg, #F4C946 0%, rgb(253, 190, 1) 40%, rgba(243, 171, 191, 0) 60%), url("../img/wholesale-busines.png");
+  }
+
+  .wholesale-page .card.-new-business .card__text {
+    max-width: calc(100% - 200px);
+    margin-left: auto;
+  }
+
+  .wholesale-page .card.-new-business .image-arrow {
+    top: auto;
+    bottom: -60px;
+    right: 20px;
+    transform: rotate(90deg) scale(0.75);
+  }
+
+  .wholesale-page .card.-communication {
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: none;
+    min-height: auto;
+    padding: 40px 10px;
+    gap: 20px;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .wholesale-page .card.-communication svg {
+    width: 60px;
+    height: 40px;
+  }
+
+  .wholesale-page .wholesale-benefit {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 450px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .wholesale-page .wholesale-benefit svg {
+    width: 60px;
+    height: 45px;
+  }
+
   .piroblog-page__content {
     gap: 40px;
   }
@@ -6826,7 +7229,11 @@ textarea {
 
 @media only screen and (max-width: 568px) {
   .vzlet-page .card.-vzlet-about-main {
-    background-image: none;
+    padding-bottom: 50vw;
+    background-color: rgb(253, 190, 1);
+    background-size: 100% calc(100% - 55vw), auto 60vw;
+    background-position: right top, right bottom;
+    background-image: linear-gradient(rgb(253, 190, 1) 0%, rgb(253, 190, 1) 90%, rgba(243, 171, 191, 0) 100%), url("../img/vzlet-about-big.png");
   }
 
   .vzlet-page .card.-vzlet-about-main .primary-line {
@@ -6838,7 +7245,7 @@ textarea {
     max-width: none;
     height: auto;
     padding-top: 30px;
-    font-size: 26px;
+    font-size: 24px;
     background-image: none;
   }
 
@@ -6862,10 +7269,11 @@ textarea {
   }
 
   .vzlet-page .card.-vzlet-delivery-main {
+    padding-bottom: 58vw;
     background-color: rgba(255, 255, 255, 0);
-    background-size: 100% 100%;
-    background-position: center;
-    background-image: linear-gradient(120deg, rgb(193, 64, 101) 0%, rgb(243, 171, 191) 100%);
+    background-size: 100% calc(100% - 60vw), auto 75vw;
+    background-position: right top, right bottom;
+    background-image: linear-gradient(rgb(193, 64, 101) 0%, rgb(243, 171, 191) 90%, rgba(243, 171, 191, 0) 100%), url("../img/vzlet-delivery-main.jpeg");
   }
 
   .vzlet-page .card.-vzlet-delivery-main .primary-line {
@@ -6892,14 +7300,54 @@ textarea {
     font-size: 20px;
   }
 
+  .wholesale-page__columns {
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+
+  .wholesale-page .card.-wholesale-pyro {
+    height: auto;
+    padding: 40px 10px 68vw;
+    background-color: #CC6C84;
+    background-size: 100% calc(100% - 65vw), auto 70vw;
+    background-position: left top, left bottom;
+    background-image: linear-gradient(#CC6C84 0%, #ECA2AF 90%, rgba(255, 255, 255, 0) 100%), url(../img/wholesale-pyro.png);
+  }
+
+  .wholesale-page .card.-wholesale-pyro .markers-list {
+    margin: 0;
+    padding: 0 10px 0;
+    width: 100%;
+  }
+
+  .wholesale-page .card.-wholesale-sale {
+    text-align: center;
+    background-size: auto 63vw;
+    background-position: right bottom;
+    background-image: url(../img/wholesale-sale.png);
+  }
+
+  .wholesale-page .card.-wholesale-sale .card__title {
+    font-size: 45px;
+  }
+
+  .wholesale-page .card.-wholesale-sale .card__text {
+    margin-top: 20px;
+    margin-bottom: 63vw;
+  }
+
   .shop-location-page .card.-shop-location-main {
-    height: 250px;
-    padding: 40px 10px;
-    background-position: -60px top;
-    background-image: url(../img/shop-location.png);
+    height: auto;
+    padding: 40px 10px 70vw;
+    background-size: 100% calc(100% - 63vw), auto 70vw;
+    background-position: right top, left bottom;
+    background-image: linear-gradient(#81C386 0%, #88CA8D 90%, rgba(255, 255, 255, 0) 100%), url(../img/shop-location.png);
   }
 
   .shop-location-page .card.-shop-location-main .markers-list {
+    margin: 0;
+    padding: 0 10px;
+    width: 100%;
     font-size: 18px;
   }
 
@@ -6907,6 +7355,31 @@ textarea {
   .pirotype-preview:nth-child(even) {
     grid-template-areas: "image title " "description description" "actions actions";
     grid-template-columns: minmax(120px, 25%) 1fr;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .wholesale-page .card.-new-business {
+    min-height: 450px;
+    padding: 20px;
+    background-size: 100% 20%, 480px auto;
+    background-position: top center, left bottom;
+    background-image: linear-gradient(#FAD161 80%, rgba(243, 171, 191, 0) 100%), url("../img/wholesale-busines.png");
+  }
+
+  .wholesale-page .card.-new-business .card__text {
+    max-width: 100%;
+    font-size: 22px;
+  }
+
+  .wholesale-page .card.-new-business .card__text br {
+    display: none;
+  }
+
+  .wholesale-page .card.-new-business .card__title {
+    max-width: none;
+    font-size: 8vw;
+    text-align: center;
   }
 }
 
