@@ -1,4 +1,38 @@
 .purchaser-page {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 64px;
+        padding: 0;
+
+        &.-padding {
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+    }
+
+    @include media_breakpoint(tablet) {
+        &__content {
+            gap: 32px;
+
+            &.-padding {
+                padding-top: 32px;
+                padding-bottom: 32px;
+            }
+        }
+    }
+
+    .primary-line {
+        width: 50%;
+        max-width: 220px;
+        margin: 30px 0;
+
+        @include media_breakpoint(mobile) {
+            margin: 20px 0;
+        }
+    }
+
     .card.-loyalty {
         background-image: url("../img/box-loyalty.png");
     }
@@ -19,5 +53,249 @@
     }
     .card.-return {
         background-image: url("../img/box-return.png");
+    }
+
+    .card.-loyalty-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 555px;
+        padding: 60px 40px 60px 50%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        background-color: #A899CB;
+        background-image: url(../img/big-box-loyalty.png);
+
+        .card__title {
+            display: block;
+            max-width: 480px;
+            font-size: 50px;
+        }
+
+        .card__text {
+            display: block;
+            max-width: 480px;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        @include media_breakpoint(tablet) {
+            height: auto;
+            min-height: 450px;
+            padding: 20px 20px 20px 55%;
+
+            .card__title {
+                max-width: 400px;
+                font-size: 38px;
+            }
+            .card__text {
+                font-size: 22px;
+            }
+        }
+
+        @include media_breakpoint(mobile) {
+            padding: 40px 20px 57vw;
+            background-position: top left, bottom left;
+            background-size: 100% calc(100% - 53vw), auto 60vw;
+            background-image: linear-gradient( #8B76AF 0%, #BDACD9 90%, rgba(255,255,255, 0) 100%), url(../img/big-box-loyalty.png);
+
+            .card__title {
+                font-size: 30px;
+            }
+            .card__text {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .card.-bonus {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 555px;
+        padding: 60px 100px;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        background-color: #EBA3B1;
+        background-image: url(../img/bonus.png);
+
+        .card__title {
+            white-space: nowrap;
+            font-size: 60px;
+        }
+        .card__text {
+            padding-top: 112px;
+            font-size: 20px;
+        }
+
+        @include media_breakpoint(tablet) {
+            height: auto;
+            min-height: 450px;
+            padding: 20px 50% 20px 40px;
+
+            .card__title {
+                font-size: 40px;
+            }
+            .card__text {
+                padding-top: 60px;
+                font-size: 18px;
+            }
+        }
+
+        @include media_breakpoint(mobile) {
+            padding: 40px 20px 57vw;
+            min-height: auto;
+            background-position: top left, bottom right;
+            background-size: 100% calc(100% - 53vw), auto 60vw;
+            background-image: linear-gradient( #DA7D90 0%, #EBA3B1 90%, rgba(255,255,255, 0) 100%), url(../img/bonus.png);
+
+            .card__title {
+                font-size: 28px;
+            }
+            .card__text {
+                padding-top: 40px;
+                font-size: 16px;
+            }
+        }
+
+
+    }
+
+    .discount-system {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 320px;
+            font-size: 20px;
+            text-align: center;
+
+            svg {
+                width: 158px;
+                height: 158px;
+                margin-bottom: 30px;
+            }
+        }
+
+        &__plus {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            margin-top: 60px;
+        }
+
+        &__result {
+            display: block;
+            width: 100%;
+            padding-top: 40px;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        @include media_breakpoint(tablet) {
+            &__item {
+                width: 220px;
+                font-size: 18px;
+
+                svg {
+                    width: 100px;
+                    height: 100px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__plus {
+                flex-shrink: 0;
+                width: 30px;
+                height: 30px;
+                margin-top: 40px;
+            }
+
+            &__result {
+                font-size: 40px;
+            }
+        }
+
+        @include media_breakpoint(mobile) {
+
+            &__item {
+                width: 25vw;
+                font-size: 14px;
+
+                svg {
+                    width: 18vw;
+                    height: 18vw;
+                    max-width: 100px;
+                    max-height: 100px;
+                }
+            }
+
+            &__plus {
+                width: 6vw;
+                height: 6vw;
+                max-width: 30px;
+                max-height: 30px;
+                margin-top: 6vw;
+            }
+
+            &__result {
+                font-size: 32px;
+            }
+        }
+    }
+
+    .order-options {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 32px;
+
+        &__item {
+            display: flex;
+            gap: 40px;
+        }
+
+        &__icon {
+            flex-shrink: 0;
+            height: 80px;
+            width: 100px;
+
+            img, svg {
+                object-position: right center;
+            }
+        }
+
+        &__title {
+            flex-shrink: 0;
+            display: block;
+            width: 200px;
+            padding-top: 24px;
+            font-weight: 700;
+        }
+
+        &__text {
+            display: block;
+            padding-top: 24px;
+        }
+
+        &__lifehack {
+            display: block;
+            padding-top: 20px;
+            text-align: right;
+        }
     }
 }

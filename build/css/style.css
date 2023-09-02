@@ -359,6 +359,13 @@ textarea {
   font-weight: 500 !important;
 }
 
+.h4 {
+  display: block;
+  margin: 0;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
 .large-text {
   display: block;
   margin: 0;
@@ -4031,6 +4038,25 @@ textarea {
   height: 80px;
 }
 
+.purchaser-page__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 64px;
+  padding: 0;
+}
+
+.purchaser-page__content.-padding {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.purchaser-page .primary-line {
+  width: 50%;
+  max-width: 220px;
+  margin: 30px 0;
+}
+
 .purchaser-page .card.-loyalty {
   background-image: url("../img/box-loyalty.png");
 }
@@ -4057,6 +4083,142 @@ textarea {
 
 .purchaser-page .card.-return {
   background-image: url("../img/box-return.png");
+}
+
+.purchaser-page .card.-loyalty-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 555px;
+  padding: 60px 40px 60px 50%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: #A899CB;
+  background-image: url(../img/big-box-loyalty.png);
+}
+
+.purchaser-page .card.-loyalty-main .card__title {
+  display: block;
+  max-width: 480px;
+  font-size: 50px;
+}
+
+.purchaser-page .card.-loyalty-main .card__text {
+  display: block;
+  max-width: 480px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.purchaser-page .card.-bonus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 555px;
+  padding: 60px 100px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: #EBA3B1;
+  background-image: url(../img/bonus.png);
+}
+
+.purchaser-page .card.-bonus .card__title {
+  white-space: nowrap;
+  font-size: 60px;
+}
+
+.purchaser-page .card.-bonus .card__text {
+  padding-top: 112px;
+  font-size: 20px;
+}
+
+.purchaser-page .discount-system {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.purchaser-page .discount-system__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.purchaser-page .discount-system__item svg {
+  width: 158px;
+  height: 158px;
+  margin-bottom: 30px;
+}
+
+.purchaser-page .discount-system__plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-top: 60px;
+}
+
+.purchaser-page .discount-system__result {
+  display: block;
+  width: 100%;
+  padding-top: 40px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.purchaser-page .order-options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
+.purchaser-page .order-options__item {
+  display: flex;
+  gap: 40px;
+}
+
+.purchaser-page .order-options__icon {
+  flex-shrink: 0;
+  height: 80px;
+  width: 100px;
+}
+
+.purchaser-page .order-options__icon img,
+.purchaser-page .order-options__icon svg {
+  -o-object-position: right center;
+  object-position: right center;
+}
+
+.purchaser-page .order-options__title {
+  flex-shrink: 0;
+  display: block;
+  width: 200px;
+  padding-top: 24px;
+  font-weight: 700;
+}
+
+.purchaser-page .order-options__text {
+  display: block;
+  padding-top: 24px;
+}
+
+.purchaser-page .order-options__lifehack {
+  display: block;
+  padding-top: 20px;
+  text-align: right;
 }
 
 .piroblog-page__content {
@@ -4211,6 +4373,118 @@ textarea {
   margin-left: 50%;
   padding-top: 10%;
   font-size: 30px;
+}
+
+.delivery-page__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 64px;
+  padding: 0;
+}
+
+.delivery-page__content.-padding {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.delivery-page .card.-delivery-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 555px;
+  padding: 60px 40px 60px 50%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: #F5CA47;
+  background-image: url(../img/delivery.png);
+}
+
+.delivery-page .card.-delivery-main .card__title {
+  display: block;
+  width: 600px;
+  font-size: 50px;
+}
+
+.delivery-page .card.-delivery-main .card__text {
+  display: block;
+  max-width: 480px;
+  padding-top: 30px;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.delivery-page .card.-delivery-region {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 555px;
+  padding: 60px 50% 60px 60px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  background-color: #FEC601;
+  background-image: url(../img/delivery-1.png);
+}
+
+.delivery-page .card.-delivery-region .card__text {
+  font-size: 24px;
+}
+
+.delivery-page .card.-return {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 555px;
+  padding: 60px 40px 60px 50%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-color: #FFB2BC;
+  background-image: url(../img/delivery-return.png);
+}
+
+.delivery-page .card.-return .card__title {
+  display: block;
+  width: 600px;
+  padding-top: 140px;
+  font-size: 50px;
+}
+
+.delivery-page .card.-return .image-arrow {
+  position: absolute;
+  right: 100px;
+  bottom: -50px;
+}
+
+.delivery-page .card.-return .image-arrow svg {
+  width: 70px;
+  height: 92px;
+  color: var(--primary-color);
+  transform: rotate(90deg);
+}
+
+.delivery-page .card.-return-text {
+  display: block;
+  padding: 64px;
+}
+
+.delivery-page .card.-return-text .primary-line {
+  width: 220px;
+  margin: 0 auto 40px;
+}
+
+.delivery-page .card.-return-text .text-contents {
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .product {
@@ -4783,15 +5057,12 @@ textarea {
   font-size: 16px;
   font-family: "Inter", sans-serif;
   line-height: 1.25;
-  color: var(--text-color);
+  color: var(--main-color);
 }
 
 .text-contents * {
   box-sizing: border-box;
   margin: 0;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
 }
 
 .text-contents p + *,
@@ -4808,18 +5079,18 @@ textarea {
 }
 
 .text-contents h1 {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .text-contents h2 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .text-contents h3 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .text-contents strong,
@@ -4873,6 +5144,31 @@ textarea {
   height: 5px;
   border-radius: 50%;
   background-color: currentColor;
+}
+
+.text-contents table {
+  margin: 40px 0 0;
+  width: 100%;
+}
+
+.text-contents table,
+.text-contents th,
+.text-contents td {
+  border-collapse: collapse;
+  border: 1px solid var(--main-color);
+}
+
+.text-contents table th {
+  padding: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: var(--gray-color);
+}
+
+.text-contents table td {
+  padding: 8px;
+  text-align: center;
+  font-size: 24px;
 }
 
 .addresses {
@@ -5289,6 +5585,10 @@ textarea {
 
   .h3 {
     font-size: 20px !important;
+  }
+
+  .h4 {
+    font-size: 18px !important;
   }
 
   .large-text {
@@ -6003,6 +6303,67 @@ textarea {
     height: 65px;
   }
 
+  .purchaser-page__content {
+    gap: 32px;
+  }
+
+  .purchaser-page__content.-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .purchaser-page .card.-loyalty-main {
+    height: auto;
+    min-height: 450px;
+    padding: 20px 20px 20px 55%;
+  }
+
+  .purchaser-page .card.-loyalty-main .card__title {
+    max-width: 400px;
+    font-size: 38px;
+  }
+
+  .purchaser-page .card.-loyalty-main .card__text {
+    font-size: 22px;
+  }
+
+  .purchaser-page .card.-bonus {
+    height: auto;
+    min-height: 450px;
+    padding: 20px 50% 20px 40px;
+  }
+
+  .purchaser-page .card.-bonus .card__title {
+    font-size: 40px;
+  }
+
+  .purchaser-page .card.-bonus .card__text {
+    padding-top: 60px;
+    font-size: 18px;
+  }
+
+  .purchaser-page .discount-system__item {
+    width: 220px;
+    font-size: 18px;
+  }
+
+  .purchaser-page .discount-system__item svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .purchaser-page .discount-system__plus {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    margin-top: 40px;
+  }
+
+  .purchaser-page .discount-system__result {
+    font-size: 40px;
+  }
+
   .piroblog-page .piroblog-type {
     gap: 30px;
   }
@@ -6048,6 +6409,61 @@ textarea {
 
   .shop-location-page .card.-shop-location-main .markers-list {
     font-size: 24px;
+  }
+
+  .delivery-page__content {
+    gap: 32px;
+  }
+
+  .delivery-page__content.-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .delivery-page .card.-delivery-main {
+    height: auto;
+    min-height: 450px;
+    padding: 40px 40px 40px 40%;
+  }
+
+  .delivery-page .card.-delivery-main .card__title {
+    width: 100%;
+    max-width: 450px;
+    font-size: 40px;
+  }
+
+  .delivery-page .card.-delivery-main .card__text {
+    max-width: 340px;
+    font-size: 36px;
+  }
+
+  .delivery-page .card.-delivery-region {
+    height: auto;
+    min-height: 400px;
+    padding: 40px 45% 40px 40px;
+  }
+
+  .delivery-page .card.-delivery-region .card__text {
+    font-size: 20px;
+  }
+
+  .delivery-page .card.-return {
+    height: auto;
+    min-height: 400px;
+    padding: 40px 40px 40px 50%;
+  }
+
+  .delivery-page .card.-return .card__title {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .delivery-page .card.-return-text {
+    padding: 40px;
+  }
+
+  .delivery-page .card.-return-text .primary-line {
+    margin-bottom: 20px;
   }
 
   .product-small {
@@ -6310,6 +6726,9 @@ textarea {
     padding-bottom: 8px;
     font-size: 10px;
     text-align: center;
+    height: 50px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
   }
 
   .header-top__logo {
@@ -6324,6 +6743,13 @@ textarea {
   .header-top__search {
     width: 100%;
     max-width: 160px;
+  }
+
+  .header-top.-hide-text-mobile .header-top__description {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    pointer-events: none;
   }
 
   .header-bottom {
@@ -7205,6 +7631,66 @@ textarea {
     height: 45px;
   }
 
+  .purchaser-page .primary-line {
+    margin: 20px 0;
+  }
+
+  .purchaser-page .card.-loyalty-main {
+    padding: 40px 20px 57vw;
+    background-position: top left, bottom left;
+    background-size: 100% calc(100% - 53vw), auto 60vw;
+    background-image: linear-gradient(#8B76AF 0%, #BDACD9 90%, rgba(255, 255, 255, 0) 100%), url(../img/big-box-loyalty.png);
+  }
+
+  .purchaser-page .card.-loyalty-main .card__title {
+    font-size: 30px;
+  }
+
+  .purchaser-page .card.-loyalty-main .card__text {
+    font-size: 16px;
+  }
+
+  .purchaser-page .card.-bonus {
+    padding: 40px 20px 57vw;
+    min-height: auto;
+    background-position: top left, bottom right;
+    background-size: 100% calc(100% - 53vw), auto 60vw;
+    background-image: linear-gradient(#DA7D90 0%, #EBA3B1 90%, rgba(255, 255, 255, 0) 100%), url(../img/bonus.png);
+  }
+
+  .purchaser-page .card.-bonus .card__title {
+    font-size: 28px;
+  }
+
+  .purchaser-page .card.-bonus .card__text {
+    padding-top: 40px;
+    font-size: 16px;
+  }
+
+  .purchaser-page .discount-system__item {
+    width: 25vw;
+    font-size: 14px;
+  }
+
+  .purchaser-page .discount-system__item svg {
+    width: 18vw;
+    height: 18vw;
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .purchaser-page .discount-system__plus {
+    width: 6vw;
+    height: 6vw;
+    max-width: 30px;
+    max-height: 30px;
+    margin-top: 6vw;
+  }
+
+  .purchaser-page .discount-system__result {
+    font-size: 32px;
+  }
+
   .piroblog-page__content {
     gap: 40px;
   }
@@ -7282,6 +7768,58 @@ textarea {
     width: 48vw;
     margin-left: auto;
     font-size: 20px;
+  }
+
+  .delivery-page .card.-delivery-main {
+    padding: 40px 20px 57vw;
+    min-height: auto;
+    background-position: top left, bottom left;
+    background-size: 100% calc(100% - 53vw), auto 60vw;
+    background-image: linear-gradient(#DCA320 0%, #F5CA47 90%, rgba(255, 255, 255, 0) 100%), url(../img/delivery.png);
+  }
+
+  .delivery-page .card.-delivery-main .card__title {
+    font-size: 28px;
+  }
+
+  .delivery-page .card.-delivery-main .card__text {
+    padding-top: 20px;
+    font-size: 16px;
+  }
+
+  .delivery-page .card.-delivery-region {
+    padding: 40px 20px 40vw;
+    min-height: auto;
+    background-position: top left, bottom right;
+    background-size: 100% calc(100% - 43vw), auto 50vw;
+    background-image: linear-gradient(#FFC501 0%, #FEC601 90%, rgba(255, 255, 255, 0) 100%), url(../img/delivery-1.png);
+  }
+
+  .delivery-page .card.-delivery-region .card__text {
+    font-size: 16px;
+  }
+
+  .delivery-page .card.-return {
+    padding: 40px 20px 40vw;
+    min-height: auto;
+    background-position: top left, bottom left;
+    background-size: 100% calc(100% - 45vw), auto 50vw;
+    background-image: linear-gradient(#F08690 30%, #FFB3BD 90%, rgba(255, 255, 255, 0) 100%), url(../img/delivery-return.png);
+  }
+
+  .delivery-page .card.-return .card__title {
+    padding-top: 0;
+    padding-bottom: 60px;
+    font-size: 30px;
+  }
+
+  .delivery-page .card.-return .image-arrow {
+    right: 40px;
+    transform: scale(0.75);
+  }
+
+  .delivery-page .card.-return-text {
+    padding: 40px 20px;
   }
 
   .product {

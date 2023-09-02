@@ -17,6 +17,8 @@
         buttonCatalogMenu?.addEventListener('mouseenter', openCatalog)
         buttonCatalogMenu?.addEventListener('mouseleave', catalogButtonMouseLeave)
 
+        window.addEventListener('scroll', handleScroll)
+
         window.addEventListener('resize', closeAll)
         const headerHeight = document.body.querySelector('.app-header')?.clientHeight ?? 0;
         const breadcrumbsHeight = document.body.querySelector('.app-breadcrumbs')?.clientHeight ?? 0;
@@ -34,6 +36,19 @@
                     }
                 }
             }
+        }
+    }
+
+    function handleScroll() {
+        hideTextHeader()
+    }
+
+    function hideTextHeader() {
+    const position = window.pageYOffset
+        if (position > 100) {
+            document.body.querySelector('.header-top')?.classList.add('-hide-text-mobile')
+        } else {
+            document.body.querySelector('.header-top')?.classList.remove('-hide-text-mobile')
         }
     }
 

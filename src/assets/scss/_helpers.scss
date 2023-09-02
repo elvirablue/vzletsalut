@@ -207,14 +207,11 @@
     font-size: 16px;
     font-family: 'Inter', sans-serif;
     line-height: 1.25;
-    color: var(--text-color);
+    color: var(--main-color);
 
     * {
         box-sizing: border-box;
         margin: 0;
-        color: inherit;
-        font-family: inherit;
-        font-size: inherit;
     }
 
     p, ul, ol, h1, h2, h3, h4, h5, h6 {
@@ -225,16 +222,16 @@
     }
 
     h1 {
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 36px;
+        font-weight: 700;
     }
     h2 {
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 30px;
+        font-weight: 700;
     }
     h3 {
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 24px;
+        font-weight: 700;
     }
 
     strong, b {
@@ -284,6 +281,29 @@
         height: 5px;
         border-radius: 50%;
         background-color: currentColor;
+    }
+
+    table {
+        margin: 40px 0 0;
+        width: 100%;
+    }
+
+    table , th, td {
+        border-collapse: collapse;
+         border: 1px solid var(--main-color);
+    }
+
+    table th {
+        padding: 16px;
+        font-size: 24px;
+        font-weight: 700;
+        background-color: var(--gray-color);
+    }
+
+    table td {
+        padding: 8px;
+        text-align: center;
+        font-size: 24px;
     }
 
 }

@@ -107,6 +107,9 @@
             padding-bottom: 8px;
             font-size: 10px;
             text-align: center;
+            height: 50px;
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
         }
 
         &__logo {
@@ -121,6 +124,15 @@
         &__search {
             width: 100%;
             max-width: 160px;
+        }
+
+        &.-hide-text-mobile {
+            .header-top__description {
+                opacity: 0;
+                height: 0;
+                padding: 0;
+                pointer-events: none;
+            }
         }
     }
 }
