@@ -77,6 +77,31 @@
         }
     }
 
+    &.-filter {
+        width: 220px;
+
+        .input__field {
+            height: 32px;
+            font-size: 16px;
+            color: var(--main-color);
+            border-radius: var(--root-radius);
+            background-color: var(--surface-color);
+            border: 1px solid var(--darker-gray-color);
+        }
+
+        input, textarea, select {
+            margin-top: 0;
+            right: 12px;
+            left: 12px;
+            display: block;
+            width: calc(100% - 24px);
+
+            &:focus + .input__field {
+                border-color: var(--main-color) !important;
+            }
+        }
+    }
+
     label {
         position: absolute;
         top: 12px;

@@ -150,35 +150,30 @@
         }
 
         @include media_breakpoint(tablet) {
-            max-height: 380px;
+            height: 30vw;
 
             &:hover {
                 box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 6px var(--main-color);
             }
 
-            &__title {
-                font-size: 26px;
+            .card__title {
+                height: 8vw;
+                font-size: 3vw;
             }
         }
 
         @include media_breakpoint(mobile) {
-            display: flex;
-            align-items: center;
-            padding: 40px 20px 40px 160px;
-            max-width: 450px;
-            height: 150px;
+            width: 248px;
+            height: 260px;
             margin: 0 auto;
-            background-position: left center;
-            background-size: contain;
 
             &:hover {
                 box-shadow: none;
             }
 
             .card__title {
-                height: auto;
+                height: 50px;
                 font-size: 20px;
-                text-align: left;
             }
         }
     }

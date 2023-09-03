@@ -290,6 +290,10 @@
             display: none;
         }
 
+        &.-center-sm {
+            justify-content: center;
+        }
+
         &.-dense-sm {
             margin: -10px;
 

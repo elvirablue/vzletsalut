@@ -750,6 +750,35 @@ textarea {
   padding-top: 4px;
 }
 
+.input.-filter {
+  width: 220px;
+}
+
+.input.-filter .input__field {
+  height: 32px;
+  font-size: 16px;
+  color: var(--main-color);
+  border-radius: var(--root-radius);
+  background-color: var(--surface-color);
+  border: 1px solid var(--darker-gray-color);
+}
+
+.input.-filter input,
+.input.-filter textarea,
+.input.-filter select {
+  margin-top: 0;
+  right: 12px;
+  left: 12px;
+  display: block;
+  width: calc(100% - 24px);
+}
+
+.input.-filter input:focus + .input__field,
+.input.-filter textarea:focus + .input__field,
+.input.-filter select:focus + .input__field {
+  border-color: var(--main-color) !important;
+}
+
 .input label {
   position: absolute;
   top: 12px;
@@ -2781,7 +2810,7 @@ textarea {
   background-image: url("../img/error-page.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
   color: var(--main-color);
   text-align: center;
 }
@@ -4085,6 +4114,44 @@ textarea {
   background-image: url("../img/box-return.png");
 }
 
+.purchaser-page .card.-certificates-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 555px;
+  padding: 60px 100px;
+  background-repeat: no-repeat;
+  background-position: 120px bottom;
+  background-size: contain;
+  background-color: #BB6BD9;
+  background-image: url("../img/certificates.png");
+}
+
+.purchaser-page .card.-certificates-main .card__title {
+  display: block;
+  width: 540px;
+  margin-left: auto;
+  padding-top: 120px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.purchaser-page .card.-certificates-main .image-arrow {
+  position: absolute;
+  right: 100px;
+  bottom: -50px;
+}
+
+.purchaser-page .card.-certificates-main .image-arrow svg {
+  width: 70px;
+  height: 92px;
+  color: var(--primary-color);
+  transform: rotate(90deg);
+}
+
 .purchaser-page .card.-loyalty-main {
   display: flex;
   flex-direction: column;
@@ -4221,6 +4288,11 @@ textarea {
   text-align: right;
 }
 
+.purchaser-page .certificate-wrap {
+  display: block;
+  padding: 40px 0;
+}
+
 .piroblog-page__content {
   display: flex;
   flex-direction: column;
@@ -4291,38 +4363,6 @@ textarea {
   flex-direction: column;
   width: 100%;
   gap: 60px;
-}
-
-.manufacturers-page .manufacturer-preview {
-  display: grid;
-  grid-template-areas: "image title" "image description" "image actions";
-  grid-template-columns: 440px 1fr;
-  grid-template-rows: 1fr auto 1fr;
-  gap: 20px 60px;
-}
-
-.manufacturers-page .manufacturer-preview .a-image {
-  grid-area: image;
-  display: block;
-  width: 100%;
-  height: 185px;
-  margin-bottom: auto;
-  overflow: hidden;
-}
-
-.manufacturers-page .manufacturer-preview .a-title {
-  grid-area: title;
-}
-
-.manufacturers-page .manufacturer-preview .a-description {
-  grid-area: description;
-  display: flex;
-  gap: 12px;
-}
-
-.manufacturers-page .manufacturer-preview .a-actions {
-  grid-area: actions;
-  margin-bottom: auto;
 }
 
 .manufacturers-page .manufacturer__image {
@@ -4566,6 +4606,7 @@ textarea {
   height: auto;
   max-width: 436px;
   max-height: 184px;
+  margin-bottom: auto;
 }
 
 .product-actions {
@@ -5287,6 +5328,77 @@ textarea {
   color: var(--text-light-color);
 }
 
+.certificate-preview {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 13vw;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.certificate-preview__title {
+  display: block;
+  padding-top: 16px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.certificate-preview__image {
+  display: flex;
+  width: 100%;
+  height: 19vw;
+  max-height: 280px;
+  padding: 16px 12px;
+  border-radius: 5px;
+  border: 0.5px solid var(--surface-color);
+  background: linear-gradient(179deg, rgba(255, 255, 255, 0.36) -16.84%, rgba(255, 255, 255, 0.56) 108.18%);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: border 0.2s ease-in-out;
+}
+
+.certificate-preview:hover .certificate-preview__image {
+  border-color: #A5630F;
+}
+
+.certificate-preview img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.manufacturer-preview {
+  display: grid;
+  grid-template-areas: "image title" "image description" "image actions";
+  grid-template-columns: 440px 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  gap: 20px 60px;
+}
+
+.manufacturer-preview .a-image {
+  grid-area: image;
+  display: block;
+  width: 100%;
+  height: 185px;
+  margin-bottom: auto;
+  overflow: hidden;
+}
+
+.manufacturer-preview .a-title {
+  grid-area: title;
+}
+
+.manufacturer-preview .a-description {
+  grid-area: description;
+  display: flex;
+  gap: 12px;
+}
+
+.manufacturer-preview .a-actions {
+  grid-area: actions;
+  margin-bottom: auto;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -5569,6 +5681,10 @@ textarea {
     background-size: auto;
   }
 
+  .purchaser-page .certificate-wrap {
+    padding: 40px 60px;
+  }
+
   .addresses-item {
     gap: 40px;
   }
@@ -5639,15 +5755,16 @@ textarea {
   }
 
   .card.-box {
-    max-height: 380px;
+    height: 30vw;
   }
 
   .card.-box:hover {
     box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 6px var(--main-color);
   }
 
-  .card.-box__title {
-    font-size: 26px;
+  .card.-box .card__title {
+    height: 8vw;
+    font-size: 3vw;
   }
 
   .card.-shop-locations {
@@ -6312,6 +6429,19 @@ textarea {
     padding-bottom: 32px;
   }
 
+  .purchaser-page .card.-certificates-main {
+    height: auto;
+    min-height: 400px;
+    padding: 40px 40px 40px 50%;
+    background-position: 10% bottom;
+  }
+
+  .purchaser-page .card.-certificates-main .card__title {
+    width: 100%;
+    padding-top: 40px;
+    font-size: 40px;
+  }
+
   .purchaser-page .card.-loyalty-main {
     height: auto;
     min-height: 450px;
@@ -6364,6 +6494,10 @@ textarea {
     font-size: 40px;
   }
 
+  .purchaser-page .certificate-wrap {
+    padding: 0;
+  }
+
   .piroblog-page .piroblog-type {
     gap: 30px;
   }
@@ -6380,15 +6514,6 @@ textarea {
   .piroblog-page .card.-pirotype {
     padding: 20px;
     gap: 30px;
-  }
-
-  .manufacturers-page .manufacturer-preview {
-    grid-template-columns: 300px 1fr;
-    gap: 20px 40px;
-  }
-
-  .manufacturers-page .manufacturer-preview .a-image {
-    height: 130px;
   }
 
   .manufacturers-page .manufacturer__image {
@@ -6544,6 +6669,27 @@ textarea {
     height: 25px;
   }
 
+  .certificate-preview {
+    max-width: 16vw;
+  }
+
+  .certificate-preview__image {
+    height: 22vw;
+  }
+
+  .certificate-preview__title {
+    font-size: 1.75vw;
+  }
+
+  .manufacturer-preview {
+    grid-template-columns: 300px 1fr;
+    gap: 20px 40px;
+  }
+
+  .manufacturer-preview .a-image {
+    height: 130px;
+  }
+
   .markers-list {
     gap: 20px;
   }
@@ -6605,6 +6751,10 @@ textarea {
     display: none;
   }
 
+  .row.-center-sm {
+    justify-content: center;
+  }
+
   .row.-dense-sm {
     margin: -10px;
   }
@@ -6663,14 +6813,9 @@ textarea {
   }
 
   .card.-box {
-    display: flex;
-    align-items: center;
-    padding: 40px 20px 40px 160px;
-    max-width: 450px;
-    height: 150px;
+    width: 248px;
+    height: 260px;
     margin: 0 auto;
-    background-position: left center;
-    background-size: contain;
   }
 
   .card.-box:hover {
@@ -6678,9 +6823,8 @@ textarea {
   }
 
   .card.-box .card__title {
-    height: auto;
+    height: 50px;
     font-size: 20px;
-    text-align: left;
   }
 
   .card.-shop-locations {
@@ -7635,6 +7779,24 @@ textarea {
     margin: 20px 0;
   }
 
+  .purchaser-page .card.-certificates-main {
+    padding: 40px 20px 42vw;
+    min-height: auto;
+    background-position: bottom center;
+    background-size: auto 50vw;
+  }
+
+  .purchaser-page .card.-certificates-main .card__title {
+    padding-top: 0;
+    padding-bottom: 60px;
+    font-size: 30px;
+  }
+
+  .purchaser-page .card.-certificates-main .image-arrow {
+    right: 20px;
+    transform: scale(0.75);
+  }
+
   .purchaser-page .card.-loyalty-main {
     padding: 40px 20px 57vw;
     background-position: top left, bottom left;
@@ -7731,23 +7893,6 @@ textarea {
 
   .manufacturers-page__content {
     gap: 40px;
-  }
-
-  .manufacturers-page .manufacturer-preview {
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: "image title " "description description" "actions actions";
-    grid-template-columns: 100px 1fr;
-    gap: 20px 10px;
-  }
-
-  .manufacturers-page .manufacturer-preview .a-image {
-    height: 45px;
-  }
-
-  .manufacturers-page .manufacturer-preview .a-title {
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: 20px !important;
   }
 
   .manufacturers-page .manufacturer__image {
@@ -8004,6 +8149,36 @@ textarea {
   .addresses-item .svg-card {
     width: 40px;
     height: 25px;
+  }
+
+  .certificate-preview {
+    max-width: 200px;
+  }
+
+  .certificate-preview__image {
+    height: auto;
+    max-height: 280px;
+  }
+
+  .certificate-preview__title {
+    font-size: 14px;
+  }
+
+  .manufacturer-preview {
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "image title " "description description" "actions actions";
+    grid-template-columns: 100px 1fr;
+    gap: 20px 10px;
+  }
+
+  .manufacturer-preview .a-image {
+    height: 45px;
+  }
+
+  .manufacturer-preview .a-title {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px !important;
   }
 
   .markers-list {
