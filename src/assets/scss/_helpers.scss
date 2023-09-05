@@ -665,6 +665,69 @@
     }
 }
 
+.feedback {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 160px;
+    padding: 80px 0;
+
+    &__avatar {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: var(--surface-color);
+        background-image: url(../img/user-avatar.svg);
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+    }
+
+    &__text {
+       display: block;
+        padding: 32px 0;
+    }
+
+    &__date {
+        display: block;
+        font-style: italic;
+        text-align: right;
+    }
+
+    @include media_breakpoint(tablet) {
+        gap: 60px;
+        padding: 60px 0;
+        margin: 0 auto;
+        max-width: 960px;
+
+        &__avatar {
+            width: 140px;
+            height: 140px;
+        }
+
+    }
+    @include media_breakpoint(mobile) {
+        display: block;
+        padding: 40px 0;
+
+        &__avatar {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 0 20px 12px 0;
+        }
+
+        &__text {
+            padding: 12px 0;
+        }
+    }
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;

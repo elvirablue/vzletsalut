@@ -5403,6 +5403,41 @@ textarea {
   gap: 30px;
 }
 
+.feedback {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 160px;
+  padding: 80px 0;
+}
+
+.feedback__avatar {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--surface-color);
+  background-image: url(../img/user-avatar.svg);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.feedback__text {
+  display: block;
+  padding: 32px 0;
+}
+
+.feedback__date {
+  display: block;
+  font-style: italic;
+  text-align: right;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -6695,6 +6730,18 @@ textarea {
   .piroblog-type__text,
   .instruction__text {
     gap: 20px;
+  }
+
+  .feedback {
+    gap: 60px;
+    padding: 60px 0;
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  .feedback__avatar {
+    width: 140px;
+    height: 140px;
   }
 
   .markers-list {
@@ -8190,6 +8237,22 @@ textarea {
   .piroblog-type__text .text-contents,
   .instruction__text .text-contents {
     font-size: 14px;
+  }
+
+  .feedback {
+    display: block;
+    padding: 40px 0;
+  }
+
+  .feedback__avatar {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 0 20px 12px 0;
+  }
+
+  .feedback__text {
+    padding: 12px 0;
   }
 
   .markers-list {
