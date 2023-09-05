@@ -10,68 +10,6 @@
         }
     }
 
-    .piroblog-type {
-        display: flex;
-        gap: 40px;
-
-        &__image {
-            flex-shrink: 0;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: var(--gray-color);
-            overflow: hidden;
-
-            img {
-                width: 95%;
-                height: 95%;
-            }
-        }
-
-        &__text {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        @include media_breakpoint(tablet) {
-            gap: 30px;
-
-            &__image {
-                width: 150px;
-                height: 150px;
-            }
-
-            &__text {
-                gap: 20px;
-            }
-        }
-
-        @include media_breakpoint(mobile) {
-            gap: 20px;
-            flex-direction: column;
-
-            &__image {
-                width: 25vw;
-                height: 25vw;
-                max-width: 150px;
-                max-height: 150px;
-            }
-
-            &__text {
-                gap: 10px;
-
-                .text-contents {
-                    font-size: 14px;
-                }
-
-            }
-        }
-    }
-
     .card.-image {
         display: block;
         height: 364px;

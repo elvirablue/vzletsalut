@@ -4300,34 +4300,6 @@ textarea {
   gap: 60px;
 }
 
-.piroblog-page .piroblog-type {
-  display: flex;
-  gap: 40px;
-}
-
-.piroblog-page .piroblog-type__image {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: var(--gray-color);
-  overflow: hidden;
-}
-
-.piroblog-page .piroblog-type__image img {
-  width: 95%;
-  height: 95%;
-}
-
-.piroblog-page .piroblog-type__text {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
 .piroblog-page .card.-image {
   display: block;
   height: 364px;
@@ -5397,6 +5369,38 @@ textarea {
 .manufacturer-preview .a-actions {
   grid-area: actions;
   margin-bottom: auto;
+}
+
+.piroblog-type,
+.instruction {
+  display: flex;
+  gap: 40px;
+}
+
+.piroblog-type__image,
+.instruction__image {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--gray-color);
+  overflow: hidden;
+}
+
+.piroblog-type__image img,
+.instruction__image img {
+  width: 86%;
+  height: 86%;
+}
+
+.piroblog-type__text,
+.instruction__text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .flex-row {
@@ -6498,19 +6502,6 @@ textarea {
     padding: 0;
   }
 
-  .piroblog-page .piroblog-type {
-    gap: 30px;
-  }
-
-  .piroblog-page .piroblog-type__image {
-    width: 150px;
-    height: 150px;
-  }
-
-  .piroblog-page .piroblog-type__text {
-    gap: 20px;
-  }
-
   .piroblog-page .card.-pirotype {
     padding: 20px;
     gap: 30px;
@@ -6688,6 +6679,22 @@ textarea {
 
   .manufacturer-preview .a-image {
     height: 130px;
+  }
+
+  .piroblog-type,
+  .instruction {
+    gap: 30px;
+  }
+
+  .piroblog-type__image,
+  .instruction__image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .piroblog-type__text,
+  .instruction__text {
+    gap: 20px;
   }
 
   .markers-list {
@@ -7857,26 +7864,6 @@ textarea {
     gap: 40px;
   }
 
-  .piroblog-page .piroblog-type {
-    gap: 20px;
-    flex-direction: column;
-  }
-
-  .piroblog-page .piroblog-type__image {
-    width: 25vw;
-    height: 25vw;
-    max-width: 150px;
-    max-height: 150px;
-  }
-
-  .piroblog-page .piroblog-type__text {
-    gap: 10px;
-  }
-
-  .piroblog-page .piroblog-type__text .text-contents {
-    font-size: 14px;
-  }
-
   .piroblog-page .card.-image {
     height: 60vw;
     max-height: 300px;
@@ -8179,6 +8166,30 @@ textarea {
     margin-top: auto;
     margin-bottom: auto;
     font-size: 20px !important;
+  }
+
+  .piroblog-type,
+  .instruction {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .piroblog-type__image,
+  .instruction__image {
+    width: 25vw;
+    height: 25vw;
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .piroblog-type__text,
+  .instruction__text {
+    gap: 10px;
+  }
+
+  .piroblog-type__text .text-contents,
+  .instruction__text .text-contents {
+    font-size: 14px;
   }
 
   .markers-list {
