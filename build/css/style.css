@@ -15,6 +15,7 @@
   --yellow-dark-color: #F6B11A;
   --purple-color: #BB6BD9;
   --pink-color: #EFA2B6;
+  --blue-color: #4D99DE;
   --header-top-height: 100px;
   --header-bottom-height: 60px;
   --action-height: 54px;
@@ -3672,6 +3673,24 @@ textarea {
   padding-bottom: 54px;
 }
 
+.special-page__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 64px;
+}
+
+.special-page__carousel {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.special-page__action {
+  display: flex;
+  justify-content: center;
+}
+
 .special-page .card.-wedding {
   background-image: url("../img/box-wedding.png");
 }
@@ -3694,6 +3713,42 @@ textarea {
 
 .special-page .card.-corporate {
   background-image: url("../img/box-corporate.png");
+}
+
+.special-page .card.-special {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 555px;
+  padding: 60px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+}
+
+.special-page .card.-special .card__title {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 50%;
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.special-page .card.-special.-wedding-main {
+  background-color: #F7CEDC;
+  background-image: url("../img/big-box-wedding.png");
+}
+
+.special-page .card.-special.-gender-main {
+  background-color: #FBE3A7;
+  background-image: url("../img/big-box-gender.png");
+}
+
+.special-page .card.-special.-birthday-main {
+  background-color: #F7B6CC;
+  background-image: url("../img/big-box-birthday.png");
 }
 
 .wholesale-page__content {
@@ -5632,6 +5687,14 @@ textarea {
   background-color: var(--yellow-dark-color);
 }
 
+.--bg-purple {
+  background-color: var(--purple-color);
+}
+
+.--bg-blue {
+  background-color: var(--blue-color);
+}
+
 .--primary-color {
   color: var(--primary-color) !important;
 }
@@ -6318,6 +6381,31 @@ textarea {
     font-size: 20px;
   }
 
+  .special-page .card.-special {
+    height: auto;
+    min-height: 400px;
+    padding: 40px;
+    background-size: auto 100%;
+  }
+
+  .special-page .card.-special .card__title {
+    font-size: 24px;
+  }
+
+  .special-page .card.-special.-wedding-main {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 70%, #F7CEDC 100%), url(../img/big-box-wedding.png);
+  }
+
+  .special-page .card.-special.-gender-main {
+    background-position: center, -100px center;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 70%, #FBE3A7 100%), url(../img/big-box-gender.png);
+  }
+
+  .special-page .card.-special.-birthday-main {
+    background-position: center, -100px center;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 40%, #EA8FAE 80%), url(../img/big-box-birthday.png);
+  }
+
   .wholesale-page__content {
     gap: 32px;
   }
@@ -6678,6 +6766,18 @@ textarea {
   .container {
     max-width: 100vw;
     padding: 0 var(--mobile-padding);
+  }
+
+  .text-contents h1 {
+    font-size: 30px;
+  }
+
+  .text-contents h2 {
+    font-size: 26px !important;
+  }
+
+  .text-contents h3 {
+    font-size: 20px !important;
   }
 
   .payment__card {
@@ -7680,6 +7780,55 @@ textarea {
     font-size: 18px;
   }
 
+  .special-page__carousel {
+    margin: 0 calc(-1 * var(--mobile-padding));
+  }
+
+  .special-page__action .button {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .special-page .card.-special {
+    min-height: 40vw;
+    padding: 40px 20px;
+  }
+
+  .special-page .card.-special .card__title {
+    width: 48vw;
+    height: auto;
+    margin-left: auto;
+    font-size: 20px;
+  }
+
+  .special-page .card.-special.-gender-main {
+    padding: 40px 10px 70vw;
+    background-size: 100% calc(100% - 63vw), auto 70vw;
+    background-position: right top, left bottom;
+    background-image: linear-gradient(#FFDAA6 90%, rgba(255, 255, 255, 0) 100%), url(../img/big-box-gender.png);
+  }
+
+  .special-page .card.-special.-gender-main .card__title {
+    margin: 0;
+    padding: 0 10px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .special-page .card.-special.-birthday-main {
+    padding: 40px 10px 70vw;
+    background-size: 100% calc(100% - 63vw), auto 70vw;
+    background-position: right top, left bottom;
+    background-image: linear-gradient(#EA8FAE 30%, #F7B6CC 70%, rgba(255, 255, 255, 0) 100%), url(../img/big-box-birthday.png);
+  }
+
+  .special-page .card.-special.-birthday-main .card__title {
+    margin: 0;
+    padding: 0 10px;
+    width: 100%;
+    font-size: 18px;
+  }
+
   .wholesale-page .primary-line {
     margin: 20px 0;
   }
@@ -8157,6 +8306,14 @@ textarea {
     gap: 8px;
   }
 
+  .text-contents h1 {
+    font-size: 26px;
+  }
+
+  .text-contents h2 {
+    font-size: 22px !important;
+  }
+
   .payment__card {
     padding: 20px 12px;
   }
@@ -8363,6 +8520,23 @@ textarea {
   .vzlet-page .card.-vzlet-delivery-main .card__text .accent-font {
     padding-top: 0;
     font-size: 20px;
+  }
+
+  .special-page .card.-special {
+    padding: 40px 10px 70vw;
+    background-size: 100% calc(100% - 63vw), auto 70vw;
+    background-position: right top, left bottom;
+  }
+
+  .special-page .card.-special .card__title {
+    margin: 0;
+    padding: 0 10px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .special-page .card.-special.-wedding-main {
+    background-image: linear-gradient(#F7CEDC 90%, rgba(255, 255, 255, 0) 100%), url(../img/big-box-wedding.png);
   }
 
   .wholesale-page__columns {

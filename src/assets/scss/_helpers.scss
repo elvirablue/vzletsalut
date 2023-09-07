@@ -224,14 +224,32 @@
     h1 {
         font-size: 36px;
         font-weight: 700;
+
+        @include media_breakpoint(tablet) {
+            font-size: 30px;
+        }
+        @include media_breakpoint(mobile) {
+            font-size: 26px;
+        }
     }
     h2 {
         font-size: 30px;
         font-weight: 700;
+
+        @include media_breakpoint(tablet) {
+            font-size: 26px !important;
+        }
+        @include media_breakpoint(mobile) {
+            font-size: 22px !important;
+        }
     }
     h3 {
         font-size: 24px;
         font-weight: 700;
+
+        @include media_breakpoint(tablet) {
+            font-size: 20px !important;
+        }
     }
 
     strong, b {
@@ -971,6 +989,12 @@
 
 .--bg-yellow {
     background-color: var(--yellow-dark-color);
+}
+.--bg-purple {
+    background-color: var(--purple-color);
+}
+.--bg-blue {
+    background-color: var(--blue-color);
 }
 
 .--primary-color {
