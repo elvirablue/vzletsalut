@@ -2044,6 +2044,38 @@ textarea {
   gap: 24px;
 }
 
+.cookie {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  transform: translateY(300px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cookie.-show {
+  transform: translateY(0);
+}
+
+.cookie__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  padding: 32px;
+  background-color: var(--surface-color);
+  border-radius: var(--root-radius) var(--root-radius) 0 0;
+  border: 1px solid var(--main-color);
+}
+
+.cookie__inner .button.-underline {
+  font-weight: 400;
+}
+
 .index-fs__description {
   position: relative;
   display: flex;
@@ -2938,10 +2970,10 @@ textarea {
   gap: 32px;
   font-size: 20px;
   text-align: center;
-  background-image: url("../img/cart-checkout.png");
+  background-image: url("../img/cart-checkout-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: 170% auto;
+  background-position: bottom center;
 }
 
 .aside.-card-checkout .promo-text {
@@ -5196,11 +5228,18 @@ textarea {
 }
 
 .text-contents ol {
-  list-style-type: decimal;
+  counter-reset: li;
+  list-style: none;
 }
 
-.text-contents ol li {
+.text-contents ol > li {
   display: list-item;
+  padding-bottom: 8px;
+}
+
+.text-contents ol > li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
 }
 
 .text-contents ul li:before {
@@ -6241,9 +6280,10 @@ textarea {
   .aside.-card-checkout {
     min-height: auto;
     max-width: 820px;
+    padding-bottom: 55vw;
     margin: 0 auto;
     background-color: var(--yellow-color);
-    background-image: none;
+    background-size: 100% auto;
   }
 
   .aside.-card-checkout .promo-text svg {

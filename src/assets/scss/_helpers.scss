@@ -283,10 +283,17 @@
     }
 
     ol {
-        list-style-type: decimal;
+        counter-reset: li;
+        list-style: none;
 
-        li {
+        > li {
             display: list-item;
+            padding-bottom: 8px;
+
+            &:before {
+                counter-increment: li;
+                content: counters(li, ".") ". ";
+            }
         }
     }
 
